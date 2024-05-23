@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 699536118}
   - component: {fileID: 699536121}
   - component: {fileID: 699536120}
-  - component: {fileID: 699536119}
+  - component: {fileID: 699536122}
   m_Layer: 0
   m_Name: Door (2)
   m_TagString: Untagged
@@ -897,20 +897,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 645338671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &699536119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699536117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a2e82ab20ccf3438ca329a75d06504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredPlayerLocation: {fileID: 1017544549}
-  desiredCameraLocation: {fileID: 1319570379}
 --- !u!61 &699536120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1008,6 +994,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &699536122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699536117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredPlayerLocation: {fileID: 1017544549}
+  desiredCameraLocation: {fileID: 1319570379}
 --- !u!1 &771437793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 923540731}
   - component: {fileID: 923540730}
   - component: {fileID: 923540729}
-  - component: {fileID: 923540728}
+  - component: {fileID: 923540732}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1405,20 +1405,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &923540728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923540727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a2e82ab20ccf3438ca329a75d06504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredPlayerLocation: {fileID: 1262603177}
-  desiredCameraLocation: {fileID: 1301749181}
 --- !u!61 &923540729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1531,6 +1517,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 645338671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923540732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923540727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredPlayerLocation: {fileID: 1262603177}
+  desiredCameraLocation: {fileID: 1301749181}
 --- !u!1 &937248077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2209,7 @@ GameObject:
   - component: {fileID: 1120000458}
   - component: {fileID: 1120000461}
   - component: {fileID: 1120000460}
-  - component: {fileID: 1120000459}
+  - component: {fileID: 1120000462}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -2232,20 +2232,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1319570379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1120000459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120000457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a2e82ab20ccf3438ca329a75d06504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredPlayerLocation: {fileID: 1483169706}
-  desiredCameraLocation: {fileID: 645338671}
 --- !u!61 &1120000460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2343,6 +2329,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1120000462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120000457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredPlayerLocation: {fileID: 1483169706}
+  desiredCameraLocation: {fileID: 645338671}
 --- !u!1 &1151411958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +3034,7 @@ GameObject:
   - component: {fileID: 1407588483}
   - component: {fileID: 1407588486}
   - component: {fileID: 1407588485}
-  - component: {fileID: 1407588484}
+  - component: {fileID: 1407588487}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -3057,20 +3057,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1301749181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1407588484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407588482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a2e82ab20ccf3438ca329a75d06504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredPlayerLocation: {fileID: 1284017852}
-  desiredCameraLocation: {fileID: 645338671}
 --- !u!61 &1407588485
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3168,6 +3154,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1407588487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407588482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredPlayerLocation: {fileID: 1284017852}
+  desiredCameraLocation: {fileID: 645338671}
 --- !u!1 &1433040044
 GameObject:
   m_ObjectHideFlags: 0
