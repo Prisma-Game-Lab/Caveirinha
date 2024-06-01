@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 59266457}
   - component: {fileID: 59266452}
   - component: {fileID: 59266456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -383,6 +383,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a9a12420-e2cc-43b2-b058-d80f9e343948
     m_ActionName: Normal/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 59266458}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e0936aa2-21fb-4a52-a991-e8d4ef2c3b02
+    m_ActionName: Normal/Shoot[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal
@@ -473,9 +489,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveInputVector: {x: 0, y: 0}
-  moveSpeed: 6
+  moveSpeed: 5.5
   moveAcceleration: 8
-  moveDesacceleration: 3
+  moveDesacceleration: 4
+  shouldShoot: 0
+  shootVector: {x: 0, y: 0}
+  castingDistance: 0.6
+  spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+  spellSpeed: 5
+  spellFireRate: 2
+  spellScatter: 0.25
 --- !u!114 &59266458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,7 +898,7 @@ GameObject:
   - component: {fileID: 699536121}
   - component: {fileID: 699536120}
   - component: {fileID: 699536122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1398,7 +1421,7 @@ GameObject:
   - component: {fileID: 923540730}
   - component: {fileID: 923540729}
   - component: {fileID: 923540732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2210,7 +2233,7 @@ GameObject:
   - component: {fileID: 1120000461}
   - component: {fileID: 1120000460}
   - component: {fileID: 1120000462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3035,7 +3058,7 @@ GameObject:
   - component: {fileID: 1407588486}
   - component: {fileID: 1407588485}
   - component: {fileID: 1407588487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
