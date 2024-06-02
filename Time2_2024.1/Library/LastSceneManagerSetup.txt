@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TesteDungeon.unity
+- path: Assets/Scenes/TesteInimigos.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
