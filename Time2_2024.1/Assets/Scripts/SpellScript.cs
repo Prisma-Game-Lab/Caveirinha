@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpellScript : MonoBehaviour
 {
+    //Comentario
     private void Awake()
     {
         Destroy(gameObject,10);

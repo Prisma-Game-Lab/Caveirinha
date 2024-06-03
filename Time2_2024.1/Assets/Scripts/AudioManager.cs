@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
+    //Comentario
     public static AudioManager instance { get; private set; }
 
     public Sound[] musicSounds, sfxSounds;

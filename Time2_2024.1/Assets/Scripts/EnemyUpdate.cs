@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyUpdate : MonoBehaviour
 {
+    //Comentario
     public EnemyInfo enemy;
     public Text nameText;
     public Text classText;

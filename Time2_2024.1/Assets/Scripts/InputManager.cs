@@ -7,6 +7,8 @@ using UnityEngine.InputSystem.Controls;
 
 public class InputManager : MonoBehaviour
 {
+    //Comentario
+
     //Referencia ao script principal
     PlayerController playerMovementScript;
 
