@@ -489,16 +489,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveInputVector: {x: 0, y: 0}
-  moveSpeed: 5.5
-  moveAcceleration: 8
-  moveDesacceleration: 4
+  moveSpeed: 5.25
+  moveAcceleration: 10
+  moveDesacceleration: 8
   shouldShoot: 0
   shootVector: {x: 0, y: 0}
   castingDistance: 0.6
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellSpeed: 5
   spellFireRate: 2
-  spellScatter: 0.25
+  spellScatter: 0.2
 --- !u!114 &59266458
 MonoBehaviour:
   m_ObjectHideFlags: 0
