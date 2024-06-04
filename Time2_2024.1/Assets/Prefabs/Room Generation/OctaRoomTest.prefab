@@ -2599,9 +2599,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2237364013863404155}
-  - component: {fileID: 4831338066635519538}
+  - component: {fileID: 8023658224045066401}
   m_Layer: 0
-  m_Name: RoomGen
+  m_Name: RoomManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2616,13 +2616,13 @@ Transform:
   m_GameObject: {fileID: 6139166969690668442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6516747, y: 0.37351155, z: -0.054116115}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2274395521248551336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4831338066635519538
+--- !u!114 &8023658224045066401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2631,9 +2631,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 6139166969690668442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f69d75e6824d0c441a0850483fce4bc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cc9412d90ac07545910a524d577ba13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomPrefabs:
+  - {fileID: 4434839237470094874, guid: 6107478a7ae04ed41b760fe76d5a64ac, type: 3}
+  - {fileID: 5454503570349562690, guid: 082d198a7cee08840b181412ff5d3f52, type: 3}
+  doors:
+  - {fileID: 1053610906260973888}
+  - {fileID: 1159084828880189791}
+  - {fileID: 4087648363608738269}
+  - {fileID: 5464917324832704843}
+  - {fileID: 48813636559211565}
+  - {fileID: 7301958151801563029}
+  - {fileID: 379049832221599854}
 --- !u!1 &6201804976408442238
 GameObject:
   m_ObjectHideFlags: 0
