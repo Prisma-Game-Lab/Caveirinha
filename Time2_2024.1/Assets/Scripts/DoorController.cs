@@ -5,10 +5,8 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     //Comentario
-    [SerializeField]
-    Transform desiredPlayerLocation;
-    [SerializeField]
-    Transform desiredCameraLocation;
+    public Transform desiredPlayerLocation;
+    public Transform desiredCameraLocation;
 
     Transform cameraTransform;
 

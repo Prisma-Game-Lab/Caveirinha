@@ -17,9 +17,32 @@ public class RoomMgr : MonoBehaviour
             int rand = Random.Range(0, roomPrefabs.Length);
             GameObject room = Instantiate(roomPrefabs[rand]);
             room.transform.parent = transform.parent;
-            room.transform.Rotate(0, 0, 45 * i);
+            room.transform.Rotate(0, 0, (45 * i) + 45);
             room.transform.Translate(0, 20, 0);
 
+            DoorController doorMain = doors[i].GetComponentInChildren<DoorController>(); // porta na sala principal
+            DoorController doorSub = room.GetComponentInChildren<DoorController>(); // porta na sala secundaria
+
+            foreach (Transform tMain in doors[i].GetComponentsInChildren<Transform>())
+            {
+                if (tMain.gameObject.name.Equals("PlayerTransform (2)"))
+                {
+                    foreach (Transform tSub in room.GetComponentsInChildren<Transform>())
+                    {
+                        if (tSub.gameObject.name.Equals("PlayerTransform"))
+                        {
+                            doorMain.desiredPlayerLocation = tSub;
+                            doorMain.desiredCameraLocation = room.GetComponent<Transform>();
+
+                            doorSub.desiredPlayerLocation = tMain;
+                            doorSub.desiredCameraLocation = transform;
+                        }
+                    }
+                }
+            }
+
+
+            
 
             rooms[i] = room; // Guarda a sala geradas caso precisemos no futuro
         }

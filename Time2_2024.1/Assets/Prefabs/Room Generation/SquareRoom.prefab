@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4563654408873558058}
   m_Layer: 0
-  m_Name: PlayerTransform (1)
+  m_Name: PlayerTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
