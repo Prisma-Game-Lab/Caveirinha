@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &116713984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1159084828880189791, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &231917395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 48813636559211565, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &952807295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1053610906260973888, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1150699660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7301958151801563029, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1194767737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4087648363608738269, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1277925882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 379049832221599854, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1464176260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370,6 +400,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2130724653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5464917324832704843, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3229498969108425660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,10 +453,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594357536983204554, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Name
+      value: PlayerTransform (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4424476370697426282, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Name
       value: OctaRoomTest
       objectReference: {fileID: 0}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 1277925882}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[1]
+      value: 
+      objectReference: {fileID: 1150699660}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[2]
+      value: 
+      objectReference: {fileID: 231917395}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[3]
+      value: 
+      objectReference: {fileID: 2130724653}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[4]
+      value: 
+      objectReference: {fileID: 1194767737}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[5]
+      value: 
+      objectReference: {fileID: 116713984}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: doors.Array.data[6]
+      value: 
+      objectReference: {fileID: 952807295}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
