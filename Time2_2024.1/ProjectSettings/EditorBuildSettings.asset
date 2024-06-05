@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TelaInicial.unity
+    guid: b64288028800203428fb4d869262903e
+  - enabled: 1
+    path: Assets/Scenes/TesteTudo.unity
+    guid: 4f5f3f095d6b9ce459a8390be3aba144
   m_configObjects: {}

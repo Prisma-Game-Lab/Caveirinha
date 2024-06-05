@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     //Comentario
     public void PlayGame()
     {
-        SceneManager.LoadScene(0); //alterar para cena do jogo depois 
+        SceneManager.LoadScene("TesteTudo"); //alterar para cena do jogo depois 
     }
 
     public void QuitGame()
