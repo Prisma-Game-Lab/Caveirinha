@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class SpellScript : MonoBehaviour
 {
-    //Comentario
-    private void Awake()
+    int damage;
+
+    public void SetUp(int spellDamage) 
     {
-        Destroy(gameObject,10);
+        damage = spellDamage;
+        Destroy(gameObject, 10);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //Deal damage code
+            collision.GetComponent<Enemybase>().TakeDamage(damage);
         }
         Destroy(gameObject);
     }

@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float spellSpeed;
     [SerializeField] float spellFireRate;
     [SerializeField] float spellScatter;
+    [SerializeField] int spellDamage;
     float spellCooldown;
 
     void Start()
@@ -92,9 +93,11 @@ public class PlayerController : MonoBehaviour
             strongVector = Vector2.up * direction;
             desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter), direction);
         }
+        //Juntar essas linhas de codigo no SetUp() do feitico
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x + castingDistance * strongVector.x, gameObject.transform.position.y + castingDistance * strongVector.y);
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
         Rigidbody2D spellRb = invokedSpell.GetComponent<Rigidbody2D>();
+        invokedSpell.GetComponent<SpellScript>().SetUp(spellDamage);
         spellRb.velocity = spellSpeed * desiredShootVector;
         spellCooldown = 1 / spellFireRate;
     }

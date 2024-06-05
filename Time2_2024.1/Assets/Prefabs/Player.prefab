@@ -151,6 +151,7 @@ MonoBehaviour:
   spellSpeed: 5
   spellFireRate: 2
   spellScatter: 0.2
+  spellDamage: 50
 --- !u!114 &2769258008990254913
 MonoBehaviour:
   m_ObjectHideFlags: 0
