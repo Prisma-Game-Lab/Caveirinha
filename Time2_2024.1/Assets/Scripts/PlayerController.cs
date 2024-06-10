@@ -20,12 +20,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float spellSpeed;
     [SerializeField] float spellFireRate;
     [SerializeField] float spellScatter;
-    [SerializeField] int spellDamage;
+    [SerializeField] float spellDamage;
     float spellCooldown;
+
+    [SerializeField] float maxHealth;
+    float health;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        health = maxHealth;
     }
 
     private void Update()
@@ -63,6 +68,27 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(speedDif * accelRate);
     }
 
+    public void TakeDamage(float damage) 
+    {
+        if (health <= 1) 
+        {
+            Die();
+        }
+        else 
+        {
+            health -= damage;
+            if (health <= 1) 
+            {
+                health = 1;
+            }
+        }
+    }
+
+    void Die() 
+    {
+        Destroy(gameObject);
+    }
+
     void CastSpell() 
     {
         float xComponent = shootVector.x;
@@ -72,33 +98,18 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Abs(xComponent) > Mathf.Abs(yComponent))
         {
             //Shoot Horizontaly
-            float direction = 1;
-            if (xComponent < 0)
-            {
-                //Shoots left
-                direction = -1;
-            }
-            strongVector = Vector2.right * direction;
-            desiredShootVector = new Vector2(direction,Random.Range(-spellScatter, spellScatter));
+            strongVector = new Vector2(xComponent, 0).normalized;
+            desiredShootVector = new Vector2(strongVector.x, Random.Range(-spellScatter, spellScatter));
         }
         else
         {
             //Shoot Verticaly
-            float direction = 1;
-            if (yComponent < 0)
-            {
-                //Shoots down
-                direction = -1;
-            }
-            strongVector = Vector2.up * direction;
-            desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter), direction);
+            strongVector = new Vector2(0, yComponent).normalized;
+            desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter), strongVector.y);
         }
-        //Juntar essas linhas de codigo no SetUp() do feitico
-        Vector2 castingLocation = new Vector2(gameObject.transform.position.x + castingDistance * strongVector.x, gameObject.transform.position.y + castingDistance * strongVector.y);
+        Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * strongVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        Rigidbody2D spellRb = invokedSpell.GetComponent<Rigidbody2D>();
-        invokedSpell.GetComponent<SpellScript>().SetUp(spellDamage);
-        spellRb.velocity = spellSpeed * desiredShootVector;
+        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",spellDamage, spellSpeed * desiredShootVector);
         spellCooldown = 1 / spellFireRate;
     }
 }

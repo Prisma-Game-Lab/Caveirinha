@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class SpellScript : MonoBehaviour
 {
-    int damage;
+    float damage;
+    string targetTag;
 
-    public void SetUp(int spellDamage) 
+    public void SetUp(string enemyTag,float spellDamage, Vector2 speed) 
     {
         damage = spellDamage;
         Destroy(gameObject, 10);
+        GetComponent<Rigidbody2D>().velocity = speed;
+        targetTag = enemyTag;
+        if (targetTag == "Player") 
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        string collisionTag = collision.gameObject.tag;
+        switch (collisionTag) 
         {
-            collision.GetComponent<Enemybase>().TakeDamage(damage);
+            case "Enemy":
+                if (targetTag == "Enemy")
+                {
+                    collision.GetComponent<Enemybase>().TakeDamage(damage);
+                    Destroy(gameObject);
+                }
+                break;
+
+            case "Player":
+                if (targetTag == "Player")
+                {
+                    collision.GetComponent<PlayerController>().TakeDamage(damage);
+                    Destroy(gameObject);
+                }
+                break;
+
+            default:
+                Destroy(gameObject);
+                break;
         }
-        Destroy(gameObject);
     }
 }

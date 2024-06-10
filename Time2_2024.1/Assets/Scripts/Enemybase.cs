@@ -8,7 +8,7 @@ public class Enemybase : MonoBehaviour
     SpriteRenderer sr;
     string enemyName;
     string enemyClass;
-    int health;
+    float health;
     int maxHealth;
     int AttackDamage;
 
@@ -23,7 +23,7 @@ public class Enemybase : MonoBehaviour
         sr.color = Color.magenta;
     }
 
-    public void TakeDamage(int damage) 
+    public void TakeDamage(float damage) 
     {
         health -= damage;
         if(health <= 0) 
