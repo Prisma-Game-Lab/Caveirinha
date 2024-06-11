@@ -27,7 +27,7 @@ public class SpellScript : MonoBehaviour
             case "Enemy":
                 if (targetTag == "Enemy")
                 {
-                    collision.GetComponent<Enemybase>().TakeDamage(damage);
+                    collision.GetComponent<EnemyBase1>().TakeDamage(damage);
                     Destroy(gameObject);
                 }
                 break;
