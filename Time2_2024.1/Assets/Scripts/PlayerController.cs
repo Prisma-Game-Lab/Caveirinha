@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     float spellCooldown;
 
     [SerializeField] float maxHealth;
+    [SerializeField] Slider healthUI;
     float health;
 
 
@@ -73,20 +75,19 @@ public class PlayerController : MonoBehaviour
         if (health <= 1) 
         {
             Die();
+            return;
         }
-        else 
+        health -= damage;
+        if (health <= 1)
         {
-            health -= damage;
-            if (health <= 1) 
-            {
-                health = 1;
-            }
+            health = 1;
         }
+        UpdateUI();
     }
 
     void Die() 
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void CastSpell() 
@@ -111,5 +112,10 @@ public class PlayerController : MonoBehaviour
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
         invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",spellDamage, spellSpeed * desiredShootVector);
         spellCooldown = 1 / spellFireRate;
+    }
+
+    void UpdateUI() 
+    {
+        healthUI.value = health;
     }
 }

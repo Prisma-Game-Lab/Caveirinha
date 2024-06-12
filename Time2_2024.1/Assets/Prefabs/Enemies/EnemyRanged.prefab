@@ -176,8 +176,8 @@ MonoBehaviour:
   health: 100
   enemyAttack: 50
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
-  spellDamage: 50
-  spellSpeed: 2
-  spellScatter: 0
-  castingDistance: 0
-  maxCooldown: 3
+  spellDamage: 20
+  spellSpeed: 4
+  spellScatter: 0.25
+  castingDistance: 0.5
+  maxCooldown: 2
