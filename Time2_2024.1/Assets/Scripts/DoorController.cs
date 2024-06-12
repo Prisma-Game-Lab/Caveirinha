@@ -23,6 +23,8 @@ public class DoorController : MonoBehaviour
         {
             collision.transform.position = desiredPlayerLocation.position;
             cameraTransform.position = new Vector3(desiredCameraLocation.position.x,desiredCameraLocation.position.y, cameraTransform.position.z);
+            EnemyManager enemies = desiredPlayerLocation.parent.gameObject.GetComponentInChildren<EnemyManager>(true);
+            if (enemies != null) enemies.gameObject.SetActive(true);
         }
     }
 }

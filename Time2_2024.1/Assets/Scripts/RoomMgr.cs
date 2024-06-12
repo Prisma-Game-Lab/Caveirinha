@@ -17,8 +17,7 @@ public class RoomMgr : MonoBehaviour
             int rand = Random.Range(0, roomPrefabs.Length);
             GameObject room = Instantiate(roomPrefabs[rand]);
             room.transform.parent = transform.parent;
-            room.transform.Rotate(0, 0, (45 * i) + 45);
-            room.transform.Translate(0, 20, 0);
+            room.transform.Translate(20 * i, 20, 0);
 
             DoorController doorMain = doors[i].GetComponentInChildren<DoorController>(); // porta na sala principal
             DoorController doorSub = room.GetComponentInChildren<DoorController>(); // porta na sala secundaria
