@@ -12,12 +12,10 @@ public class EnemyBase1 : MonoBehaviour
     private float health;
     [SerializeField]
     private int enemyAttack;
-    SpriteRenderer sr;
 
     private void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
-        sr.color = Color.magenta;
+        
     }
 
     public void TakeDamage(float damage)

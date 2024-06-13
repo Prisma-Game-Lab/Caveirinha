@@ -12,11 +12,13 @@ public class EnemyRanged : EnemyBase1
     [SerializeField] float spellScatter;
     [SerializeField] float castingDistance;
     [SerializeField] float maxCooldown;
+    Animator ac;
     float cooldown;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        ac = GetComponent<Animator>();
         cooldown = maxCooldown;
     }
 
@@ -26,13 +28,15 @@ public class EnemyRanged : EnemyBase1
         cooldown -= Time.deltaTime;
         if (cooldown <= 0)
         {
-            shoot();
+            StartCoroutine(shoot());
             cooldown = maxCooldown;
         }
     }
 
-    void shoot()
+    IEnumerator shoot()
     {
+        ac.Play("Atirar");
+        yield return new WaitForSeconds(0.25f);
         Vector2 directionVector = player.transform.position - transform.position;
         Vector2 desiredShootVector;
         float xComponent = directionVector.x;
