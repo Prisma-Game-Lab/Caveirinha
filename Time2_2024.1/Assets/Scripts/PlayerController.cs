@@ -25,7 +25,12 @@ public class PlayerController : MonoBehaviour
     float spellCooldown;
 
     [SerializeField] float maxHealth;
-    [SerializeField] Slider healthUI;
+    [SerializeField] GameObject playerUiPrefab;
+
+    [SerializeField] float maxInvencibility;
+    float invencibilitySeconds;
+
+    Slider healthUI;
     float health;
 
 
@@ -33,6 +38,14 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
+        GameObject PlayerUIInScene = GameObject.Find("PlayerUI");
+        if (PlayerUIInScene == null) 
+        {
+            GameObject canvas = GameObject.Find("Canvas");
+            PlayerUIInScene = Instantiate(playerUiPrefab, canvas.transform);
+        }
+        healthUI = PlayerUIInScene.GetComponentInChildren<Slider>();
+        invencibilitySeconds = 2;
     }
 
     private void Update()
@@ -68,21 +81,27 @@ public class PlayerController : MonoBehaviour
 
         //Aplica a força
         rb.AddForce(speedDif * accelRate);
+
+        invencibilitySeconds -= Time.deltaTime;
     }
 
     public void TakeDamage(float damage) 
     {
-        if (health <= 1) 
+        if (invencibilitySeconds < 0) 
         {
-            Die();
-            return;
+            if (health <= 1)
+            {
+                Die();
+                return;
+            }
+            health -= damage;
+            if (health <= 1)
+            {
+                health = 1;
+            }
+            UpdateUI();
+            invencibilitySeconds = maxInvencibility;
         }
-        health -= damage;
-        if (health <= 1)
-        {
-            health = 1;
-        }
-        UpdateUI();
     }
 
     void Die() 

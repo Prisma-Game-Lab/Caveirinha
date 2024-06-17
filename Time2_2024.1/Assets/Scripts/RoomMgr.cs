@@ -24,7 +24,7 @@ public class RoomMgr : MonoBehaviour
 
             foreach (Transform tMain in doors[i].GetComponentsInChildren<Transform>())
             {
-                if (tMain.gameObject.name.Equals("PlayerTransform (2)"))
+                if (tMain.gameObject.name.Equals("TeleportDestination"))
                 {
                     foreach (Transform tSub in room.GetComponentsInChildren<Transform>())
                     {

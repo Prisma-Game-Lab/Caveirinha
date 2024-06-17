@@ -153,6 +153,8 @@ MonoBehaviour:
   spellScatter: 0.2
   spellDamage: 35
   maxHealth: 100
+  playerUiPrefab: {fileID: 2769957789313938938, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
+  maxInvencibility: 0.5
 --- !u!114 &2769258008990254913
 MonoBehaviour:
   m_ObjectHideFlags: 0
