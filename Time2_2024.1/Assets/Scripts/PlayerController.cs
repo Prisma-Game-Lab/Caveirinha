@@ -89,6 +89,9 @@ public class PlayerController : MonoBehaviour
     {
         if (invencibilitySeconds < 0) 
         {
+            int sfx = (Random.Range(1, 25));
+            string name = "DMG" + sfx.ToString();
+            AudioManager.instance.PlaySFX(name);
             if (health <= 1)
             {
                 Die();
