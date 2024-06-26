@@ -2244,7 +2244,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
+  sfxSounds:
+  - name: DMG1
+    clip: {fileID: 8300000, guid: 3ff03e0fbf2ffa64fab3814fe23addab, type: 3}
+  - name: DMG2
+    clip: {fileID: 8300000, guid: 664fee2e80ff242429116450bae5bc2e, type: 3}
+  - name: DMG3
+    clip: {fileID: 8300000, guid: 5ace3ee6fda01e541a0d61744df1b5a6, type: 3}
+  - name: DMG4
+    clip: {fileID: 8300000, guid: 1de423f722d739d4b86255fc0230ea12, type: 3}
+  - name: DMG5
+    clip: {fileID: 8300000, guid: 7d5b507fa8ff1644cb7f5b661db7c138, type: 3}
+  - name: DMG6
+    clip: {fileID: 8300000, guid: dda32c475c30e6b4492b36367b87c46f, type: 3}
   musicSource: {fileID: 1254060749}
   sfxSource: {fileID: 1334063456}
 --- !u!1 &1371117931
