@@ -37,4 +37,9 @@ public class InputManager : MonoBehaviour
             playerMovementScript.shouldShoot = true;
         }
     }
+
+    public void OnAssimilation(InputAction.CallbackContext assimilateInput)
+    {
+        playerMovementScript.Assimilate();
+    }
 }

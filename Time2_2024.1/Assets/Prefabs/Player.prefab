@@ -112,7 +112,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -149,12 +149,14 @@ MonoBehaviour:
   castingDistance: 0.6
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellSpeed: 5
-  spellFireRate: 2
   spellScatter: 0.2
-  spellDamage: 35
-  maxHealth: 100
   playerUiPrefab: {fileID: 2769957789313938938, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
   maxInvencibility: 0.5
+  selectedSoul: {fileID: 0}
+  maxHealth: 100
+  attackDamage: 35
+  attackSpeed: 2
+  health: 100
 --- !u!114 &2769258008990254913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +214,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e0936aa2-21fb-4a52-a991-e8d4ef2c3b02
     m_ActionName: Normal/Shoot[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7368506280277791282}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnAssimilation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 346fe972-a3ba-4279-a586-bf7e12964f55
+    m_ActionName: Normal/Assimilate[/Keyboard/e,/DualShock4GamepadHID/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal

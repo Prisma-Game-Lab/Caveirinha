@@ -7,6 +7,7 @@ public class RoomMgr : MonoBehaviour
 {
     public GameObject[] roomPrefabs;
     public GameObject[] doors;
+    [SerializeField] PolygonCollider2D mainCameraCollider;
     GameObject[] rooms; 
 
     // Start is called before the first frame update
@@ -17,10 +18,11 @@ public class RoomMgr : MonoBehaviour
             int rand = Random.Range(0, roomPrefabs.Length);
             GameObject room = Instantiate(roomPrefabs[rand]);
             room.transform.parent = transform.parent;
-            room.transform.Translate(20 * i, 20, 0);
+            room.transform.Translate(100 * i, 20, 0);
 
             DoorController doorMain = doors[i].GetComponentInChildren<DoorController>(); // porta na sala principal
             DoorController doorSub = room.GetComponentInChildren<DoorController>(); // porta na sala secundaria
+            PolygonCollider2D cameraCollider = room.GetComponent<PolygonCollider2D>();
 
             foreach (Transform tMain in doors[i].GetComponentsInChildren<Transform>())
             {
@@ -32,9 +34,11 @@ public class RoomMgr : MonoBehaviour
                         {
                             doorMain.desiredPlayerLocation = tSub;
                             doorMain.desiredCameraLocation = room.GetComponent<Transform>();
+                            doorMain.cameraCollider = cameraCollider;
 
                             doorSub.desiredPlayerLocation = tMain;
                             doorSub.desiredCameraLocation = transform;
+                            doorSub.cameraCollider = mainCameraCollider;
                         }
                     }
                 }

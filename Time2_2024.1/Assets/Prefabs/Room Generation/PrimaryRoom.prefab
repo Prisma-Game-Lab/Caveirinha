@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredPlayerLocation: {fileID: 0}
   desiredCameraLocation: {fileID: 0}
+  cameraCollider: {fileID: 0}
 --- !u!1 &1285147827033404375
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +313,7 @@ GameObject:
   - component: {fileID: 1158554154385876865}
   m_Layer: 0
   m_Name: UpWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -526,7 +527,7 @@ GameObject:
   - component: {fileID: 3101028306471052877}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -656,7 +657,7 @@ GameObject:
   - component: {fileID: 9056820600856408465}
   m_Layer: 0
   m_Name: UpLeftWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,7 +787,7 @@ GameObject:
   - component: {fileID: 1653541376924747136}
   m_Layer: 0
   m_Name: DownLeftWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -912,6 +913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2274395521248551336}
+  - component: {fileID: 1785081177563292600}
   m_Layer: 0
   m_Name: PrimaryRoom
   m_TagString: Untagged
@@ -938,6 +940,55 @@ Transform:
   - {fileID: 2237364013863404155}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1785081177563292600
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424476370697426282}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1, y: 1}
+      - {x: -1, y: -1}
+      - {x: 1, y: -1}
+      - {x: 1, y: 1}
+  m_UseDelaunayMesh: 0
 --- !u!1 &4600022663599663460
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +1041,7 @@ GameObject:
   - component: {fileID: 8502411043288530533}
   m_Layer: 0
   m_Name: DownRightWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1120,7 +1171,7 @@ GameObject:
   - component: {fileID: 3569290183167065688}
   m_Layer: 0
   m_Name: UpRightWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1250,7 +1301,7 @@ GameObject:
   - component: {fileID: 2243489287640506250}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1414,6 +1465,7 @@ MonoBehaviour:
   roomPrefabs:
   - {fileID: 4434839237470094874, guid: 6107478a7ae04ed41b760fe76d5a64ac, type: 3}
   - {fileID: 5454503570349562690, guid: 082d198a7cee08840b181412ff5d3f52, type: 3}
+  - {fileID: 8477505669187749100, guid: cdf303a5e86f56f44bcf8995ea521e5f, type: 3}
   doors:
   - {fileID: 5449645391769211883}
   - {fileID: 8280517495696885022}
@@ -1422,6 +1474,7 @@ MonoBehaviour:
   - {fileID: 4864751296032380892}
   - {fileID: 1159084828880189791}
   - {fileID: 1413483264853320908}
+  mainCameraCollider: {fileID: 1785081177563292600}
 --- !u!1 &6201804976408442238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,7 +1656,7 @@ GameObject:
   - component: {fileID: 867136984649300927}
   m_Layer: 0
   m_Name: DownWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

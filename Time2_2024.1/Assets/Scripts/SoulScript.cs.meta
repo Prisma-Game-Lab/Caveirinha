@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: a9f893421c3e7d44b812882d5b157382
+guid: deb47859ef452314d86880fc348cf813
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

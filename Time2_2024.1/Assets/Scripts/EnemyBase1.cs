@@ -16,6 +16,10 @@ public class EnemyBase1 : MonoBehaviour
     private float contactDamage;
     [SerializeField]
     private float knockbackStrenght;
+    [SerializeField]
+    GameObject soulObject;
+    [SerializeField]
+    int soulType;
 
     private void Awake()
     {
@@ -33,6 +37,8 @@ public class EnemyBase1 : MonoBehaviour
 
     void OnDeath()
     {
+        GameObject soul = Instantiate(soulObject, transform.position, Quaternion.identity);
+        soul.GetComponent<SoulScript>().inicialConfiguration(soulType,enemyName);
         Destroy(gameObject);
     }
 

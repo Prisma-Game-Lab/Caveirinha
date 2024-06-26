@@ -288,6 +288,7 @@ MonoBehaviour:
   enemyAttack: 50
   contactDamage: 10
   knockbackStrenght: 25
+  soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellDamage: 20
   spellSpeed: 4

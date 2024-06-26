@@ -19,20 +19,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float castingDistance;
     [SerializeField] GameObject spellObject;
     [SerializeField] float spellSpeed;
-    [SerializeField] float spellFireRate;
     [SerializeField] float spellScatter;
-    [SerializeField] float spellDamage;
     float spellCooldown;
-
-    [SerializeField] float maxHealth;
     [SerializeField] GameObject playerUiPrefab;
 
     [SerializeField] float maxInvencibility;
     float invencibilitySeconds;
 
+    public GameObject selectedSoul;
     Slider healthUI;
-    float health;
 
+    [Header("Stats")]
+    public float maxHealth;
+    public float attackDamage;
+    public float attackSpeed;
+    public float health;
 
     void Start()
     {
@@ -129,12 +130,23 @@ public class PlayerController : MonoBehaviour
         }
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * strongVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",spellDamage, spellSpeed * desiredShootVector);
-        spellCooldown = 1 / spellFireRate;
+        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector);
+        spellCooldown = 1 / attackSpeed;
+    }
+
+    public void Assimilate() 
+    {
+        if (selectedSoul != null) 
+        {
+            selectedSoul.GetComponent<SoulScript>().soulAssimilation();
+            selectedSoul = null;
+            UpdateUI();
+        }
     }
 
     void UpdateUI() 
     {
+        healthUI.maxValue = maxHealth;
         healthUI.value = health;
     }
 }
