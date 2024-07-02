@@ -384,6 +384,92 @@ Transform:
   - {fileID: 876604567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &692898100 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2172176348579321642, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+  m_PrefabInstance: {fileID: 696544475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &696544475
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363979231180543041, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Name
+      value: Boss Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880842700616217106, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880842700616217106, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880842700616217106, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2622079097726681988, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    - {fileID: 6151619498975816082, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 6661586199863688480, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+--- !u!4 &717264267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4563654408873558058, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+  m_PrefabInstance: {fileID: 696544475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876604566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1408,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: cameraCollider
+      value: 
+      objectReference: {fileID: 692898100}
+    - target: {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: desiredCameraLocation
+      value: 
+      objectReference: {fileID: 717264267}
+    - target: {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: desiredPlayerLocation
+      value: 
+      objectReference: {fileID: 717264267}
     - target: {fileID: 4424476370697426282, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Name
       value: OctaRoomTest
@@ -1450,3 +1548,4 @@ SceneRoots:
   - {fileID: 1645935429}
   - {fileID: 1955631601}
   - {fileID: 381103694}
+  - {fileID: 696544475}
