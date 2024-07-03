@@ -397,6 +397,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 234668388828877281, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 265578962814067732, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 91569f5fe5bba6d48a42753a63c8f636, type: 2}
+    - target: {fileID: 1018240885146631221, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -441,10 +453,18 @@ PrefabInstance:
       propertyPath: doors.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3976470832762744221, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_Name
       value: Boss Room
       objectReference: {fileID: 0}
+    - target: {fileID: 5680564471463406197, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 91569f5fe5bba6d48a42753a63c8f636, type: 2}
     - target: {fileID: 5880842700616217106, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_Color.b
       value: 0.5
@@ -457,9 +477,23 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6945882421622360974, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511431552842464246, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511431552842464246, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2622079097726681988, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     - {fileID: 6151619498975816082, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    - {fileID: 5680564471463406197, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    - {fileID: 8511431552842464246, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6661586199863688480, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     m_AddedGameObjects: []
