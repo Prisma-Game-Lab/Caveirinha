@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject playerUiPrefab;
 
     [SerializeField] float maxInvencibility;
-    float invencibilitySeconds;
+    public float invencibilitySeconds;
 
     public GameObject selectedSoul;
     Slider healthUI;
@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public float attackDamage;
     public float attackSpeed;
     public float health;
+
+    public bool canMove;
 
     void Start()
     {
@@ -46,7 +48,21 @@ public class PlayerController : MonoBehaviour
             PlayerUIInScene = Instantiate(playerUiPrefab, canvas.transform);
         }
         healthUI = PlayerUIInScene.GetComponentInChildren<Slider>();
+        StartCoroutine(WaitForRoomTransition(1));
+    }
+
+    public void OnDoorEnter() 
+    {
+        canMove = false;
         invencibilitySeconds = 2;
+        rb.velocity = Vector3.zero;
+        StartCoroutine(WaitForRoomTransition(1.75f));
+    }
+
+    private IEnumerator WaitForRoomTransition(float timeWaited) 
+    {
+        yield return new WaitForSeconds(timeWaited);
+        canMove = true;
     }
 
     private void Update()
@@ -63,27 +79,30 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Calcula a velocidade desejada
-        Vector2 targetSpeed = moveInputVector * moveSpeed;
-
-        //Calcula a diferenca de velocidade entre a atual e a desejada
-        Vector2 speedDif = targetSpeed - rb.velocity;
-
-        //Decide a taxa de acceleracao/desaceleracao dependendo se o player quer parar completamente
-        float accelRate;
-        if (targetSpeed.magnitude > 0.01f) 
+        if (canMove) 
         {
-            accelRate = moveAcceleration;
-        }
-        else 
-        {
-            accelRate = moveAcceleration;
-        }
+            //Calcula a velocidade desejada
+            Vector2 targetSpeed = moveInputVector * moveSpeed;
 
-        //Aplica a força
-        rb.AddForce(speedDif * accelRate);
+            //Calcula a diferenca de velocidade entre a atual e a desejada
+            Vector2 speedDif = targetSpeed - rb.velocity;
 
-        invencibilitySeconds -= Time.deltaTime;
+            //Decide a taxa de acceleracao/desaceleracao dependendo se o player quer parar completamente
+            float accelRate;
+            if (targetSpeed.magnitude > 0.01f)
+            {
+                accelRate = moveAcceleration;
+            }
+            else
+            {
+                accelRate = moveAcceleration;
+            }
+
+            //Aplica a força
+            rb.AddForce(speedDif * accelRate);
+
+            invencibilitySeconds -= Time.deltaTime;
+        }
     }
 
     public void TakeDamage(float damage) 

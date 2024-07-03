@@ -2,7 +2,6 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static SoulScript;
 
 public class DoorController : MonoBehaviour
 {
@@ -13,10 +12,10 @@ public class DoorController : MonoBehaviour
 
     GameObject cameraObject;
     CinemachineConfiner2D cameraConfiner;
-    BoxCollider2D doorCollider;
-    SpriteRenderer doorSr;
+    protected BoxCollider2D doorCollider;
+    protected SpriteRenderer doorSr;
 
-    bool locked;
+    protected bool locked;
 
     void Start()
     {
@@ -27,7 +26,7 @@ public class DoorController : MonoBehaviour
         doorSr = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    public void toggleLock() 
+    public virtual void toggleLock() 
     {
         if (locked) 
         {
@@ -47,16 +46,27 @@ public class DoorController : MonoBehaviour
         //Se o player entrar na area, teleporte ele e a camera para essas posicoes
         if (collision.CompareTag("Player")) 
         {
-            collision.transform.position = desiredPlayerLocation.position;
-            cameraConfiner.m_BoundingShape2D = cameraCollider;
-            cameraObject.transform.position = new Vector3(desiredCameraLocation.position.x,desiredCameraLocation.position.y, cameraObject.transform.position.z);
-            EnemyManager enemies = desiredPlayerLocation.parent.gameObject.GetComponentInChildren<EnemyManager>(true);
-            if (enemies != null)
-            {
-                enemies.gameObject.SetActive(true);
-                enemies.LockDoors();
-            }
-            toggleLock();
+            StartCoroutine(RoomTransition(collision.transform));
         }
+    }
+
+    private IEnumerator RoomTransition(Transform playerTransform) 
+    {
+        CanvasController.onSceneTransition();
+        PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();
+        playerScript.OnDoorEnter();
+        yield return new WaitForSeconds(1f);
+        playerTransform.position = desiredPlayerLocation.position;
+        cameraConfiner.m_BoundingShape2D = cameraCollider;
+        cameraObject.transform.position = new Vector3(desiredCameraLocation.position.x, desiredCameraLocation.position.y, cameraObject.transform.position.z);
+        EnemyManager enemies = desiredPlayerLocation.parent.gameObject.GetComponentInChildren<EnemyManager>(true);
+        if (enemies != null)
+        {
+            enemies.gameObject.SetActive(true);
+            enemies.LockDoors();
+        }
+        toggleLock();
+        yield return new WaitForSeconds(1);
+        playerScript.canMove = true;
     }
 }

@@ -6,6 +6,7 @@ public class EnemyBase1 : MonoBehaviour
 {
     [SerializeField]
     private string enemyName;
+    private string[] vectorNames = { "Adriana", "Adriano", "Agostinho", "Alan", "Alba", "Alessandra", "Alexandre", "Al Pacino", "Aline", "Amanda", "Anderson", "André", "Angélica", "Antônio", "Arnaldo", "Arthur", "Aurélio", "Barbara", "Beatriz", "Berenice", "Bernadete", "Bernardo", "Bingus", "Bin", "Bipo", "Bob", "Bonni", "Brígida", "Bruno", "Caiozinho", "Camila", "Cândido", "Carla", "Carlos", "Carolina", "Caroline", "Catarina", "Charles", "Clari", "César", "César", "Cristina", "Daniel", "Daniela", "Danilo", "Davi", "Dave", "Débora", "Delfina", "Destroyer", "Diego", "Diogo", "Dionísia", "Douglas", "Ecrenemenon", "Eduardo", "Elaine", "Eliana", "Elisa", "Enzo", "Erick", "Eusébio", "Evaristo", "Evandro", "Fabiano", "Fábio", "Fandango", "Felix", "Fernanda", "Fernando", "Firmina", "Flapio", "Flávia", "Floppa", "Flarpo", "Fibonaccio", "Freddy", "Frederico", "Francisco", "Frovio", "Gabriel", "Gabriela", "Gabrielle", "Garen", "Garpaccio", "Gartando", "Genghis Khan", "Geiso", "Geoffrey", "Geremias", "Geraldo", "Germano", "Giovanna", "Giovanni", "Gilberto", "Ginkobiloba", "Godfrey", "Gojo", "Guilherme", "Guaraci", "Haykal", "Helena", "Henrique", "Hermínia", "Hildebrando", "Higgsboson", "Hugo", "Igor", "Ingrid", "Iolanda", "Isabel", "Isabela", "Jaqueline", "Joaquim", "Joana", "Johan", "João", "Jonas", "Joshua", "Júbilo", "Juliana", "Juliano", "Júlio", "Kevin", "Karine", "Laís", "Larissa", "Leandro", "Leonardo", "Leocádia", "Letícia", "Letícia", "Lillia", "Lito", "Logarino", "Lope", "Lucas", "Luana", "Luciana", "Luisa", "Luiza", "Ludovico", "Magnus", "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Mariana", "Marina", "Mário", "Marta", "Marta", "Maurício", "Mauro", "Mazinho", "Matheus", "Miguel", "Milena", "Nana", "Natália", "Nelson", "Nelson", "Nilson", "Nicanor", "Nicolau", "Núbia", "Octávio", "Odete", "Olaso", "Orangofrango", "Orestes", "Ossozé", "Pantaleão", "Pamela", "Patricia", "Patrícia", "Patrick", "Paulo", "Pedro", "Papyrus", "Pepperonio", "Pingala", "Planilho", "Rafaela", "Rafael", "Raimunda", "Raul", "Rebeca", "Renan", "Renata", "Renato", "Riclaudio", "Robert de Niro", "Roberto", "Robson", "Rodrigo", "Rodrigo", "Rodriguez", "Ryan Gosling", "Sabrina", "Samuel", "Sandra", "Sans", "Sancho", "Santiago", "Saul", "Sergio", "Severino", "Syndra", "Tatiana", "Teodora", "Tharcísio", "Tripas", "Túlio", "Ubaldo", "Valdomiro", "Vagner", "Vinícius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley", "Xenofonte", "Yara", "Yuri", "Zagreu", "Zeferino", "Zenóbio", "Zé" };
     [SerializeField]
     private string enemyClass;
     [SerializeField]
@@ -23,7 +24,7 @@ public class EnemyBase1 : MonoBehaviour
 
     private void Awake()
     {
-        
+        enemyName = vectorNames[Random.Range(0, vectorNames.Length)];
     }
 
     public void TakeDamage(float damage)
