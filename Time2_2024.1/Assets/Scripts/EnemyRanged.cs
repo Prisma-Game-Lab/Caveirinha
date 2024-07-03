@@ -35,7 +35,7 @@ public class EnemyRanged : EnemyBase1
 
     IEnumerator shoot()
     {
-        ac.Play("Laser");
+        ac.Play("Estagiario_Atirar");
         yield return new WaitForSeconds(0.25f);
         Vector2 directionVector = (player.transform.position - transform.position).normalized;
         Vector2 desiredShootVector;
