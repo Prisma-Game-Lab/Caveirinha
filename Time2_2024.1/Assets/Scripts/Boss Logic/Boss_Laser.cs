@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss_Laser : StateMachineBehaviour
 {
@@ -24,11 +25,16 @@ public class Boss_Laser : StateMachineBehaviour
         float angle = Mathf.Atan2(player.position.y - vassoura.position.y, player.position.x - vassoura.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle+90));
         vassoura.rotation = Quaternion.RotateTowards(vassoura.rotation, targetRotation, rotation_speed * Time.deltaTime);
+
+        if (targetRotation.Equals(vassoura.rotation))
+        {
+            animator.SetTrigger("LockOn");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.ResetTrigger("LockOn");
+    }
 }
