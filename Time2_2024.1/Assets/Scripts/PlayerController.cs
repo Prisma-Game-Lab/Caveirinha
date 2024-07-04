@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour
     float spellCooldown;
     [SerializeField] GameObject playerUiPrefab;
 
-    [SerializeField] float maxInvencibility;
-    public float invencibilitySeconds;
+    [SerializeField] float starterInvencibility;
+    [SerializeField] float maxInvencibilityOnDamage;
+    [SerializeField] float maxInvencibilityOnRoomEnter;
+    float invencibilitySeconds;
 
     public GameObject selectedSoul;
     Slider healthUI;
@@ -54,7 +56,7 @@ public class PlayerController : MonoBehaviour
     public void OnDoorEnter() 
     {
         canMove = false;
-        invencibilitySeconds = 2;
+        invencibilitySeconds = maxInvencibilityOnRoomEnter;
         rb.velocity = Vector3.zero;
         StartCoroutine(WaitForRoomTransition(1.75f));
     }
@@ -123,7 +125,7 @@ public class PlayerController : MonoBehaviour
                 health = 1;
             }
             UpdateUI();
-            invencibilitySeconds = maxInvencibility;
+            invencibilitySeconds = maxInvencibilityOnDamage;
         }
     }
 

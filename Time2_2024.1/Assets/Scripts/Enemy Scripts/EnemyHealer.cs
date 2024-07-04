@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMelee : EnemyBase1
+public class EnemyHealer : EnemyBase
 {
-    //descrever funcoes da classe melee
+    //descrever funcoes da classe healer
 }
