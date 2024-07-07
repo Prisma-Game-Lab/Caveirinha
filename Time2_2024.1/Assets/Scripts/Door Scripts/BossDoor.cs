@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossDoor : DoorController
 {
-    int neededSouls = 2;
+    [SerializeField] int neededSouls = 2;
 
     private void OnEnable()
     {
