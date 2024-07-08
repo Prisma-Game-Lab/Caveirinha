@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
+        invencibilitySeconds = starterInvencibility;
         GameObject PlayerUIInScene = GameObject.Find("PlayerUI");
         if (PlayerUIInScene == null) 
         {
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
         canMove = false;
         invencibilitySeconds = maxInvencibilityOnRoomEnter;
         rb.velocity = Vector3.zero;
-        StartCoroutine(WaitForRoomTransition(1.75f));
+        StartCoroutine(WaitForRoomTransition(1.50f));
     }
 
     private IEnumerator WaitForRoomTransition(float timeWaited) 
@@ -77,6 +78,10 @@ public class PlayerController : MonoBehaviour
         else if (shouldShoot && canMove) 
         {
             CastSpell();
+        }
+        if (invencibilitySeconds > 0) 
+        {
+            invencibilitySeconds -= Time.deltaTime;
         }
     }
 
@@ -103,14 +108,12 @@ public class PlayerController : MonoBehaviour
 
             //Aplica a força
             rb.AddForce(speedDif * accelRate);
-
-            invencibilitySeconds -= Time.deltaTime;
         }
     }
 
     public void TakeDamage(float damage) 
     {
-        if (invencibilitySeconds < 0) 
+        if (invencibilitySeconds <= 0) 
         {
             int sfx = (Random.Range(1, 25));
             string name = "DMG" + sfx.ToString();

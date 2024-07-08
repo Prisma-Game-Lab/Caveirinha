@@ -91,6 +91,7 @@ public class SoulScript : MonoBehaviour
                 playerReference.attackSpeed += soulAmount;
                 break;
         }
+        GameManager.instance.RoomCleared += 1;
         onSoulAssimilation();
     }
 

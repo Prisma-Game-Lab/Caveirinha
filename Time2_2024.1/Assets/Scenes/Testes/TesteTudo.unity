@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 3229498969108425661}
-  m_Damping: 0
+  m_Damping: 0.25
   m_MaxWindowSize: -1
 --- !u!114 &71212409
 MonoBehaviour:
@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77863872dd3e85a4ea3b6231ed720c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RoomCleared: 0
 --- !u!4 &381103694
 Transform:
   m_ObjectHideFlags: 0
@@ -409,12 +410,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-      propertyPath: laserSpeed
-      value: 50
     - target: {fileID: 2017528577569526136, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: laserSpeed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,7 +1121,6 @@ MonoBehaviour:
   desiredPlayerLocation: {fileID: 717264267}
   desiredCameraLocation: {fileID: 717264267}
   cameraCollider: {fileID: 692898100}
-  neededSouls: 2
 --- !u!1 &1955631598
 GameObject:
   m_ObjectHideFlags: 0

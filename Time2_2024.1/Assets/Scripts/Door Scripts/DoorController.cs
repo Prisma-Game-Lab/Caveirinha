@@ -55,10 +55,10 @@ public class DoorController : MonoBehaviour
         CanvasController.onSceneTransition();
         PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();
         playerScript.OnDoorEnter();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.85f);
         playerTransform.position = desiredPlayerLocation.position;
         cameraConfiner.m_BoundingShape2D = cameraCollider;
-        cameraObject.transform.position = new Vector3(desiredCameraLocation.position.x, desiredCameraLocation.position.y, cameraObject.transform.position.z);
+        cameraObject.transform.position = desiredPlayerLocation.position;
         EnemyManager enemies = desiredPlayerLocation.parent.gameObject.GetComponentInChildren<EnemyManager>(true);
         if (enemies != null)
         {

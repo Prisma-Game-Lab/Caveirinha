@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BossDoor : DoorController
 {
-    [SerializeField] int neededSouls = 2;
 
     private void OnEnable()
     {
+        locked = true;
         SoulScript.onSoulAssimilation += toggleLock;
     }
 
@@ -18,14 +18,11 @@ public class BossDoor : DoorController
 
     public override void toggleLock()
     {
-        if (neededSouls <= 0) 
+        if (locked && GameManager.instance.RoomCleared >= 3) 
         {
             doorCollider.enabled = true;
             doorSr.color = Color.red;
-        }
-        else 
-        {
-            neededSouls -= 1;
+            locked = false;
         }
     }
 }

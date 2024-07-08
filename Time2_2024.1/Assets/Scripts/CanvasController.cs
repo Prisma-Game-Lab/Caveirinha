@@ -8,6 +8,7 @@ public class CanvasController : MonoBehaviour
     public GameObject circleObject;
     GameObject player;
     Animator anim;
+    bool isOnTransition;
 
     public delegate void OnSceneTransition();
     public static OnSceneTransition onSceneTransition;
@@ -29,20 +30,26 @@ public class CanvasController : MonoBehaviour
         onSceneTransition -= AnimationTransition;
     }
 
+    private void FixedUpdate()
+    {
+        if (isOnTransition) 
+        {
+            circleObject.transform.position = Camera.main.WorldToScreenPoint(player.transform.position);
+        }
+    }
+
     private IEnumerator WaitForAnimation() 
     {
-        circleObject.transform.position = Camera.main.WorldToScreenPoint(player.transform.position);
         transitionObject.SetActive(true);
-        yield return new WaitForSeconds(1.05f);
-        circleObject.transform.position = Camera.main.WorldToScreenPoint(player.transform.position);
-        anim.SetBool("LeavingScene", false);
-        yield return new WaitForSeconds(1);
+        isOnTransition = true;
+        yield return new WaitForSeconds(2);
+        isOnTransition = false;
         transitionObject.SetActive(false);
     }
 
     public void AnimationTransition() 
     {
-        anim.SetBool("LeavingScene", true);
+        anim.SetTrigger("LeavingScene");
         StartCoroutine(WaitForAnimation());
     }
 }
