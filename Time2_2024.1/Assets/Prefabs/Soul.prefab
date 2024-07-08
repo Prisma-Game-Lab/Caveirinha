@@ -147,6 +147,6 @@ MonoBehaviour:
   maxHealthUp: 50
   minAttackUp: 15
   maxAttackUp: 30
-  minAttackSpeedUp: 1
-  maxAttackSpeedUp: 4
-  attackSpeedDivider: 2
+  minAttackSpeedUp: 5
+  maxAttackSpeedUp: 10
+  attackSpeedDivider: 10
