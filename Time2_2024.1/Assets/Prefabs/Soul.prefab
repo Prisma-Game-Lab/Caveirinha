@@ -145,8 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minHealthUp: 15
   maxHealthUp: 50
-  minAttackUp: 15
-  maxAttackUp: 30
-  minAttackSpeedUp: 5
+  minAttackUp: 10
+  maxAttackUp: 25
+  minAttackSpeedUp: 4
   maxAttackSpeedUp: 10
   attackSpeedDivider: 10
