@@ -9,14 +9,12 @@ public class BossController : MonoBehaviour
     private string enemyName;
     [SerializeField]
     private string enemyClass;
-    [SerializeField]
+
     private float health;
-    [SerializeField]
     private float enemyAttack;
-    [SerializeField]
     private float contactDamage;
-    [SerializeField]
     private float knockbackStrength;
+
     [SerializeField]
     GameObject soulObject;
     [SerializeField]
@@ -44,8 +42,8 @@ public class BossController : MonoBehaviour
 
     void OnDeath()
     {
-        GameObject soul = Instantiate(soulObject, transform.position, Quaternion.identity);
-        soul.GetComponent<SoulScript>().inicialConfiguration(soulType, enemyName);
+        //GameObject soul = Instantiate(soulObject, transform.position, Quaternion.identity);
+        //soul.GetComponent<SoulScript>().inicialConfiguration(soulType, enemyName);
         Destroy(gameObject);
     }
 
