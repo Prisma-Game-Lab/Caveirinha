@@ -289,10 +289,11 @@ MonoBehaviour:
   contactDamage: 10
   knockbackStrenght: 25
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
+  soulType: 0
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellDamage: 20
   spellSpeed: 4
-  spellScatter: 0.25
+  spellScatter: 0.2
   castingDistance: 0.5
   maxCooldown: 2
 --- !u!95 &4700173020868153342
@@ -305,7 +306,7 @@ Animator:
   m_GameObject: {fileID: 6443080209051351698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31a8573bcec541046aa7bea5745502b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 50c7c15982d11284383e3ea241a017c2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

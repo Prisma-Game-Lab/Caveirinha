@@ -35,24 +35,37 @@ public class EnemyRanged : EnemyBase1
 
     IEnumerator shoot()
     {
-        ac.Play("Atirar");
+        ac.Play("Estagiario_Atirar");
         yield return new WaitForSeconds(0.25f);
-        Vector2 directionVector = player.transform.position - transform.position;
+        Vector2 directionVector = (player.transform.position - transform.position).normalized;
         Vector2 desiredShootVector;
         float xComponent = directionVector.x;
         float yComponent = directionVector.y;
-        if (Mathf.Abs(xComponent) > Mathf.Abs(yComponent))
+        if (xComponent > 0.5f)
         {
             //Shoot Horizontaly
-            directionVector = new Vector2(xComponent, 0).normalized;
-            desiredShootVector = new Vector2(directionVector.x, Random.Range(-spellScatter, spellScatter));
+            xComponent = 1;
+            directionVector.x = 1;
         }
-        else
+        else if (xComponent < -0.5f) 
+        {
+            xComponent = -1;
+            directionVector.x = -1;
+        }
+        if(yComponent > 0.5f)
         {
             //Shoot Verticaly
-            directionVector = new Vector2(0, yComponent).normalized;
-            desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter), directionVector.y);
+            yComponent = 1;
+            directionVector.y = 1;
         }
+        else if (yComponent < -0.5f)
+        {
+            //Shoot Verticaly
+            yComponent = -1;
+            directionVector.y = -1;
+        }
+        directionVector = new Vector2(xComponent,yComponent).normalized;
+        desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter) + xComponent, Random.Range(-spellScatter, spellScatter) + yComponent).normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
         invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * desiredShootVector);
