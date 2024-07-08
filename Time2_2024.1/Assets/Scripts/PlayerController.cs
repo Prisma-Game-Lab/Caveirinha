@@ -6,36 +6,39 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    //Comentario
     Rigidbody2D rb;
+    [SerializeField] GameObject playerUiPrefab;
 
     [HideInInspector] public Vector2 moveInputVector;
+    [Header("Move Stats")]
     [SerializeField] float moveSpeed;
     [SerializeField] float moveAcceleration;
     [SerializeField] float moveDesacceleration;
 
     [HideInInspector] public bool shouldShoot;
     [HideInInspector] public Vector2 shootVector;
+    [Header("Spell Stats")]
     [SerializeField] float castingDistance;
     [SerializeField] GameObject spellObject;
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     float spellCooldown;
-    [SerializeField] GameObject playerUiPrefab;
 
-    [SerializeField] float maxInvencibility;
-    public float invencibilitySeconds;
 
-    public GameObject selectedSoul;
+    [HideInInspector] public GameObject selectedSoul;
     Slider healthUI;
 
-    [Header("Stats")]
+    [Header("Combat Stats")]
+    public float health;
     public float maxHealth;
     public float attackDamage;
     public float attackSpeed;
-    public float health;
+    float invencibilitySeconds;
+    [SerializeField] float starterInvencibility;
+    [SerializeField] float maxInvencibilityOnDamage;
+    [SerializeField] float maxInvencibilityOnRoomEnter;
 
-    public bool canMove;
+    [HideInInspector] public bool canMove;
 
     void Start()
     {
@@ -54,7 +57,7 @@ public class PlayerController : MonoBehaviour
     public void OnDoorEnter() 
     {
         canMove = false;
-        invencibilitySeconds = 2;
+        invencibilitySeconds = maxInvencibilityOnRoomEnter;
         rb.velocity = Vector3.zero;
         StartCoroutine(WaitForRoomTransition(1.75f));
     }
@@ -71,7 +74,7 @@ public class PlayerController : MonoBehaviour
         {
             spellCooldown -= Time.deltaTime;
         }
-        else if (shouldShoot) 
+        else if (shouldShoot && canMove) 
         {
             CastSpell();
         }
@@ -123,7 +126,7 @@ public class PlayerController : MonoBehaviour
                 health = 1;
             }
             UpdateUI();
-            invencibilitySeconds = maxInvencibility;
+            invencibilitySeconds = maxInvencibilityOnDamage;
         }
     }
 

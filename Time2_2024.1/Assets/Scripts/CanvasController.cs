@@ -12,7 +12,6 @@ public class CanvasController : MonoBehaviour
     public delegate void OnSceneTransition();
     public static OnSceneTransition onSceneTransition;
 
-
     private void Awake()
     {
         anim = GetComponent<Animator>();

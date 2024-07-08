@@ -143,3 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb47859ef452314d86880fc348cf813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minHealthUp: 15
+  maxHealthUp: 50
+  minAttackUp: 15
+  maxAttackUp: 30
+  minAttackSpeedUp: 1
+  maxAttackSpeedUp: 4
+  attackSpeedDivider: 2

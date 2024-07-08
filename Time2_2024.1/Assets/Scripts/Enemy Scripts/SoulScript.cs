@@ -16,6 +16,14 @@ public class SoulScript : MonoBehaviour
     string[] statsName = {"Health", "Attack", "Attack Speed" };
     Color[] statsColor = { Color.green, Color.red, Color.blue };
 
+    [SerializeField] int minHealthUp;
+    [SerializeField] int maxHealthUp;
+    [SerializeField] int minAttackUp;
+    [SerializeField] int maxAttackUp;
+    [SerializeField] int minAttackSpeedUp;
+    [SerializeField] int maxAttackSpeedUp;
+    [SerializeField] int attackSpeedDivider;
+
     public delegate void OnSoulAssimilation();
     public static OnSoulAssimilation onSoulAssimilation;
 
@@ -51,16 +59,16 @@ public class SoulScript : MonoBehaviour
         switch (soulStat)
         {
             case 0:
-                soulAmount = Random.Range(15,51);
+                soulAmount = Random.Range(minHealthUp, maxHealthUp+1);
                 break;
 
             case 1:
-                soulAmount = Random.Range(15, 31);
+                soulAmount = Random.Range(minAttackUp, maxAttackUp+1);
                 break;
 
             case 2:
-                soulAmount = Random.Range(1, 5);
-                soulAmount /= 2;
+                soulAmount = Random.Range(minAttackSpeedUp, maxAttackSpeedUp);
+                soulAmount /= attackSpeedDivider;
                 break;
 
         }
