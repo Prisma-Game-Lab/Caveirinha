@@ -7,11 +7,11 @@ public class DoorController : MonoBehaviour
 {
     //Comentario
     public Transform desiredPlayerLocation;
-    public Transform desiredCameraLocation;
     public PolygonCollider2D cameraCollider;
 
     GameObject cameraObject;
     CinemachineConfiner2D cameraConfiner;
+    CinemachineFramingTransposer cinemachineTransposer;
     protected BoxCollider2D doorCollider;
     protected SpriteRenderer doorSr;
 
@@ -22,6 +22,7 @@ public class DoorController : MonoBehaviour
         //Pega uma referencia a posição da camera
         cameraObject = GameObject.FindWithTag("Cinemachine");
         cameraConfiner = cameraObject.GetComponent<CinemachineConfiner2D>();
+        cinemachineTransposer = cameraObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>();
         doorCollider = gameObject.GetComponent<BoxCollider2D>();
         doorSr = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -56,6 +57,9 @@ public class DoorController : MonoBehaviour
         PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();
         playerScript.OnDoorEnter();
         yield return new WaitForSeconds(0.85f);
+        cinemachineTransposer.m_XDamping = 0;
+        cinemachineTransposer.m_YDamping = 0;
+        cinemachineTransposer.m_ZDamping = 0;
         playerTransform.position = desiredPlayerLocation.position;
         cameraConfiner.m_BoundingShape2D = cameraCollider;
         cameraObject.transform.position = desiredPlayerLocation.position;
@@ -66,7 +70,9 @@ public class DoorController : MonoBehaviour
             enemies.LockDoors();
         }
         toggleLock();
-        yield return new WaitForSeconds(1);
-        playerScript.canMove = true;
+        yield return new WaitForSeconds(0.1f);
+        cinemachineTransposer.m_XDamping = 1;
+        cinemachineTransposer.m_YDamping = 1;
+        cinemachineTransposer.m_ZDamping = 1;
     }
 }

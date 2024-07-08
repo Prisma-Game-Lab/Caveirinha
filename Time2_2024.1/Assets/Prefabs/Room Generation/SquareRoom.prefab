@@ -987,6 +987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyRanged
       objectReference: {fileID: 0}
+    - target: {fileID: 9006526819979534148, guid: 58384914790c9974c90eaa72b123ea2f, type: 3}
+      propertyPath: soulType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1048,6 +1052,10 @@ PrefabInstance:
     - target: {fileID: 6443080209051351698, guid: 58384914790c9974c90eaa72b123ea2f, type: 3}
       propertyPath: m_Name
       value: EnemyRanged (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006526819979534148, guid: 58384914790c9974c90eaa72b123ea2f, type: 3}
+      propertyPath: soulType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1193,6 +1201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyRanged (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9006526819979534148, guid: 58384914790c9974c90eaa72b123ea2f, type: 3}
+      propertyPath: soulType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1254,6 +1266,10 @@ PrefabInstance:
     - target: {fileID: 6443080209051351698, guid: 58384914790c9974c90eaa72b123ea2f, type: 3}
       propertyPath: m_Name
       value: EnemyRanged (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006526819979534148, guid: 58384914790c9974c90eaa72b123ea2f, type: 3}
+      propertyPath: soulType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -33,11 +33,9 @@ public class RoomMgr : MonoBehaviour
                         if (tSub.gameObject.name.Equals("PlayerTransform"))
                         {
                             doorMain.desiredPlayerLocation = tSub;
-                            doorMain.desiredCameraLocation = room.GetComponent<Transform>();
                             doorMain.cameraCollider = cameraCollider;
 
                             doorSub.desiredPlayerLocation = tMain;
-                            doorSub.desiredCameraLocation = transform;
                             doorSub.cameraCollider = mainCameraCollider;
                         }
                     }
