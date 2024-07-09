@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3618274750609022443}
   - component: {fileID: -3553535790001232290}
   m_Layer: 0
-  m_Name: EnemyHealer
+  m_Name: EnemyMage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -171,7 +171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10038ef527839749bcdf67cf6961b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Juca
-  enemyClass: Healer
-  health: 200
-  enemyAttack: 10
+  health: 100
+  enemyAttack: 20
+  contactDamage: 10
+  knockbackStrenght: 25
+  soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
+  soulType: 2
+  spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+  spellDamage: 20
+  spellSpeed: 4
+  spellScatter: 0.2
+  castingDistance: 0.5
+  maxCooldown: 2

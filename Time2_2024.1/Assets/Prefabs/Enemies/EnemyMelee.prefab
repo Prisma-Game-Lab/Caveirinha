@@ -179,7 +179,7 @@ MonoBehaviour:
   contactDamage: 25
   knockbackStrenght: 25
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
-  soulType: 0
+  soulType: 1
 --- !u!114 &538601960664854071
 MonoBehaviour:
   m_ObjectHideFlags: 0
