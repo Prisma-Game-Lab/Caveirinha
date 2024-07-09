@@ -161,93 +161,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &2422890767638125073
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1077834244794486793}
-  - component: {fileID: 2902699671626733234}
-  m_Layer: 0
-  m_Name: A*
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1077834244794486793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2422890767638125073}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7630282362044573864}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2902699671626733234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2422890767638125073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  data:
-    dataString: UEsDBBQAAAgIAACwn+vd10DVWQIAABAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF9VE1z2jAQ/SuMzqVjPCEkvbVASA8kTGgmF1+EtMYaZMmjj/A1/PeuZBs7dKYnxHtvd9+uVj4ToWwFzGmzMIIvNQfyY0DCmXwbdOQzHOhWq7U4Qav5ENwVQUSj5o06oREfhTCrS3BGsJ9qK4M4QdArkWtTzvkWpto6i3BOpQWkjHYhWiF0HpAD/gwfQ8gRT+kknE54ekwGFzwyUA5MJ22FrWw4jjKvmKRlBTx47tSjtJGP6mwKu2kUwTnTUgrbWCHuWMVW11UBBkKvXFDsLJYP8gLEtnDBZT/2Nc8tuMaSoceZMDigOin5peupldTualufVPpQ5iEaqlMu/2GHo0jnRpfPbdVREiq4QrDdGz0yal1vqH149tW2V3sqd3Qj4aMA9aIXRnvFkXTGh1BvIZ11f6+NTQtguw6vrd6AvvrP1WAPl9j7YSpFuQnU97saWEsdhx0vHgxey280HNfCNikQDS7eLfyh2/7+NMSTMNYh1XSpgr2N9iZIyTzOLHTj3VQbBRFuTFegqHTHFaZxtxd4w/XK3jBPNLyUpnjDtQ/gJiTCnT5JbqiV3l8vyxZ6vwRbvHonhYLOdCBecE5TrVS9X/2ZtGFrb3LKemFbL/jX1SKUsvFkkt/R0X0yeUjYkE3SJGVpSsebcZrfcxJ3Tyjsk8pVbbQZD96a6pIr3LP2AzJYGFrFXeeG7hfiVOreyIXK9ZoZAPVaZ7gaB4NF8EnyORc4oDU4J1S8b3LOiNRsBzy7Jspip/ODMzTrsmSkEp/aBSQj0/jFyEiAr7u8MvApYB+Kt8ku5PIXUEsDBBQAAAgIAACwn+uvO12PbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSYmKyqbl5mkmioZmBuYVBsm6yuZGBUbKRUaJpkqlRmlmKUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACwn+vd10DVWQIAABAFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACwn+uvO12PbQAAAHgAAAAJACQAAAAAAAAAAAAAAKYCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAXgMAAAAA
-    upgradeData: 
-    file_cachedStartup: {fileID: 0}
-    data_cachedStartup: 
-    cacheStartup: 0
-  showNavGraphs: 1
-  showUnwalkableNodes: 1
-  debugMode: 0
-  debugFloor: 0
-  debugRoof: 1
-  manualDebugFloorRoof: 0
-  showSearchTree: 0
-  unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
-  maxNearestNodeDistance: 100
-  scanOnStartup: 1
-  fullGetNearestSearch: 0
-  prioritizeGraphs: 0
-  prioritizeGraphsLimit: 1
-  colorSettings:
-    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
-    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
-    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
-    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
-    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
-    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
-    _AreaColors:
-    - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
-  heuristic: 2
-  heuristicScale: 1
-  threadCount: 1
-  maxFrameTime: 10
-  batchGraphUpdates: 0
-  graphUpdateBatchingInterval: 0.2
-  euclideanEmbedding:
-    mode: 0
-    seed: 0
-    pivotPointRoot: {fileID: 0}
-    spreadOutCount: 1
-  showGraphs: 1
 --- !u!1 &4945827052702927709
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +223,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1077834244794486793}
   - {fileID: 6658426490526668177}
   - {fileID: 7630645962817619734}
   - {fileID: 4636098243489436205}
@@ -855,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredPlayerLocation: {fileID: 0}
   cameraCollider: {fileID: 0}
+  tipo: 0
 --- !u!1 &7793374363226173030
 GameObject:
   m_ObjectHideFlags: 0
