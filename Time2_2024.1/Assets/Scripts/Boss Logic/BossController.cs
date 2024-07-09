@@ -9,11 +9,13 @@ public class BossController : MonoBehaviour
     private string enemyName;
     [SerializeField]
     private string enemyClass;
+    [SerializeField]
+    private float baseHealth;
+    [SerializeField]
+    public float baseLaser;
 
-    private float health;
-    private float enemyAttack;
-    private float contactDamage;
-    private float knockbackStrength;
+    public float health;
+    public float laserDamage;
 
     [SerializeField]
     GameObject soulObject;
@@ -26,9 +28,26 @@ public class BossController : MonoBehaviour
 
     GameObject laser;
 
-    private void Awake()
+    private void Start()
     {
-
+        int rooms = GameObject.Find("GameManager").GetComponent<GameManager>().RoomCleared;
+        
+        // Se um case nao termina com break a execucao continua lendo o case abaixo
+        // Nesse caso, os cases 0 a 2 executam o codigo do case 3, ja que todos tem os mesmos stats
+        switch (rooms)
+        {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                health = baseHealth;
+                laserDamage = baseLaser;
+                break;
+            default:
+                health = baseHealth * Mathf.Log(rooms, 2.3f);
+                laserDamage = baseLaser * Mathf.Pow(1.03f,rooms);
+                break;
+        }
     }
 
     public void TakeDamage(float damage)
