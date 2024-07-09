@@ -158,7 +158,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-3553535790001232290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10038ef527839749bcdf67cf6961b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Juca
-  enemyClass: Healer
   health: 200
   enemyAttack: 10
+  contactDamage: 0
+  knockbackStrenght: 0
+  soulObject: {fileID: 0}
+  soulType: 0

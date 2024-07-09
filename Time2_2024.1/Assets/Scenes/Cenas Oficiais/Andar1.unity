@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -871,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -883,15 +883,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -923,11 +923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7824493753650523135, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1203,7 +1203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredPlayerLocation: {fileID: 717264267}
   cameraCollider: {fileID: 692898100}
-  tipo: 0
 --- !u!1 &1955631598
 GameObject:
   m_ObjectHideFlags: 0

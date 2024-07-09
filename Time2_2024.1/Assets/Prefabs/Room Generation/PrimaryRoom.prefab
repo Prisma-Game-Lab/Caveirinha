@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2294229955696114489}
   - component: {fileID: 7899858898625025694}
   - component: {fileID: 1068407261304608302}
-  - component: {fileID: 3981160222464489598}
+  - component: {fileID: 5464198927689071861}
   m_Layer: 8
   m_Name: DoorSprite
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.043137252, b: 0.07877678, a: 1}
+  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,7 +93,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041657138747518054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 1.8372256}
   m_EdgeRadius: 0
---- !u!114 &3981160222464489598
+--- !u!114 &5464198927689071861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +140,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1041657138747518054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1755621eefb18144c8199ce9852d9291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   desiredPlayerLocation: {fileID: 0}
-  desiredCameraLocation: {fileID: 0}
   cameraCollider: {fileID: 0}
 --- !u!1 &1285147827033404375
 GameObject:
@@ -984,10 +983,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1, y: 1}
-      - {x: -1, y: -1}
-      - {x: 1, y: -1}
-      - {x: 1, y: 1}
+    - - {x: -3.25, y: 3.25}
+      - {x: -3.25, y: -3.25}
+      - {x: 3.25, y: -3.25}
+      - {x: 3.25, y: 3.25}
   m_UseDelaunayMesh: 0
 --- !u!1 &4600022663599663460
 GameObject:
