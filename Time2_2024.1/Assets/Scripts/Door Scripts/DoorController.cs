@@ -9,9 +9,6 @@ public class DoorController : MonoBehaviour
     public Transform desiredPlayerLocation;
     public PolygonCollider2D cameraCollider;
 
-    [SerializeField]
-    private int tipo;
-
     GameObject cameraObject;
     CinemachineConfiner2D cameraConfiner;
     CinemachineFramingTransposer cinemachineTransposer;
@@ -34,11 +31,8 @@ public class DoorController : MonoBehaviour
     {
         if (locked)
         {
-            if (tipo == 0)
-            {
-                doorCollider.enabled = true;
-                doorSr.color = Color.yellow;
-            }
+            doorCollider.enabled = true;
+            doorSr.color = Color.yellow;
         }
         else 
         {
