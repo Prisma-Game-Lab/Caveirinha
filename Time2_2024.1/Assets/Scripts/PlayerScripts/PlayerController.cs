@@ -7,16 +7,23 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] GameObject playerUiPrefab;
+
+    PlayerUIController playerUIController;
+    [HideInInspector] public GameObject selectedSoul;
+
+    public bool[] avaiableItems;
+    private int selectedItem = 0;
 
     [HideInInspector] public Vector2 moveInputVector;
+    [HideInInspector] public bool shouldShoot;
+    [HideInInspector] public Vector2 shootVector;
+
     [Header("Move Stats")]
     [SerializeField] float moveSpeed;
     [SerializeField] float moveAcceleration;
     [SerializeField] float moveDesacceleration;
 
-    [HideInInspector] public bool shouldShoot;
-    [HideInInspector] public Vector2 shootVector;
+
     [Header("Spell Stats")]
     [SerializeField] float castingDistance;
     [SerializeField] GameObject spellObject;
@@ -24,20 +31,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float spellScatter;
     float spellCooldown;
 
-
-    [HideInInspector] public GameObject selectedSoul;
-    Slider healthUI;
-
     [Header("Combat Stats")]
     public float health;
     public float maxHealth;
     public float attackDamage;
     public float attackSpeed;
-    float invencibilitySeconds;
     [SerializeField] float starterInvencibility;
     [SerializeField] float maxInvencibilityOnDamage;
     [SerializeField] float maxInvencibilityOnRoomEnter;
 
+    [Header("Item Stats")]
+    [SerializeField] float potionHealing;
+
+    float invencibilitySeconds;
     [HideInInspector] public bool canMove;
 
     void Start()
@@ -45,13 +51,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
         invencibilitySeconds = starterInvencibility;
-        GameObject PlayerUIInScene = GameObject.Find("PlayerUI");
-        if (PlayerUIInScene == null) 
-        {
-            GameObject canvas = GameObject.Find("Canvas");
-            PlayerUIInScene = Instantiate(playerUiPrefab, canvas.transform);
-        }
-        healthUI = PlayerUIInScene.GetComponentInChildren<Slider>();
+        playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
+        UpdateUI();
         StartCoroutine(WaitForRoomTransition(1));
     }
 
@@ -172,9 +173,52 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ChangeItemSelected() 
+    {
+        int i = selectedItem+1;
+        i = i % (avaiableItems.Length);
+        while (true) 
+        {
+            if (avaiableItems[i]) 
+            {
+                selectedItem = i;
+                break;
+            }
+            i++;
+            i = i % (avaiableItems.Length);
+        }
+        UpdateUI();
+    }
+
+    public void UseItem() 
+    {
+        switch (selectedItem)
+        {
+            case 0:
+                //Unused Potion
+                health += potionHealing;
+                avaiableItems[0] = false;
+                avaiableItems[1] = true;
+                selectedItem = 1;
+                break;
+
+            case 1:
+                //Used Potion
+                break;
+
+            case 2:
+                //Broom
+                break;
+
+            case 3:
+                //Bucket
+                break;
+        }
+        UpdateUI();
+    }
+
     void UpdateUI() 
     {
-        healthUI.maxValue = maxHealth;
-        healthUI.value = health;
+        playerUIController.UpdateUI(maxHealth, health, attackDamage, attackSpeed, selectedItem);
     }
 }

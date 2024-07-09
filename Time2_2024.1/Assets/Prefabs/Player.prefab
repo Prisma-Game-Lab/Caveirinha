@@ -140,18 +140,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33f46f8b820de64e822e796e8ef8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUiPrefab: {fileID: 2769957789313938938, guid: c15cb3877ff3e3e4ab94d6b73b46e6e5, type: 3}
+  selectedSoul: {fileID: 0}
+  avaiableItems: 01000100
   moveInputVector: {x: 0, y: 0}
+  shouldShoot: 0
+  shootVector: {x: 0, y: 0}
   moveSpeed: 5.25
   moveAcceleration: 10
   moveDesacceleration: 8
-  shouldShoot: 0
-  shootVector: {x: 0, y: 0}
   castingDistance: 0.6
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellSpeed: 5
   spellScatter: 0.2
-  selectedSoul: {fileID: 0}
   health: 100
   maxHealth: 100
   attackDamage: 35
@@ -159,6 +159,7 @@ MonoBehaviour:
   starterInvencibility: 5
   maxInvencibilityOnDamage: 2
   maxInvencibilityOnRoomEnter: 3
+  potionHealing: 50
   canMove: 0
 --- !u!114 &2144826358682729720
 MonoBehaviour:
@@ -233,6 +234,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 346fe972-a3ba-4279-a586-bf7e12964f55
     m_ActionName: Normal/Assimilate[/Keyboard/e,/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 332292834312830547}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnItemChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae4d0459-72a4-4115-9ee5-d09a3b3ac73f
+    m_ActionName: Normal/Change Item[/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 332292834312830547}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3c6bda5a-ff9f-4cec-809f-c9695df9b8a1
+    m_ActionName: Normal/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal

@@ -42,4 +42,20 @@ public class InputManager : MonoBehaviour
     {
         playerMovementScript.Assimilate();
     }
+
+    public void OnItemChange(InputAction.CallbackContext itemInput) 
+    {
+        if (itemInput.performed) 
+        {
+            playerMovementScript.ChangeItemSelected();
+        }
+    }
+
+    public void UseItem(InputAction.CallbackContext itemInput)
+    {
+        if (itemInput.performed)
+        {
+            playerMovementScript.UseItem();
+        }
+    }
 }
