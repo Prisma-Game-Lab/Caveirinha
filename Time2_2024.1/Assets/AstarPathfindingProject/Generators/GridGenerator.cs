@@ -233,8 +233,8 @@ namespace Pathfinding {
 		[JsonMember]
 		public Vector3 center;
 
-		/// <summary>Size of the grid. Might be negative or smaller than <see cref="nodeSize"/></summary>
-		[JsonMember]
+            /// <summary>Size of the grid. Might be negative or smaller than <see cref="nodeSize"/></summary>
+            [JsonMember]
 		public Vector2 unclampedSize;
 
 		/// <summary>

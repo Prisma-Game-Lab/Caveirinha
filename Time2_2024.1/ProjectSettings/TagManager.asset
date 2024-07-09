@@ -8,6 +8,7 @@ TagManager:
   - Soul
   - Wall
   - Cinemachine
+  - Path
   layers:
   - Default
   - TransparentFX
