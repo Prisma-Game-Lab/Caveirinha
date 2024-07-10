@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpellScript : MonoBehaviour
 {
-    float damage;
-    string targetTag;
+    protected float damage;
+    public string targetTag;
 
-    public void SetUp(string enemyTag,float spellDamage, Vector2 speed) 
+    public void SetUp(string enemyTag,float spellDamage, Vector2 speed, float destructionTimer) 
     {
         damage = spellDamage;
-        Destroy(gameObject, 10);
+        Destroy(gameObject, destructionTimer);
         GetComponent<Rigidbody2D>().velocity = speed;
         targetTag = enemyTag;
         if (targetTag == "Player") 

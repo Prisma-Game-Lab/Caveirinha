@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: -8924393176489594017}
   - component: {fileID: 3842000942583254947}
   - component: {fileID: 8999342297717664306}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyRanged
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -295,6 +295,7 @@ MonoBehaviour:
   spellDamage: 20
   spellSpeed: 4
   spellScatter: 0.2
+  spellDestructionTimer: 3
   castingDistance: 0.5
   maxCooldown: 2
 --- !u!95 &4700173020868153342

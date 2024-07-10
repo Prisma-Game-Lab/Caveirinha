@@ -108,12 +108,6 @@ public class SoulScript : MonoBehaviour
             {
                 playerReference = collision.gameObject.GetComponent<PlayerController>();
             }
-            playerReference.selectedSoul = gameObject;
-            updateUIPos();
-            soulUIText[0].text = soulName;
-            soulUIText[1].color = statsColor[soulStat];
-            soulUIText[1].text = $"{statsName[soulStat]} +{soulAmount}";
-            canvasGroupRef.alpha = 1;
         }
     }
 
@@ -121,7 +115,23 @@ public class SoulScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) 
         {
-            updateUIPos();
+            float distanceToPlayer = Mathf.Sqrt(Mathf.Pow(transform.position.x - playerReference.transform.position.x, 2) + Mathf.Pow(transform.position.y - playerReference.transform.position.y, 2));
+            print(distanceToPlayer);
+            if(playerReference.selectedSoul == gameObject) 
+            {
+                playerReference.selectedSoulDistance = distanceToPlayer;
+                updateUIPos();
+                return;
+            }
+            if(playerReference.selectedSoulDistance > distanceToPlayer || playerReference.selectedSoul == null) 
+            {
+                playerReference.selectedSoul = gameObject;
+                soulUIText[0].text = soulName;
+                soulUIText[1].color = statsColor[soulStat];
+                soulUIText[1].text = $"{statsName[soulStat]} +{soulAmount}"; 
+                canvasGroupRef.alpha = 1;
+                updateUIPos();
+            }
         }
     }
 

@@ -10,6 +10,7 @@ public class EnemyRanged : EnemyBase
     [SerializeField] float spellDamage;
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
+    [SerializeField] float spellDestructionTimer;
     [SerializeField] float castingDistance;
     [SerializeField] float maxCooldown;
     Animator ac;
@@ -68,6 +69,6 @@ public class EnemyRanged : EnemyBase
         desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter) + xComponent, Random.Range(-spellScatter, spellScatter) + yComponent).normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * desiredShootVector);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * desiredShootVector, spellDestructionTimer);
     }
 }

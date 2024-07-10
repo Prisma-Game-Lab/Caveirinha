@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7968076277286018682}
   - component: {fileID: 3618274750609022443}
   - component: {fileID: -3553535790001232290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyMage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -183,3 +183,4 @@ MonoBehaviour:
   spellScatter: 0.2
   castingDistance: 0.5
   maxCooldown: 2
+  spellDestructionTime: 60

@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Cinemachine
   - Path
+  - Spell
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Spell
   - Doors
   - EnemyCollider
-  - 
+  - EnemyTrigger
   - 
   - 
   - 

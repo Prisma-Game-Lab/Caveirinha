@@ -398,6 +398,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30831314452504500, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: enemyType
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 234668388828877281, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -413,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 2017528577569526136, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: laserDestructionTime
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2414696601327375404, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1184,25 +1192,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1853919537 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1041657138747518054, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-  m_PrefabInstance: {fileID: 3229498969108425660}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1853919542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853919537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1755621eefb18144c8199ce9852d9291, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredPlayerLocation: {fileID: 717264267}
-  cameraCollider: {fileID: 692898100}
 --- !u!1 &1955631598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1546,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: broomDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: broomVisual
+      value: 
+      objectReference: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: broomCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: broomHitboxSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: spellDestructionTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: broomLayerMask.m_Bits
+      value: 1152
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: deflectedProjectileSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1574,14 +1591,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2274395521248551336, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1622,42 +1631,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: cameraCollider
-      value: 
-      objectReference: {fileID: 692898100}
-    - target: {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: desiredCameraLocation
-      value: 
-      objectReference: {fileID: 717264267}
-    - target: {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: desiredPlayerLocation
-      value: 
-      objectReference: {fileID: 717264267}
     - target: {fileID: 4424476370697426282, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Name
       value: OctaRoomTest
       objectReference: {fileID: 0}
-    - target: {fileID: 7899858898625025694, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: m_Color.b
-      value: 0.31132078
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899858898625025694, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: m_Color.g
-      value: 0.31132078
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899858898625025694, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      propertyPath: m_Color.r
-      value: 0.31132078
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3981160222464489598, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: cameraCollider
+      value: 
+      objectReference: {fileID: 692898100}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: desiredPlayerLocation
+      value: 
+      objectReference: {fileID: 717264267}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1041657138747518054, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1853919542}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
 --- !u!60 &3229498969108425661 stripped
 PolygonCollider2D:

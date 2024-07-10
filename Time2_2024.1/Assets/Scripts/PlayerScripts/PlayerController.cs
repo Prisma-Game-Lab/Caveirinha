@@ -1,5 +1,7 @@
+using Pathfinding.Util;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     PlayerUIController playerUIController;
     [HideInInspector] public GameObject selectedSoul;
+    [HideInInspector] public float selectedSoulDistance;
 
     public bool[] avaiableItems;
     private int selectedItem = 0;
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject spellObject;
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
+    [SerializeField] float spellDestructionTime;
     float spellCooldown;
 
     [Header("Combat Stats")]
@@ -41,13 +45,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxInvencibilityOnRoomEnter;
 
     [Header("Item Stats")]
-    [SerializeField] float potionHealing;
+    [SerializeField] private float potionHealing;
+    [SerializeField] private float broomDamage;
+    [SerializeField] private float broomCooldown;
+    [SerializeField] private float broomHitboxSize;
+    [SerializeField] private LayerMask broomLayerMask;
+    [SerializeField] private GameObject broomVisual;
+    [SerializeField] private float deflectedProjectileSpeed;
+    private float itemCooldown;
 
     float invencibilitySeconds;
     [HideInInspector] public bool canMove;
 
     void Start()
     {
+        selectedSoulDistance = 69;
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
         invencibilitySeconds = starterInvencibility;
@@ -83,6 +95,10 @@ public class PlayerController : MonoBehaviour
         if (invencibilitySeconds > 0) 
         {
             invencibilitySeconds -= Time.deltaTime;
+        }
+        if (itemCooldown > 0)
+        {
+            itemCooldown -= Time.deltaTime;
         }
     }
 
@@ -159,7 +175,7 @@ public class PlayerController : MonoBehaviour
         }
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * strongVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector,spellDestructionTime);
         spellCooldown = 1 / attackSpeed;
     }
 
@@ -192,11 +208,19 @@ public class PlayerController : MonoBehaviour
 
     public void UseItem() 
     {
+        if(itemCooldown > 0) 
+        {
+            return;
+        }
         switch (selectedItem)
         {
             case 0:
                 //Unused Potion
                 health += potionHealing;
+                if(health > maxHealth) 
+                {
+                    health = maxHealth;
+                }
                 avaiableItems[0] = false;
                 avaiableItems[1] = true;
                 selectedItem = 1;
@@ -208,6 +232,35 @@ public class PlayerController : MonoBehaviour
 
             case 2:
                 //Broom
+                Destroy(Instantiate(broomVisual,transform.position,Quaternion.identity),0.5f);
+                RaycastHit2D[] objectsHit = Physics2D.CircleCastAll(transform.position,broomHitboxSize,Vector2.zero,0,broomLayerMask);
+                foreach (var item in objectsHit)
+                {
+                    GameObject hitObject = item.transform.gameObject;
+                    string collisionTag = hitObject.tag;
+                    switch (collisionTag)
+                    {
+                        case "Enemy":
+                            EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
+                            if (enemy != null)
+                            {
+                                enemy.TakeDamage(broomDamage);
+                            }
+                            else
+                            {
+                                hitObject.GetComponent<BossController>().TakeDamage(broomDamage);
+                            }
+                            break;
+
+                        case "Spell":
+                            SpellScript spellScript = hitObject.GetComponent<SpellScript>();
+                            Rigidbody2D spellRigidBody = hitObject.GetComponent<Rigidbody2D>();
+                            spellScript.targetTag = "Enemy";
+                            spellRigidBody.velocity = deflectedProjectileSpeed * (spellRigidBody.transform.position - transform.position).normalized;
+                            break;
+                    }
+                }
+                itemCooldown = broomCooldown;
                 break;
 
             case 3:
@@ -220,5 +273,10 @@ public class PlayerController : MonoBehaviour
     void UpdateUI() 
     {
         playerUIController.UpdateUI(maxHealth, health, attackDamage, attackSpeed, selectedItem);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position,broomHitboxSize);
     }
 }

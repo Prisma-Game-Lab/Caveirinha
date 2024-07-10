@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class LaserScript : SpellScript
 {
-    float damage;
-    string targetTag;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string collisionTag = collision.gameObject.tag;

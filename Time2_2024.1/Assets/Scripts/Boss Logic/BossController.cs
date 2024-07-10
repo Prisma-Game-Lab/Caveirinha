@@ -25,28 +25,42 @@ public class BossController : MonoBehaviour
     GameObject laserObject;
     [SerializeField]
     float laserSpeed;
+    //So pro setup
+    [SerializeField]
+    float laserDestructionTime;
 
     GameObject laser;
 
     private void Start()
     {
-        int rooms = GameObject.Find("GameManager").GetComponent<GameManager>().RoomCleared;
+        int rooms = GameManager.instance.RoomCleared;
         
         // Se um case nao termina com break a execucao continua lendo o case abaixo
         // Nesse caso, os cases 0 a 2 executam o codigo do case 3, ja que todos tem os mesmos stats
-        switch (rooms)
+
+        //switch (rooms)
+        //{
+        //    case 0:
+        //    case 1:
+        //    case 2:
+        //    case 3:
+        //        health = baseHealth;
+        //        laserDamage = baseLaser;
+        //        break;
+        //    default:
+        //        health = baseHealth * Mathf.Log(rooms, 2.3f);
+        //        laserDamage = baseLaser * Mathf.Pow(1.03f,rooms);
+        //        break;
+        //}
+
+        // Esse if é melhor, nao?
+
+        health = baseHealth;
+        laserDamage = baseLaser;
+        if (rooms > 3) 
         {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-                health = baseHealth;
-                laserDamage = baseLaser;
-                break;
-            default:
-                health = baseHealth * Mathf.Log(rooms, 2.3f);
-                laserDamage = baseLaser * Mathf.Pow(1.03f,rooms);
-                break;
+            health = baseHealth * Mathf.Log(rooms, 2.3f);
+            laserDamage = baseLaser * Mathf.Pow(1.03f, rooms);
         }
     }
 
@@ -74,7 +88,7 @@ public class BossController : MonoBehaviour
 
         Vector2 targetVector = vassoura.up * -1;
         laser = Instantiate(laserObject, vassoura.position, vassoura.rotation);
-        laser.GetComponent<SpellScript>().SetUp("Player", spellDamage, targetVector * laserSpeed);
+        laser.GetComponent<SpellScript>().SetUp("Player", spellDamage, targetVector * laserSpeed,laserDestructionTime);
     }
 
     void destroyLaser()
