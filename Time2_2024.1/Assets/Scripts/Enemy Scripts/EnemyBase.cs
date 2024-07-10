@@ -9,7 +9,7 @@ public class EnemyBase : MonoBehaviour
     private string[] vectorNames = { "Adriana", "Adriano", "Agostinho", "Alan", "Alba", "Alessandra", "Alexandre",
                                      "Al Pacino", "Aline", "Amanda", "Anderson", "André", "Angélica", "Antônio",
                                      "Arnaldo", "Arthur", "Aurélio", "Barbara", "Beatriz", "Berenice", "Bernadete",
-                                     "Bernardo", "Bingus", "Bin", "Bipo", "Bob", "Bonni", "Brígida", "Bruno", 
+                                     "Bernardo", "Bingus", "Bini", "Bipo", "Bob", "Bonni", "Brígida", "Bruno", 
                                      "Caiozinho", "Camila", "Cândido", "Carla", "Carlos", "Carolina", "Caroline",
                                      "Catarina", "Charles", "Clari", "César", "César", "Cristina", "Daniel", 
                                      "Daniela", "Danilo", "Davi", "Dave", "Débora", "Delfina", "Destroyer", "Diego", 
@@ -19,10 +19,10 @@ public class EnemyBase : MonoBehaviour
                                      "Flarpo", "Fibonaccio", "Freddy", "Frederico", "Francisco", "Frovio", "Gabriel", 
                                      "Gabriela", "Gabrielle", "Garen", "Garpaccio", "Gartando", "Genghis Khan", "Geiso", 
                                      "Geoffrey", "Geremias", "Geraldo", "Germano", "Giovanna", "Giovanni", "Gilberto", 
-                                     "Ginkobiloba", "Godfrey", "Gojo", "Guilherme", "Guaraci", "Haykal", "Helena", 
+                                     "Ginkobiloba", "Godfrey", "Gojo", "Guilherme", "Guaraci", "Hannah", "Haykal", "Helena", 
                                      "Henrique", "Hermínia", "Hildebrando", "Higgsboson", "Hugo", "Igor", "Ingrid", 
                                      "Iolanda", "Isabel", "Isabela", "Jaqueline", "Joaquim", "Joana", "Johan", "João", 
-                                     "Jonas", "Joshua", "Júbilo", "Juliana", "Juliano", "Júlio", "Kevin", "Karine", 
+                                     "Jonas", "Joshua", "Júbilo", "Juliana", "Juliano", "Júlio", "Ken", "Kevin", "Karine", 
                                      "Laís", "Larissa", "Leandro", "Leonardo", "Leocádia", "Letícia", "Lillia", "Lito",
                                      "Logarino", "Lope", "Lucas", "Luana", "Luciana", "Luisa", "Luiza", "Ludovico", "Magnus",
                                      "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Marina", "Mário", 
@@ -32,10 +32,10 @@ public class EnemyBase : MonoBehaviour
                                      "Patrícia", "Patrick", "Paulo", "Pedro", "Papyrus", "Pepperonio", "Pingala", "Planilho", 
                                      "Rafaela", "Rafael", "Raimunda", "Raul", "Rebeca", "Renan", "Renata", "Renato", "Riclaudio",
                                      "Robert de Niro", "Roberto", "Robson", "Rodrigo", "Rodrigo", "Rodriguez", "Ryan Gosling",
-                                     "Sabrina", "Samuel", "Sandra", "Sans", "Sancho", "Santiago", "Saul", "Sergio", "Severino",
+                                     "Sabrina", "Samuel", "Sandra", "Sans", "Sancho", "Santiago", "Saul", "Sergio", "Severino", "Shaka", "Suzy",
                                      "Syndra", "Tatiana", "Teodora", "Tharcísio", "Tripas", "Túlio", "Ubaldo", "Valdomiro", "Vagner",
                                      "Vinícius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
-                                     "Xenofonte", "Yara", "Yuri", "Zagreu", "Zeferino", "Zenóbio", "Zé" };
+                                     "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenóbio", "Zé" };
 
     [SerializeField]
     private float health;

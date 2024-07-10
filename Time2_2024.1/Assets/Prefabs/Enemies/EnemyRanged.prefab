@@ -293,9 +293,9 @@ MonoBehaviour:
   soulType: 0
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellDamage: 20
-  spellSpeed: 4
+  spellSpeed: 5
   spellScatter: 0.2
-  spellDestructionTimer: 3
+  spellDestructionTimer: 2.5
   castingDistance: 0.5
   maxCooldown: 2
 --- !u!95 &4700173020868153342

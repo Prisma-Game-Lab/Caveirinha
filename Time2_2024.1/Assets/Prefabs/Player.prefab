@@ -153,7 +153,7 @@ MonoBehaviour:
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellSpeed: 5
   spellScatter: 0.2
-  spellDestructionTime: 3
+  spellDestructionTime: 1.35
   health: 100
   maxHealth: 100
   attackDamage: 35
@@ -167,9 +167,9 @@ MonoBehaviour:
   broomHitboxSize: 2
   broomLayerMask:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 128
   broomVisual: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
-  deflectedProjectileSpeed: 5
+  deflectedProjectileSpeed: 7
   canMove: 0
 --- !u!114 &2144826358682729720
 MonoBehaviour:
