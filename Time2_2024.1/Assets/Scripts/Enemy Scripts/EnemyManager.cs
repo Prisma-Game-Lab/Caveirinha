@@ -7,7 +7,7 @@ public class EnemyManager : MonoBehaviour
     public delegate void OnRoomCleared();
     public static OnRoomCleared onRoomCleared;
     [SerializeField] DoorController[] doors;
-
+    public string enemyType;
     bool roomNotCleared;
 
     // Start is called before the first frame update
@@ -28,6 +28,10 @@ public class EnemyManager : MonoBehaviour
 
     public void LockDoors() 
     {
+        if (enemyType == "Boss")
+        {
+            return;
+        }
         foreach(DoorController door in doors) 
         {
             door.toggleLock();
