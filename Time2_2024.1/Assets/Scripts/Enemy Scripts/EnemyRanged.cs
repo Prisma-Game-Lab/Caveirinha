@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyRanged : EnemyBase
@@ -26,8 +27,10 @@ public class EnemyRanged : EnemyBase
     // Update is called once per frame
     void Update()
     {
+        float distanceX = System.Math.Abs(player.transform.position.x - gameObject.transform.position.x);
+        float distanceY = System.Math.Abs(player.transform.position.y - gameObject.transform.position.y);
         cooldown -= Time.deltaTime;
-        if (cooldown <= 0)
+        if (cooldown <= 0 && distanceX < 5 && distanceY < 6) 
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;
