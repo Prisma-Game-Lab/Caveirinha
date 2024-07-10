@@ -1546,34 +1546,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: broomDamage
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: broomVisual
-      value: 
-      objectReference: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: broomCooldown
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: broomHitboxSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: spellDestructionTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: broomLayerMask.m_Bits
-      value: 1152
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-      propertyPath: deflectedProjectileSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: m_Name
       value: Player

@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedSoul: {fileID: 0}
+  selectedSoulDistance: 0
   avaiableItems: 01000100
   moveInputVector: {x: 0, y: 0}
   shouldShoot: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellSpeed: 5
   spellScatter: 0.2
+  spellDestructionTime: 3
   health: 100
   maxHealth: 100
   attackDamage: 35
@@ -160,6 +162,14 @@ MonoBehaviour:
   maxInvencibilityOnDamage: 2
   maxInvencibilityOnRoomEnter: 3
   potionHealing: 50
+  broomDamage: 20
+  broomCooldown: 5
+  broomHitboxSize: 2
+  broomLayerMask:
+    serializedVersion: 2
+    m_Bits: 1152
+  broomVisual: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
+  deflectedProjectileSpeed: 5
   canMove: 0
 --- !u!114 &2144826358682729720
 MonoBehaviour:
