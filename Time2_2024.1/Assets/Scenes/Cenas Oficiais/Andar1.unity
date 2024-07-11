@@ -290,18 +290,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3420973812181376497, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3976470832762744221, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4004559840148355443, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229313011776422465, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-      propertyPath: roomsNeeded
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -683,18 +675,6 @@ PrefabInstance:
     - target: {fileID: 8511431552842464246, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_Animations.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150382089070173879, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-      propertyPath: m_Color.b
-      value: 0.3018868
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150382089070173879, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-      propertyPath: m_Color.g
-      value: 0.3018868
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150382089070173879, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-      propertyPath: m_Color.r
-      value: 0.3018868
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2622079097726681988, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -1714,7 +1694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7593336733982146382, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: PathFinding
