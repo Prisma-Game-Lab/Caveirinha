@@ -75,6 +75,11 @@ public class BossController : MonoBehaviour
         Destroy(laser);
     }
 
+    void playSound(string sfx)
+    {
+        AudioManager.instance.PlaySFX(sfx);
+    }
+
     /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

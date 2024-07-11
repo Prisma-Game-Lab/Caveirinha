@@ -895,6 +895,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8033a2d72722b0045a9919303c25bfe5, type: 3}
   - name: MOUSE
     clip: {fileID: 8300000, guid: 106b8aefaabf552418d2f98acd92481c, type: 3}
+  - name: LASER
+    clip: {fileID: 8300000, guid: b76684a91ca199141bd0ea90ad3238af, type: 3}
   musicSource: {fileID: 1880624264}
   sfxSource: {fileID: 1718667124}
 --- !u!1 &1718667122
