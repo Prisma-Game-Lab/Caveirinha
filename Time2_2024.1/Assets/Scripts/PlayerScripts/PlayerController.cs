@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
         {
             return false;
         }
-        int sfx = (Random.Range(1, 25));
+        int sfx = (Random.Range(1, 14));
         string name = "DMG" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);
         if (health <= 1)

@@ -1448,28 +1448,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3e732c627f33d014791e7a1dbc940449, type: 3}
   - name: DMG14
     clip: {fileID: 8300000, guid: bcd23c3840fa96f4491d07ba538e6d28, type: 3}
-  - name: DMG15
-    clip: {fileID: 8300000, guid: 5f2b0f910bb411e4f97321fa31985812, type: 3}
-  - name: DMG16
-    clip: {fileID: 8300000, guid: f01df43f84e7bcc4394738871207a922, type: 3}
-  - name: DMG17
-    clip: {fileID: 8300000, guid: 49bb35320fd874744adbfb4072b4f644, type: 3}
-  - name: DMG18
-    clip: {fileID: 8300000, guid: affe034f55a490745891748772d5198d, type: 3}
-  - name: DMG619
-    clip: {fileID: 8300000, guid: 8a35f64f9c4ed6a45973ce71389bada0, type: 3}
-  - name: DMG20
-    clip: {fileID: 8300000, guid: 2ed4bc00b423df64b8734de7d5ec793f, type: 3}
-  - name: DMG21
-    clip: {fileID: 8300000, guid: bc507652d1c2c944aba857e10a9dce19, type: 3}
-  - name: DMG22
-    clip: {fileID: 8300000, guid: be3c8f5da0ecc0742b830a099c739e73, type: 3}
-  - name: DMG23
-    clip: {fileID: 8300000, guid: 8a8b531396dee0e488fe5f4ccf820a78, type: 3}
-  - name: DMG24
-    clip: {fileID: 8300000, guid: 9cb3d81b0b2ac2a419f61b3cca92004b, type: 3}
-  - name: DMG25
-    clip: {fileID: 8300000, guid: 325d53336f4fd7c4a8acf6d6efba5681, type: 3}
   - name: DEATH1
     clip: {fileID: 8300000, guid: b313bb784f82c0a4abe3e8873f382798, type: 3}
   - name: DEATH2
