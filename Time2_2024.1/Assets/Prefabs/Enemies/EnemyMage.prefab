@@ -178,7 +178,7 @@ MonoBehaviour:
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 2
   spellObject: {fileID: 4722857247087816948, guid: 8eb8b4026c465554b9865bcf5540050f, type: 3}
-  spellDamage: 20
+  spellDamage: 25
   spellSpeed: 6.7
   spellScatter: 0.1
   castingDistance: 0.5
