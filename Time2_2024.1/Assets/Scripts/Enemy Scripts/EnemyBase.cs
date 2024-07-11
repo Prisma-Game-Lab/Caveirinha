@@ -93,14 +93,11 @@ public class EnemyBase : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Vector2 directionVector = collision.transform.position - transform.position;
-            collision.GetComponent<PlayerController>().TakeDamage(contactDamage, directionVector.normalized, knockbackStrenght);
-            if (soulType == 1)
+            bool hit = collision.GetComponent<PlayerController>().TakeDamage(contactDamage, directionVector.normalized, knockbackStrenght);
+            if (soulType == 1 && hit)
             {
                 AudioManager.instance.PlaySFX("SHIT");
             }
-            Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
-            playerRb.velocity = Vector2.zero;
-            playerRb.AddForce(knockbackStrenght * directionVector.normalized, ForceMode2D.Impulse);
         }
     }
 }

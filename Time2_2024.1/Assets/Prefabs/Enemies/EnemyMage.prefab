@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.004971385, y: -0.19884992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1590803, y: 1.288332}
   m_EdgeRadius: 0
 --- !u!50 &3618274750609022443
 Rigidbody2D:
@@ -158,7 +158,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-3553535790001232290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,11 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10038ef527839749bcdf67cf6961b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   health: 100
   enemyAttack: 20
   contactDamage: 10
-  knockbackStrenght: 15
+  knockbackStrenght: 20
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 2
   spellObject: {fileID: 4722857247087816948, guid: 8eb8b4026c465554b9865bcf5540050f, type: 3}

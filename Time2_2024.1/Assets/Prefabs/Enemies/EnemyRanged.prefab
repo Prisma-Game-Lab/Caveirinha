@@ -285,11 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd6e603637c70440b85a090502dfbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   health: 100
   enemyAttack: 50
   contactDamage: 10
-  knockbackStrenght: 15
+  knockbackStrenght: 20
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 0
   spellObject: {fileID: 4722857247087816948, guid: d872a7b1f38733542a0ba95be83191b1, type: 3}

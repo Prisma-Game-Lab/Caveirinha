@@ -131,30 +131,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage, Vector2 knockbackDirection, float knockback) 
+    public bool TakeDamage(float damage, Vector2 knockbackDirection, float knockback) 
     {
-        if (invencibilitySeconds <= 0) 
+        if (invencibilitySeconds > 0) 
         {
-            int sfx = (Random.Range(1, 25));
-            string name = "DMG" + sfx.ToString();
-            AudioManager.instance.PlaySFX(name);
-            if (health <= 1)
-            {
-                sfx = (Random.Range(1, 3));
-                name = "DEATH" + sfx.ToString();
-                AudioManager.instance.PlaySFX(name);
-                Die();
-                return;
-            }
-            health -= damage;
-            if (health <= 1)
-            {
-                health = 1;
-            }
-            UpdateUI();
-            invencibilitySeconds = maxInvencibilityOnDamage;
-            rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
+            return false;
         }
+        int sfx = (Random.Range(1, 25));
+        string name = "DMG" + sfx.ToString();
+        AudioManager.instance.PlaySFX(name);
+        if (health <= 1)
+        {
+            sfx = (Random.Range(1, 3));
+            name = "DEATH" + sfx.ToString();
+            AudioManager.instance.PlaySFX(name);
+            Die();
+            return true;
+        }
+        health -= damage;
+        if (health <= 1)
+        {
+            health = 1;
+        }
+        UpdateUI();
+        invencibilitySeconds = maxInvencibilityOnDamage;
+        rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
+        return true;
     }
 
     void Die() 
