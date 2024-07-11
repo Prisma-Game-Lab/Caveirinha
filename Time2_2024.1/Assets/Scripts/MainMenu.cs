@@ -8,6 +8,9 @@ public class MainMenu : MonoBehaviour
     //Comentario
     public void PlayGame()
     {
+        int sfx = (Random.Range(1, 2));
+        string name = "PLAY" + sfx.ToString();
+        AudioManager.instance.PlaySFX(name);
         SceneManager.LoadScene("Andar1"); //alterar para cena do jogo depois 
     }
 
@@ -17,5 +20,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Click()
+    {
+        AudioManager.instance.PlaySFX("SELECT");
+    }
 }
 

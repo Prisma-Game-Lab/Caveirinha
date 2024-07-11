@@ -9,7 +9,7 @@ public class LaserHitbox : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             float damage = GameObject.Find("Boss").GetComponent<BossController>().laserDamage;
-            collision.GetComponent<PlayerController>().TakeDamage(damage);
+            collision.GetComponent<PlayerController>().TakeDamage(damage,Vector2.zero,0);
         }
     }
 }

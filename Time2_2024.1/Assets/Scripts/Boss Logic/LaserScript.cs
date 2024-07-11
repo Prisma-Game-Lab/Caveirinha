@@ -10,11 +10,18 @@ public class LaserScript : SpellScript
         string collisionTag = collision.gameObject.tag;
         switch (collisionTag)
         {
+            case "Enemy":
+                if (targetTag == "Enemy")
+                {
+                    collision.GetComponent<EnemyBase>().TakeDamage(damage,Vector2.zero,0);
+                    Destroy(gameObject);
+                }
+                break;
 
             case "Player":
                 if (targetTag == "Player")
                 {
-                    collision.GetComponent<PlayerController>().TakeDamage(damage);
+                    collision.GetComponent<PlayerController>().TakeDamage(damage,Vector2.zero,0);
                 }
                 break;
 

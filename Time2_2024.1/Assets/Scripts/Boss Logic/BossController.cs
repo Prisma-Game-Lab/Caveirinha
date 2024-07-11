@@ -88,7 +88,7 @@ public class BossController : MonoBehaviour
 
         Vector2 targetVector = vassoura.up * -1;
         laser = Instantiate(laserObject, vassoura.position, vassoura.rotation);
-        laser.GetComponent<SpellScript>().SetUp("Player", spellDamage, targetVector * laserSpeed,laserDestructionTime);
+        laser.GetComponent<SpellScript>().SetUp("Player", spellDamage, targetVector * laserSpeed,laserDestructionTime, 0);
     }
 
     void destroyLaser()

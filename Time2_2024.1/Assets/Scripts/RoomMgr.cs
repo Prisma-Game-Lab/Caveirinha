@@ -8,7 +8,8 @@ public class RoomMgr : MonoBehaviour
     public GameObject[] roomPrefabs;
     public GameObject[] doors;
     [SerializeField] PolygonCollider2D mainCameraCollider;
-    GameObject[] rooms; 
+    GameObject[] rooms;
+    public GameObject PathFinding;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,7 @@ public class RoomMgr : MonoBehaviour
 
             rooms[i] = room; // Guarda a sala geradas caso precisemos no futuro
         }
-
+        Instantiate(PathFinding);
     }
 
     // Update is called once per frame

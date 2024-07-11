@@ -14,6 +14,7 @@ public class EnemyMage : EnemyBase
     [SerializeField] float castingDistance;
     [SerializeField] float maxCooldown;
     [SerializeField] float spellDestructionTime;
+    [SerializeField] float spellKnockback;
     float cooldown;
 
     void Start()
@@ -29,6 +30,7 @@ public class EnemyMage : EnemyBase
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;
+            AudioManager.instance.PlaySFX("PATK");
         }
     }
 
@@ -40,6 +42,6 @@ public class EnemyMage : EnemyBase
         directionVector = directionVector.normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * directionVector, spellDestructionTime);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * directionVector, spellDestructionTime, spellKnockback);
     }
 }

@@ -288,16 +288,17 @@ MonoBehaviour:
   health: 100
   enemyAttack: 50
   contactDamage: 10
-  knockbackStrenght: 25
+  knockbackStrenght: 20
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 0
-  spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+  spellObject: {fileID: 4722857247087816948, guid: d872a7b1f38733542a0ba95be83191b1, type: 3}
   spellDamage: 20
   spellSpeed: 5
   spellScatter: 0.2
   spellDestructionTimer: 2.5
   castingDistance: 0.5
   maxCooldown: 2
+  spellKnockback: 10
 --- !u!95 &4700173020868153342
 Animator:
   serializedVersion: 5
@@ -363,7 +364,7 @@ MonoBehaviour:
   radius: 0.7
   height: 2
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -384,7 +385,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 3
+  endReachedDistance: 5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0

@@ -116,7 +116,6 @@ public class SoulScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) 
         {
             float distanceToPlayer = Mathf.Sqrt(Mathf.Pow(transform.position.x - playerReference.transform.position.x, 2) + Mathf.Pow(transform.position.y - playerReference.transform.position.y, 2));
-            print(distanceToPlayer);
             if(playerReference.selectedSoul == gameObject) 
             {
                 playerReference.selectedSoulDistance = distanceToPlayer;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyRanged : EnemyBase
@@ -13,6 +14,7 @@ public class EnemyRanged : EnemyBase
     [SerializeField] float spellDestructionTimer;
     [SerializeField] float castingDistance;
     [SerializeField] float maxCooldown;
+    [SerializeField] float spellKnockback;
     Animator ac;
     float cooldown;
 
@@ -26,11 +28,14 @@ public class EnemyRanged : EnemyBase
     // Update is called once per frame
     void Update()
     {
+        float distanceX = System.Math.Abs(player.transform.position.x - gameObject.transform.position.x);
+        float distanceY = System.Math.Abs(player.transform.position.y - gameObject.transform.position.y);
         cooldown -= Time.deltaTime;
-        if (cooldown <= 0)
+        if (cooldown <= 0 && distanceX < 6 && distanceY < 7) 
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;
+            AudioManager.instance.PlaySFX("EATK");
         }
     }
 
@@ -69,6 +74,6 @@ public class EnemyRanged : EnemyBase
         desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter) + xComponent, Random.Range(-spellScatter, spellScatter) + yComponent).normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * desiredShootVector, spellDestructionTimer);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * desiredShootVector, spellDestructionTimer, spellKnockback);
     }
 }

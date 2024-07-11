@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     [SerializeField] float spellDestructionTime;
+    [SerializeField] float spellKnockback;
     float spellCooldown;
 
     [Header("Combat Stats")]
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask broomLayerMask;
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
+    [SerializeField] private float broomKnockback;
     private float itemCooldown;
 
     float invencibilitySeconds;
@@ -90,6 +92,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (shouldShoot && canMove) 
         {
+            AudioManager.instance.PlaySFX("ATK");
             CastSpell();
         }
         if (invencibilitySeconds > 0) 
@@ -120,7 +123,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                accelRate = moveAcceleration;
+                accelRate = moveDesacceleration;
             }
 
             //Aplica a força
@@ -128,26 +131,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage) 
+    public bool TakeDamage(float damage, Vector2 knockbackDirection, float knockback) 
     {
-        if (invencibilitySeconds <= 0) 
+        if (invencibilitySeconds > 0) 
         {
-            int sfx = (Random.Range(1, 25));
-            string name = "DMG" + sfx.ToString();
-            AudioManager.instance.PlaySFX(name);
-            if (health <= 1)
-            {
-                Die();
-                return;
-            }
-            health -= damage;
-            if (health <= 1)
-            {
-                health = 1;
-            }
-            UpdateUI();
-            invencibilitySeconds = maxInvencibilityOnDamage;
+            return false;
         }
+        int sfx = (Random.Range(1, 14));
+        string name = "DMG" + sfx.ToString();
+        AudioManager.instance.PlaySFX(name);
+        if (health <= 1)
+        {
+            sfx = (Random.Range(1, 3));
+            name = "DEATH" + sfx.ToString();
+            AudioManager.instance.PlaySFX(name);
+            Die();
+            return true;
+        }
+        health -= damage;
+        if (health <= 1)
+        {
+            health = 1;
+        }
+        UpdateUI();
+        invencibilitySeconds = maxInvencibilityOnDamage;
+        rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
+        return true;
     }
 
     void Die() 
@@ -173,9 +182,9 @@ public class PlayerController : MonoBehaviour
             strongVector = new Vector2(0, yComponent).normalized;
             desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter), strongVector.y);
         }
-        Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * strongVector;
+        Vector2 castingLocation = new Vector2(transform.position.x, transform.position.y) + castingDistance * strongVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector,spellDestructionTime);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector,spellDestructionTime,spellKnockback);
         spellCooldown = 1 / attackSpeed;
     }
 
@@ -244,7 +253,8 @@ public class PlayerController : MonoBehaviour
                             EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
                             if (enemy != null)
                             {
-                                enemy.TakeDamage(broomDamage);
+                                Vector2 directionVector = hitObject.transform.position - transform.position;
+                                enemy.TakeDamage(broomDamage, directionVector,broomKnockback);
                             }
                             else
                             {
