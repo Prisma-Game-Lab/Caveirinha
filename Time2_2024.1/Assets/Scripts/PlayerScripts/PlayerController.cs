@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (shouldShoot && canMove) 
         {
+            AudioManager.instance.PlaySFX("ATK");
             CastSpell();
         }
         if (invencibilitySeconds > 0) 
@@ -137,6 +138,9 @@ public class PlayerController : MonoBehaviour
             AudioManager.instance.PlaySFX(name);
             if (health <= 1)
             {
+                sfx = (Random.Range(1, 3));
+                name = "DEATH" + sfx.ToString();
+                AudioManager.instance.PlaySFX(name);
                 Die();
                 return;
             }

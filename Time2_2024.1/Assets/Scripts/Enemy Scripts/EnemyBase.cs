@@ -57,9 +57,22 @@ public class EnemyBase : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        AudioManager.instance.PlaySFX("HIT");
         health -= damage;
         if (health <= 0)
         {
+            if (soulType == 0)
+            {
+                AudioManager.instance.PlaySFX("EDEATH");
+            }
+            else if (soulType == 1)
+            {
+                AudioManager.instance.PlaySFX("SDEATH");
+            }
+            else 
+            {
+                AudioManager.instance.PlaySFX("PDEATH");
+            }
             OnDeath();
         }
     }
@@ -77,6 +90,10 @@ public class EnemyBase : MonoBehaviour
         {
             Vector2 directionVector = collision.transform.position - transform.position;
             collision.GetComponent<PlayerController>().TakeDamage(contactDamage);
+            if (soulType == 1)
+            {
+                AudioManager.instance.PlaySFX("SHIT");
+            }
             Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
             playerRb.velocity = Vector2.zero;
             playerRb.AddForce(knockbackStrenght * directionVector.normalized, ForceMode2D.Impulse);

@@ -29,6 +29,7 @@ public class EnemyMage : EnemyBase
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;
+            AudioManager.instance.PlaySFX("PATK");
         }
     }
 
