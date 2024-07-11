@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4349827250260146998, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_Name
       value: Boss Room
@@ -676,6 +680,10 @@ PrefabInstance:
       propertyPath: m_Animations.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8731556965416738236, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2622079097726681988, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     - {fileID: 6151619498975816082, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -685,6 +693,7 @@ PrefabInstance:
     - {fileID: 6661586199863688480, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     - {fileID: 7819920724792086131, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     - {fileID: 3420973812181376497, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    - {fileID: 7890358447501353863, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -1619,6 +1628,10 @@ PrefabInstance:
     - target: {fileID: 402459273127846536, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_SortingOrder
       value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2274395521248551336, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_LocalPosition.x
