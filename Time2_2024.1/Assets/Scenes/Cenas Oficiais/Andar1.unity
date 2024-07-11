@@ -684,6 +684,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6661586199863688480, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     - {fileID: 7819920724792086131, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    - {fileID: 3420973812181376497, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -899,6 +900,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b76684a91ca199141bd0ea90ad3238af, type: 3}
   musicSource: {fileID: 1880624264}
   sfxSource: {fileID: 1718667124}
+--- !u!114 &1092049978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 30831314452504500, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+  m_PrefabInstance: {fileID: 696544475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d08b5534e03ce429adfa4c7d4eaaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1718667122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1692,10 @@ PrefabInstance:
       propertyPath: roomsNeeded
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1092049978}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: cameraCollider
       value: 
