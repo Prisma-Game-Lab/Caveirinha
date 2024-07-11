@@ -6450,8 +6450,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2433801906201933323}
-  - {fileID: 2225795380347415927}
   - {fileID: 2821539030685513436}
   - {fileID: 5478872722967865846}
   - {fileID: 8968951856731525420}
@@ -7163,6 +7161,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2433801906201933323}
+    - targetCorrespondingSourceObject: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2225795380347415927}
     - targetCorrespondingSourceObject: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4843288886123675335}
@@ -26910,7 +26914,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2152133587948737129}
+    m_TransformParent: {fileID: 8968951856731525420}
     m_Modifications:
     - target: {fileID: 3424965049604003977, guid: fe4e3171faf7b89429e8cff0165f20b1, type: 3}
       propertyPath: m_Name
@@ -27172,7 +27176,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2152133587948737129}
+    m_TransformParent: {fileID: 8968951856731525420}
     m_Modifications:
     - target: {fileID: 3424965049604003977, guid: fe4e3171faf7b89429e8cff0165f20b1, type: 3}
       propertyPath: m_Name
