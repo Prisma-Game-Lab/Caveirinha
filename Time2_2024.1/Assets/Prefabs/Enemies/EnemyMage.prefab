@@ -180,7 +180,7 @@ MonoBehaviour:
   spellObject: {fileID: 4722857247087816948, guid: 8eb8b4026c465554b9865bcf5540050f, type: 3}
   spellDamage: 25
   spellSpeed: 6.7
-  spellScatter: 0.1
+  spellScatter: 0.025
   castingDistance: 0.5
   maxCooldown: 2
   spellDestructionTime: 60
