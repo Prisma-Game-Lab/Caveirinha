@@ -20,5 +20,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Click()
+    {
+        AudioManager.instance.PlaySFX("SELECT");
+    }
 }
 
