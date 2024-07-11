@@ -47,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Item Stats")]
     [SerializeField] private float potionHealing;
+    [SerializeField] private float potionCooldown;
+    [SerializeField] private float potionChangeDelay;
     [SerializeField] private float broomDamage;
     [SerializeField] private float broomCooldown;
     [SerializeField] private float broomHitboxSize;
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
     [SerializeField] private float broomKnockback;
+    bool bocaAberta = true;
     private float itemCooldown;
 
     float invencibilitySeconds;
@@ -102,6 +105,11 @@ public class PlayerController : MonoBehaviour
         if (itemCooldown > 0)
         {
             itemCooldown -= Time.deltaTime;
+        }
+        else if (!bocaAberta) 
+        {
+            playerUIController.CaveiraoAnim.SetTrigger("Abrir");
+            bocaAberta = true;
         }
     }
 
@@ -212,13 +220,14 @@ public class PlayerController : MonoBehaviour
             i++;
             i = i % (avaiableItems.Length);
         }
-        UpdateUI();
+        playerUIController.UpdateItem(selectedItem);
     }
 
     public void UseItem() 
     {
         if(itemCooldown > 0) 
         {
+            playerUIController.CaveiraoAnim.SetTrigger("Balança");
             return;
         }
         switch (selectedItem)
@@ -233,11 +242,14 @@ public class PlayerController : MonoBehaviour
                 avaiableItems[0] = false;
                 avaiableItems[1] = true;
                 selectedItem = 1;
+                itemCooldown = potionCooldown;
+                StartCoroutine(WaitMouthClosing());
+                UpdateUI();
                 break;
 
             case 1:
                 //Used Potion
-                break;
+                return;
 
             case 2:
                 //Broom
@@ -275,14 +287,22 @@ public class PlayerController : MonoBehaviour
 
             case 3:
                 //Bucket
-                break;
+                return;
         }
-        UpdateUI();
+        playerUIController.CaveiraoAnim.SetTrigger("Fechar");
+        bocaAberta = false;
+    }
+
+    IEnumerator WaitMouthClosing() 
+    {
+        yield return new WaitForSeconds(potionChangeDelay);
+        playerUIController.UpdateItem(selectedItem);
+
     }
 
     void UpdateUI() 
     {
-        playerUIController.UpdateUI(maxHealth, health, attackDamage, attackSpeed, selectedItem);
+        playerUIController.UpdateUI(maxHealth, health, attackDamage, attackSpeed);
     }
 
     private void OnDrawGizmosSelected()

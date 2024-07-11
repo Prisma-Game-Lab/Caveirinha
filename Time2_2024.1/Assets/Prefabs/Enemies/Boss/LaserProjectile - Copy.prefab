@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8986384941925779916, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1649029894375435591, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
     m_RemovedGameObjects: []
@@ -136,7 +140,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Time: 3
   m_PreviewTimeScale: 1
   m_Parameters:
@@ -211,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ce813aa353460f49a401d5a4cb7f858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: 
 --- !u!198 &4992291607116048498
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4975,7 +4980,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
