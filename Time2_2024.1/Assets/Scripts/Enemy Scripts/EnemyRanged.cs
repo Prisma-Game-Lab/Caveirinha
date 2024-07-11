@@ -31,7 +31,7 @@ public class EnemyRanged : EnemyBase
         float distanceX = System.Math.Abs(player.transform.position.x - gameObject.transform.position.x);
         float distanceY = System.Math.Abs(player.transform.position.y - gameObject.transform.position.y);
         cooldown -= Time.deltaTime;
-        if (cooldown <= 0 && distanceX < 5 && distanceY < 6) 
+        if (cooldown <= 0 && distanceX < 6 && distanceY < 7) 
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;

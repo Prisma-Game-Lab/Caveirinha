@@ -140,7 +140,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8464873342827758928}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   soulType: 2
   spellObject: {fileID: 4722857247087816948, guid: 8eb8b4026c465554b9865bcf5540050f, type: 3}
   spellDamage: 20
-  spellSpeed: 8
+  spellSpeed: 6.7
   spellScatter: 0.1
   castingDistance: 0.5
   maxCooldown: 2

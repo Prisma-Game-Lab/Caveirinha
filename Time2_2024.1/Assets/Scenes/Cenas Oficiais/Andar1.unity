@@ -1353,12 +1353,24 @@ PrefabInstance:
       objectReference: {fileID: 6485473789887992910, guid: 929ee713eb71df24398632c513b22665, type: 3}
     - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: roomPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: roomPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4434839237470094874, guid: a3604940afa17ab49a7c6d816e379daa, type: 3}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: roomPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8477505669187749100, guid: 4a20511b22439384389bc46e476a0073, type: 3}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: roomPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8477505669187749100, guid: e931dbdc59276194aa22cdd3a5062ee5, type: 3}
     - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: roomPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 4434839237470094874, guid: 79601076fd5c88440b3c5e4aa23ff974, type: 3}
+      objectReference: {fileID: 4434839237470094874, guid: f82e45167e276234696ef6aa2d1e6f31, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
