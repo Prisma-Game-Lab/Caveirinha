@@ -44,6 +44,8 @@ public class EnemyManager : MonoBehaviour
         {
             onRoomCleared();
             roomNotCleared = true;
-        } 
+
+        }
+        
     }
 }

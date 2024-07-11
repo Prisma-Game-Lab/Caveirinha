@@ -995,7 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredPlayerLocation: {fileID: 2414696601327375404}
   cameraCollider: {fileID: 2172176348579321642}
-  roomsNeeded: 0
+  roomsNeeded: 3
   enemyManager: {fileID: 30831314452504500}
 --- !u!1 &7838140403369460723
 GameObject:
