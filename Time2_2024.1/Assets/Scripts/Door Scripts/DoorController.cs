@@ -51,7 +51,7 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    private IEnumerator RoomTransition(Transform playerTransform) 
+    protected IEnumerator RoomTransition(Transform playerTransform) 
     {
         CanvasController.onSceneTransition();
         PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();

@@ -34,26 +34,6 @@ public class BossController : MonoBehaviour
     private void Start()
     {
         int rooms = GameManager.instance.RoomCleared;
-        
-        // Se um case nao termina com break a execucao continua lendo o case abaixo
-        // Nesse caso, os cases 0 a 2 executam o codigo do case 3, ja que todos tem os mesmos stats
-
-        //switch (rooms)
-        //{
-        //    case 0:
-        //    case 1:
-        //    case 2:
-        //    case 3:
-        //        health = baseHealth;
-        //        laserDamage = baseLaser;
-        //        break;
-        //    default:
-        //        health = baseHealth * Mathf.Log(rooms, 2.3f);
-        //        laserDamage = baseLaser * Mathf.Pow(1.03f,rooms);
-        //        break;
-        //}
-
-        // Esse if é melhor, nao?
 
         health = baseHealth;
         laserDamage = baseLaser;
@@ -82,13 +62,12 @@ public class BossController : MonoBehaviour
 
     IEnumerator shootLaser()
     {
-        float spellDamage = 1;
         yield return new WaitForSeconds(0);
         Transform vassoura = GameObject.Find("Vassoura_Laser").transform;
 
         Vector2 targetVector = vassoura.up * -1;
         laser = Instantiate(laserObject, vassoura.position, vassoura.rotation);
-        laser.GetComponent<SpellScript>().SetUp("Player", spellDamage, targetVector * laserSpeed,laserDestructionTime, 0);
+        laser.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed,laserDestructionTime, 0);
     }
 
     void destroyLaser()

@@ -6,6 +6,8 @@ using UnityEngine;
 public class BossDoor : DoorController
 {
     public int roomsNeeded;
+    [SerializeField]
+    EnemyManager enemyManager;
 
     private void OnEnable()
     {
@@ -27,8 +29,16 @@ public class BossDoor : DoorController
             locked = false;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Se o player entrar na area, teleporte ele e a camera para essas posicoes
+        if (collision.CompareTag("Player"))
+        {
+            StartCoroutine(BossTransition(collision.transform));
+        }
+    }
 
-    private IEnumerator RoomTransition(Transform playerTransform)
+    protected IEnumerator BossTransition(Transform playerTransform)
     {
         CanvasController.onSceneTransition();
         PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();
@@ -40,11 +50,9 @@ public class BossDoor : DoorController
         playerTransform.position = desiredPlayerLocation.position;
         cameraConfiner.m_BoundingShape2D = cameraCollider;
         cameraObject.transform.position = desiredPlayerLocation.position;
-        EnemyManager enemies = GameObject.Find("BossManager").GetComponent<EnemyManager>();
-        if (enemies != null)
-        {
-            enemies.gameObject.SetActive(true);
-        }
+
+        enemyManager.gameObject.SetActive(true);
+
         toggleLock();
         yield return new WaitForSeconds(0.1f);
         cinemachineTransposer.m_XDamping = 1;
