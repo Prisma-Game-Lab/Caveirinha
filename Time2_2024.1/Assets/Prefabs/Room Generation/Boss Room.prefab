@@ -167,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6945882421622360974
 Transform:
   m_ObjectHideFlags: 0
@@ -292,14 +292,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Zelador
   enemyClass: Boss
-  baseHealth: 0
-  baseLaser: 0
+  baseHealth: 4252.5
+  baseLaser: 26.5
   health: 0
   laserDamage: 0
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 0
   laserObject: {fileID: 2174690906993087790, guid: be5f048c076503c46a743f2cea39344c, type: 3}
   laserSpeed: 50
+  laserDestructionTime: 0
 --- !u!1 &3420973812181376497
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredPlayerLocation: {fileID: 0}
   cameraCollider: {fileID: 0}
+  roomsNeeded: 0
 --- !u!1 &7838140403369460723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,7 +1638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8921477390906171808, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
       propertyPath: m_Name
-      value: EnemyManager
+      value: BossManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921477390906171808, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

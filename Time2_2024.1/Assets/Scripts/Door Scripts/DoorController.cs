@@ -9,9 +9,9 @@ public class DoorController : MonoBehaviour
     public Transform desiredPlayerLocation;
     public PolygonCollider2D cameraCollider;
 
-    GameObject cameraObject;
-    CinemachineConfiner2D cameraConfiner;
-    CinemachineFramingTransposer cinemachineTransposer;
+    protected GameObject cameraObject;
+    protected CinemachineConfiner2D cameraConfiner;
+    protected CinemachineFramingTransposer cinemachineTransposer;
     protected BoxCollider2D doorCollider;
     protected SpriteRenderer doorSr;
 
