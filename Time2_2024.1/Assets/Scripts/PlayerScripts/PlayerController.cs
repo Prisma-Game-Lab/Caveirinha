@@ -244,6 +244,7 @@ public class PlayerController : MonoBehaviour
                 selectedItem = 1;
                 itemCooldown = potionCooldown;
                 StartCoroutine(WaitMouthClosing());
+                UpdateUI();
                 break;
 
             case 1:
