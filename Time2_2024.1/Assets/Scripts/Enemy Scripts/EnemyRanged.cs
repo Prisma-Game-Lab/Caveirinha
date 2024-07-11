@@ -7,6 +7,7 @@ public class EnemyRanged : EnemyBase
 {
     //descrever funcoes da classe ranged
     GameObject player;
+    [SerializeField] Sprite spellSprite;
     [SerializeField] GameObject spellObject;
     [SerializeField] float spellDamage;
     [SerializeField] float spellSpeed;

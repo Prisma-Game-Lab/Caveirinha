@@ -12,11 +12,8 @@ public class SpellScript : MonoBehaviour
         damage = spellDamage;
         Destroy(gameObject, destructionTimer);
         GetComponent<Rigidbody2D>().velocity = speed;
+        transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(speed.y, speed.x) * Mathf.Rad2Deg + 90);
         targetTag = enemyTag;
-        if (targetTag == "Player") 
-        {
-            GetComponent<SpriteRenderer>().color = Color.red;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

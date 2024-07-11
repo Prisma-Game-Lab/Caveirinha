@@ -167,7 +167,7 @@ MonoBehaviour:
   broomHitboxSize: 2
   broomLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
   broomVisual: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
   deflectedProjectileSpeed: 7
   canMove: 0

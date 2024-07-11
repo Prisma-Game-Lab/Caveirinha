@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour
             strongVector = new Vector2(0, yComponent).normalized;
             desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter), strongVector.y);
         }
-        Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * strongVector;
+        Vector2 castingLocation = new Vector2(transform.position.x, transform.position.y) + castingDistance * strongVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
         invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector,spellDestructionTime);
         spellCooldown = 1 / attackSpeed;
