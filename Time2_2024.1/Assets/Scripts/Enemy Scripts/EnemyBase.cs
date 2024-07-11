@@ -78,7 +78,7 @@ public class EnemyBase : MonoBehaviour
             }
             OnDeath();
         }
-        rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
+        //rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
     }
 
     void OnDeath()

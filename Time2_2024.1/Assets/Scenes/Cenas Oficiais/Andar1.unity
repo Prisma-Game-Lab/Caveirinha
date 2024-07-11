@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1303,9 +1303,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3046377556373706288, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390099181836934677, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460426752281445745, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3913999764322309565, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4424476370697426282, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Name
       value: OctaRoomTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996804977959198564, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164798617197377757, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306172327618209849, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: cameraCollider
@@ -1315,6 +1343,10 @@ PrefabInstance:
       propertyPath: desiredPlayerLocation
       value: 
       objectReference: {fileID: 717264267}
+    - target: {fileID: 6773358947878297691, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: PathFinding
       value: 
