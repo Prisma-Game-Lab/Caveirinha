@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    Rigidbody2D rb;
+
     private string enemyName;
 
     private string[] vectorNames = { "Adriana", "Adriano", "Agostinho", "Alan", "Alba", "Alessandra", "Alexandre",
@@ -53,15 +55,17 @@ public class EnemyBase : MonoBehaviour
     private void Awake()
     {
         enemyName = vectorNames[Random.Range(0, vectorNames.Length)];
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector2 knockbackDirection, float knockback)
     {
         health -= damage;
         if (health <= 0)
         {
             OnDeath();
         }
+        rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
     }
 
     void OnDeath()
@@ -71,15 +75,12 @@ public class EnemyBase : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             Vector2 directionVector = collision.transform.position - transform.position;
-            collision.GetComponent<PlayerController>().TakeDamage(contactDamage);
-            Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
-            playerRb.velocity = Vector2.zero;
-            playerRb.AddForce(knockbackStrenght * directionVector.normalized, ForceMode2D.Impulse);
+            collision.GetComponent<PlayerController>().TakeDamage(contactDamage, directionVector.normalized, knockbackStrenght);
         }
     }
 }

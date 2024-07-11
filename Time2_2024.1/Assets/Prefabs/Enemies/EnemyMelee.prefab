@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef32ca8fbc11123418cdb6f025ce61f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   health: 200
   enemyAttack: 50
   contactDamage: 25

@@ -1175,8 +1175,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: broomKnockback
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: spellKnockback
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: broomHitboxSize
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: moveDesacceleration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: broomLayerMask.m_Bits

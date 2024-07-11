@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     [SerializeField] float spellDestructionTime;
+    [SerializeField] float spellKnockback;
     float spellCooldown;
 
     [Header("Combat Stats")]
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask broomLayerMask;
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
+    [SerializeField] private float broomKnockback;
     private float itemCooldown;
 
     float invencibilitySeconds;
@@ -120,7 +122,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                accelRate = moveAcceleration;
+                accelRate = moveDesacceleration;
             }
 
             //Aplica a força
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage) 
+    public void TakeDamage(float damage, Vector2 knockbackDirection, float knockback) 
     {
         if (invencibilitySeconds <= 0) 
         {
@@ -147,6 +149,7 @@ public class PlayerController : MonoBehaviour
             }
             UpdateUI();
             invencibilitySeconds = maxInvencibilityOnDamage;
+            rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
         }
     }
 
@@ -175,7 +178,7 @@ public class PlayerController : MonoBehaviour
         }
         Vector2 castingLocation = new Vector2(transform.position.x, transform.position.y) + castingDistance * strongVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector,spellDestructionTime);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Enemy",attackDamage, spellSpeed * desiredShootVector,spellDestructionTime,spellKnockback);
         spellCooldown = 1 / attackSpeed;
     }
 
@@ -244,7 +247,8 @@ public class PlayerController : MonoBehaviour
                             EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
                             if (enemy != null)
                             {
-                                enemy.TakeDamage(broomDamage);
+                                Vector2 directionVector = hitObject.transform.position - transform.position;
+                                enemy.TakeDamage(broomDamage, directionVector,broomKnockback);
                             }
                             else
                             {

@@ -13,7 +13,7 @@ public class LaserScript : SpellScript
             case "Enemy":
                 if (targetTag == "Enemy")
                 {
-                    collision.GetComponent<EnemyBase>().TakeDamage(damage);
+                    collision.GetComponent<EnemyBase>().TakeDamage(damage,Vector2.zero,0);
                     Destroy(gameObject);
                 }
                 break;
@@ -21,7 +21,7 @@ public class LaserScript : SpellScript
             case "Player":
                 if (targetTag == "Player")
                 {
-                    collision.GetComponent<PlayerController>().TakeDamage(damage);
+                    collision.GetComponent<PlayerController>().TakeDamage(damage,Vector2.zero,0);
                 }
                 break;
 
