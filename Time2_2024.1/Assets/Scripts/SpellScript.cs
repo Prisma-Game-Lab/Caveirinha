@@ -53,6 +53,7 @@ public class SpellScript : MonoBehaviour
             case "Wall":
                 Destroy(gameObject);
                 break;
+
         }
     }
 }
