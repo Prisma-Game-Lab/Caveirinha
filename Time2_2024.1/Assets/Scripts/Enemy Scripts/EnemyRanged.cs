@@ -35,6 +35,7 @@ public class EnemyRanged : EnemyBase
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;
+            AudioManager.instance.PlaySFX("EATK");
         }
     }
 

@@ -9,35 +9,35 @@ public class EnemyBase : MonoBehaviour
     private string enemyName;
 
     private string[] vectorNames = { "Adriana", "Adriano", "Agostinho", "Alan", "Alba", "Alessandra", "Alexandre",
-                                     "Al Pacino", "Aline", "Amanda", "Anderson", "André", "Angélica", "Antônio",
-                                     "Arnaldo", "Arthur", "Aurélio", "Barbara", "Beatriz", "Berenice", "Bernadete",
-                                     "Bernardo", "Bingus", "Bini", "Bipo", "Bob", "Bonni", "Brígida", "Bruno", 
-                                     "Caiozinho", "Camila", "Cândido", "Carla", "Carlos", "Carolina", "Caroline",
-                                     "Catarina", "Charles", "Clari", "César", "César", "Cristina", "Daniel", 
-                                     "Daniela", "Danilo", "Davi", "Dave", "Débora", "Delfina", "Destroyer", "Diego", 
-                                     "Diogo", "Dionísia", "Douglas", "Ecrenemenon", "Eduardo", "Elaine", "Eliana", 
-                                     "Elisa", "Enzo", "Erick", "Eusébio", "Evaristo", "Evandro", "Fabiano", "Fábio", 
-                                     "Fandango", "Felix", "Fernanda", "Fernando", "Firmina", "Flapio", "Flávia", "Floppa", 
+                                     "Al Pacino", "Aline", "Amanda", "Anderson", "Andrï¿½", "Angï¿½lica", "Antï¿½nio",
+                                     "Arnaldo", "Arthur", "Aurï¿½lio", "Barbara", "Beatriz", "Berenice", "Bernadete",
+                                     "Bernardo", "Bingus", "Bini", "Bipo", "Bob", "Bonni", "Brï¿½gida", "Bruno", 
+                                     "Caiozinho", "Camila", "Cï¿½ndido", "Carla", "Carlos", "Carolina", "Caroline",
+                                     "Catarina", "Charles", "Clari", "Cï¿½sar", "Cï¿½sar", "Cristina", "Daniel", 
+                                     "Daniela", "Danilo", "Davi", "Dave", "Dï¿½bora", "Delfina", "Destroyer", "Diego", 
+                                     "Diogo", "Dionï¿½sia", "Douglas", "Ecrenemenon", "Eduardo", "Elaine", "Eliana", 
+                                     "Elisa", "Enzo", "Erick", "Eusï¿½bio", "Evaristo", "Evandro", "Fabiano", "Fï¿½bio", 
+                                     "Fandango", "Felix", "Fernanda", "Fernando", "Firmina", "Flapio", "Flï¿½via", "Floppa", 
                                      "Flarpo", "Fibonaccio", "Freddy", "Frederico", "Francisco", "Frovio", "Gabriel", 
                                      "Gabriela", "Gabrielle", "Garen", "Garpaccio", "Gartando", "Genghis Khan", "Geiso", 
                                      "Geoffrey", "Geremias", "Geraldo", "Germano", "Giovanna", "Giovanni", "Gilberto", 
                                      "Ginkobiloba", "Godfrey", "Gojo", "Guilherme", "Guaraci", "Hannah", "Haykal", "Helena", 
-                                     "Henrique", "Hermínia", "Hildebrando", "Higgsboson", "Hugo", "Igor", "Ingrid", 
-                                     "Iolanda", "Isabel", "Isabela", "Jaqueline", "Joaquim", "Joana", "Johan", "João", 
-                                     "Jonas", "Joshua", "Júbilo", "Juliana", "Juliano", "Júlio", "Ken", "Kevin", "Karine", 
-                                     "Laís", "Larissa", "Leandro", "Leonardo", "Leocádia", "Letícia", "Lillia", "Lito",
+                                     "Henrique", "Hermï¿½nia", "Hildebrando", "Higgsboson", "Hugo", "Igor", "Ingrid", 
+                                     "Iolanda", "Isabel", "Isabela", "Jaqueline", "Joaquim", "Joana", "Johan", "Joï¿½o", 
+                                     "Jonas", "Joshua", "Jï¿½bilo", "Juliana", "Juliano", "Jï¿½lio", "Ken", "Kevin", "Karine", 
+                                     "Laï¿½s", "Larissa", "Leandro", "Leonardo", "Leocï¿½dia", "Letï¿½cia", "Lillia", "Lito",
                                      "Logarino", "Lope", "Lucas", "Luana", "Luciana", "Luisa", "Luiza", "Ludovico", "Magnus",
-                                     "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Marina", "Mário", 
-                                     "Marta", "Maurício", "Mauro", "Mazinho", "Matheus", "Miguel", "Milena", "Nana", 
-                                     "Natália", "Nelson", "Nelson", "Nilson", "Nicanor", "Nicolau", "Núbia", "Octávio",
-                                     "Odete", "Olaso", "Orangofrango", "Orestes", "Ossozé", "Pantaleão", "Pamela", "Patricia",
-                                     "Patrícia", "Patrick", "Paulo", "Pedro", "Papyrus", "Pepperonio", "Pingala", "Planilho", 
+                                     "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Marina", "Mï¿½rio", 
+                                     "Marta", "Maurï¿½cio", "Mauro", "Mazinho", "Matheus", "Miguel", "Milena", "Nana", 
+                                     "Natï¿½lia", "Nelson", "Nelson", "Nilson", "Nicanor", "Nicolau", "Nï¿½bia", "Octï¿½vio",
+                                     "Odete", "Olaso", "Orangofrango", "Orestes", "Ossozï¿½", "Pantaleï¿½o", "Pamela", "Patricia",
+                                     "Patrï¿½cia", "Patrick", "Paulo", "Pedro", "Papyrus", "Pepperonio", "Pingala", "Planilho", 
                                      "Rafaela", "Rafael", "Raimunda", "Raul", "Rebeca", "Renan", "Renata", "Renato", "Riclaudio",
                                      "Robert de Niro", "Roberto", "Robson", "Rodrigo", "Rodrigo", "Rodriguez", "Ryan Gosling",
                                      "Sabrina", "Samuel", "Sandra", "Sans", "Sancho", "Santiago", "Saul", "Sergio", "Severino", "Shaka", "Suzy",
-                                     "Syndra", "Tatiana", "Teodora", "Tharcísio", "Tripas", "Túlio", "Ubaldo", "Valdomiro", "Vagner",
-                                     "Vinícius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
-                                     "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenóbio", "Zé" };
+                                     "Syndra", "Tatiana", "Teodora", "Tharcï¿½sio", "Tripas", "Tï¿½lio", "Ubaldo", "Valdomiro", "Vagner",
+                                     "Vinï¿½cius", "Virgï¿½nia", "Vitï¿½ria", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
+                                     "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenï¿½bio", "Zï¿½" };
 
     [SerializeField]
     private float health;
@@ -60,9 +60,22 @@ public class EnemyBase : MonoBehaviour
 
     public void TakeDamage(float damage, Vector2 knockbackDirection, float knockback)
     {
+        AudioManager.instance.PlaySFX("HIT");
         health -= damage;
         if (health <= 0)
         {
+            if (soulType == 0)
+            {
+                AudioManager.instance.PlaySFX("EDEATH");
+            }
+            else if (soulType == 1)
+            {
+                AudioManager.instance.PlaySFX("SDEATH");
+            }
+            else 
+            {
+                AudioManager.instance.PlaySFX("PDEATH");
+            }
             OnDeath();
         }
         rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
@@ -81,6 +94,13 @@ public class EnemyBase : MonoBehaviour
         {
             Vector2 directionVector = collision.transform.position - transform.position;
             collision.GetComponent<PlayerController>().TakeDamage(contactDamage, directionVector.normalized, knockbackStrenght);
+            if (soulType == 1)
+            {
+                AudioManager.instance.PlaySFX("SHIT");
+            }
+            Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
+            playerRb.velocity = Vector2.zero;
+            playerRb.AddForce(knockbackStrenght * directionVector.normalized, ForceMode2D.Impulse);
         }
     }
 }
