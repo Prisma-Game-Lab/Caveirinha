@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour
                                      "Bernardo", "Bingus", "Bini", "Bipo", "Bob", "Bonni", "Brigida", "Bruno", 
                                      "Caiozinho", "Camila", "Cândido", "Carla", "Carlos", "Carolina", "Caroline",
                                      "Catarina", "Charles", "Clari", "César", "Cristina", "Daniel", 
-                                     "Daniela", "Danilo", "Davi", "Dave", "D�bora", "Delfina", "Destroyer", "Diego", 
+                                     "Daniela", "Danilo", "Davi", "Dave", "Débora", "Delfina", "Destroyer", "Diego", 
                                      "Diogo", "Dionísio", "Douglas", "Ecrenemenon", "Eduardo", "Elaine", "Eliana", 
                                      "Elisa", "Enzo", "Erick", "Eusébio", "Evaristo", "Evandro", "Fabiano", "Fábio", 
                                      "Fandango", "Felix", "Fernanda", "Fernando", "Firmina", "Flapio", "Flávia", "Floppa", 
@@ -27,7 +27,7 @@ public class EnemyBase : MonoBehaviour
                                      "Jonas", "Joshua", "Júbilo", "Juliana", "Juliano", "Júlio", "Ken", "Kevin", "Karine", 
                                      "Laís", "Larissa", "Leandro", "Leonardo", "Leocádia", "Letícia", "Lillia", "Lito",
                                      "Logarino", "Lope", "Lucas", "Luana", "Luciana", "Luisa", "Luiza", "Ludovico", "Magnus",
-                                     "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Marina", "M�rio", 
+                                     "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Marina", "Mário", 
                                      "Marta", "Maurício", "Mauro", "Mazinho", "Matheus", "Miguel", "Milena", "Nana", 
                                      "Natália", "Nelson", "Nelson", "Nilson", "Nicanor", "Nicolau", "N�bia", "Octávio",
                                      "Odete", "Olaso", "Orangofrango", "Orestes", "Ossozé", "Pantale�o", "Pamela", "Patricia",
@@ -36,7 +36,7 @@ public class EnemyBase : MonoBehaviour
                                      "Robert de Niro", "Roberto", "Robson", "Rodrigo", "Rodrigo", "Rodriguez", "Ryan Gosling",
                                      "Sabrina", "Samuel", "Sandra", "Sans", "Sancho", "Santiago", "Saul", "Sergio", "Severino", "Shaka", "Suzy",
                                      "Syndra", "Tatiana", "Teodora", "Tharcísio", "Tripas", "Túlio", "Ubaldo", "Valdomiro", "Vagner",
-                                     "Vin�cius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
+                                     "Vinícius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
                                      "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenóbio", "Zé" };
 
     [SerializeField]
