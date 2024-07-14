@@ -10383,10 +10383,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -11, y: 11}
+    - - {x: -11, y: 10}
       - {x: -11, y: -11}
-      - {x: 11, y: -11}
-      - {x: 11, y: 11}
+      - {x: 10, y: -11}
+      - {x: 10, y: 10}
   m_UseDelaunayMesh: 0
 --- !u!1 &8483432576750995400
 GameObject:
