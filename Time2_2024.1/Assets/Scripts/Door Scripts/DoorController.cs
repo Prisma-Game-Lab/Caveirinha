@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    //Comentario
+    public Transform desiredCameraLocation;
     public Transform desiredPlayerLocation;
     public PolygonCollider2D cameraCollider;
 
@@ -60,8 +60,8 @@ public class DoorController : MonoBehaviour
         cinemachineTransposer.m_XDamping = 0;
         cinemachineTransposer.m_YDamping = 0;
         cinemachineTransposer.m_ZDamping = 0;
-        playerTransform.position = desiredPlayerLocation.position;
         cameraConfiner.m_BoundingShape2D = cameraCollider;
+        playerTransform.position = desiredPlayerLocation.position;
         cameraObject.transform.position = desiredPlayerLocation.position;
         EnemyManager enemies = desiredPlayerLocation.parent.gameObject.GetComponentInChildren<EnemyManager>(true);
         if (enemies != null)

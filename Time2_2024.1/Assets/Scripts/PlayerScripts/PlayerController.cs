@@ -1,10 +1,7 @@
-using Pathfinding.Util;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -253,7 +250,9 @@ public class PlayerController : MonoBehaviour
 
             case 2:
                 //Broom
-                Destroy(Instantiate(broomVisual,transform.position,Quaternion.identity),0.5f);
+                GameObject broomVisualObject = Instantiate(broomVisual, transform);
+                broomVisualObject.transform.localScale = new Vector3(broomHitboxSize*2/transform.localScale.x, broomHitboxSize*2 / transform.localScale.y, 1);
+                Destroy(broomVisualObject,0.5f);
                 RaycastHit2D[] objectsHit = Physics2D.CircleCastAll(transform.position,broomHitboxSize,Vector2.zero,0,broomLayerMask);
                 foreach (var item in objectsHit)
                 {
