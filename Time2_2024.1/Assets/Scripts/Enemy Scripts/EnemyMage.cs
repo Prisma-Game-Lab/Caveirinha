@@ -15,6 +15,7 @@ public class EnemyMage : EnemyBase
     [SerializeField] float maxCooldown;
     [SerializeField] float spellDestructionTime;
     [SerializeField] float spellKnockback;
+    [SerializeField] int robson;
     float cooldown;
 
     void Start()
@@ -30,7 +31,14 @@ public class EnemyMage : EnemyBase
         {
             StartCoroutine(shoot());
             cooldown = maxCooldown;
-            AudioManager.instance.PlaySFX("PATK");
+            if (robson == 0)
+            {
+                AudioManager.instance.PlaySFX("PATK");
+            }
+            else
+            {
+                AudioManager.instance.PlaySFX("ROBSON");
+            }
         }
     }
 
