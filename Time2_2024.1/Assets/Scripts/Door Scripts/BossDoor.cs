@@ -6,12 +6,15 @@ using UnityEngine;
 public class BossDoor : DoorController
 {
     public int roomsNeeded;
+    //[SerializeField]
+    //GameObject bossRoom;
     [SerializeField]
     EnemyManager enemyManager;
 
     private void OnEnable()
     {
         locked = true;
+        //bossRoom.SetActive(false);
         SoulScript.onSoulAssimilation += toggleLock;
     }
 
@@ -51,6 +54,7 @@ public class BossDoor : DoorController
         cameraConfiner.m_BoundingShape2D = cameraCollider;
         cameraObject.transform.position = desiredPlayerLocation.position;
 
+        //bossRoom.SetActive(true);
         enemyManager.gameObject.SetActive(true);
 
         toggleLock();

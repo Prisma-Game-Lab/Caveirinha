@@ -17,19 +17,24 @@ public class BossController : MonoBehaviour
     public float health;
     public float laserDamage;
 
-    [SerializeField]
-    GameObject soulObject;
-    [SerializeField]
-    int soulType;
     [SerializeField] 
     GameObject laserObject;
     [SerializeField]
     float laserSpeed;
-    //So pro setup
     [SerializeField]
     float laserDestructionTime;
 
     GameObject laser;
+
+    bool attacking;
+    [SerializeField] Vector3 meeleColliderOffset;
+    [SerializeField] Vector2 meeleColliderSize;
+    [SerializeField] LayerMask playerLayerMask;
+    [SerializeField] GameObject meeleVisual;
+    [SerializeField] float meeleAtackDelay;
+    [SerializeField] float meeleAttackCooldown;
+    [SerializeField] float meeleAttackDamage;
+    [SerializeField] float meeleKnockbackStrenght;
 
     private void Start()
     {
@@ -44,6 +49,14 @@ public class BossController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (!attacking) 
+        {
+            melleRangeCheck();
+        }
+    }
+
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -55,8 +68,6 @@ public class BossController : MonoBehaviour
 
     void OnDeath()
     {
-        //GameObject soul = Instantiate(soulObject, transform.position, Quaternion.identity);
-        //soul.GetComponent<SoulScript>().inicialConfiguration(soulType, enemyName);
         Destroy(gameObject);
     }
 
@@ -80,6 +91,34 @@ public class BossController : MonoBehaviour
         AudioManager.instance.PlaySFX(sfx);
     }
 
+    private void melleRangeCheck() 
+    {
+        RaycastHit2D objectHit = Physics2D.BoxCast(transform.position + meeleColliderOffset, meeleColliderSize, 0, Vector2.zero, 0, playerLayerMask);
+        if (objectHit)
+        {
+            attacking = true;
+            StartCoroutine(meeleAttack());
+        }
+    }
+
+    IEnumerator meeleAttack() 
+    {
+        GameObject meeleVisualInScene = Instantiate(meeleVisual);
+        meeleVisualInScene.transform.position = transform.position + meeleColliderOffset;
+        meeleVisualInScene.transform.localScale = meeleColliderSize;
+        yield return new WaitForSeconds(meeleAtackDelay);
+        meeleVisualInScene.GetComponent<SpriteRenderer>().color = Color.red;
+        RaycastHit2D objectHit = Physics2D.BoxCast(transform.position + meeleColliderOffset, meeleColliderSize, 0, Vector2.zero, 0, playerLayerMask);
+        if(objectHit) 
+        {
+            Vector2 directionVector = objectHit.transform.position - transform.position;
+            objectHit.transform.gameObject.GetComponent<PlayerController>().TakeDamage(meeleAttackDamage, directionVector, meeleKnockbackStrenght);
+        }
+        Destroy(meeleVisualInScene,0.5f);
+        yield return new WaitForSeconds(meeleAttackCooldown);
+        attacking = false;
+    }
+
     /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -91,4 +130,9 @@ public class BossController : MonoBehaviour
             playerRb.AddForce(knockbackStrength * directionVector.normalized, ForceMode2D.Impulse);
         }
     }*/
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireCube(transform.position + meeleColliderOffset, meeleColliderSize);
+    }
 }
