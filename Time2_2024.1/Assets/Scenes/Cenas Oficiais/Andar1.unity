@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731725, g: 0.1341475, b: 0.121078506, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1968,6 +1968,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7088419020568288187, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 1718667124}
+    - target: {fileID: 7088419020568288187, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1880624264}
     - target: {fileID: 7759924811455944577, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
