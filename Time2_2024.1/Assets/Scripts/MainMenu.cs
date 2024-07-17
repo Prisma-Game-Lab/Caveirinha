@@ -24,5 +24,10 @@ public class MainMenu : MonoBehaviour
     {
         AudioManager.instance.PlaySFX("SELECT");
     }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("TelaInicial");
+    }
 }
 

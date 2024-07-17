@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool gameIsPaused;
 
     [SerializeField] private GameObject deathScene;
+    [SerializeField] private GameObject floorScene;
 
     void Start()
     {
@@ -134,7 +135,7 @@ public class PlayerController : MonoBehaviour
                 accelRate = moveDesacceleration;
             }
 
-            //Aplica a força
+            //Aplica a forï¿½a
             rb.AddForce(speedDif * accelRate);
         }
     }
@@ -170,6 +171,8 @@ public class PlayerController : MonoBehaviour
         string name = "DEATH" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);
         GameObject.Find("Canvas").GetComponent<CanvasController>().GameOver();
+        floorScene.SetActive(false);
+        deathScene.SetActive(true);
     }
 
     void CastSpell() 
@@ -239,7 +242,7 @@ public class PlayerController : MonoBehaviour
         }
         if(itemCooldown > 0) 
         {
-            playerUIController.CaveiraoAnim.SetTrigger("Balança");
+            playerUIController.CaveiraoAnim.SetTrigger("Balanï¿½a");
             return;
         }
         switch (selectedItem)
