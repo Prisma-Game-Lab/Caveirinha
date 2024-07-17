@@ -60,9 +60,6 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool canMove;
     [HideInInspector] public bool gameIsPaused;
 
-    [SerializeField] private GameObject deathScene;
-    [SerializeField] private GameObject floorScene;
-
     void Start()
     {
         selectedSoulDistance = 69;
@@ -171,8 +168,6 @@ public class PlayerController : MonoBehaviour
         string name = "DEATH" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);
         GameObject.Find("Canvas").GetComponent<CanvasController>().GameOver();
-        floorScene.SetActive(false);
-        deathScene.SetActive(true);
     }
 
     void CastSpell() 

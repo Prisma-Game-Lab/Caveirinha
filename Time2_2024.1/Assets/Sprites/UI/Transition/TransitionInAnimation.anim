@@ -42,17 +42,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.75
         value: 0
-        inSlope: -3239.6194
-        outSlope: -3239.6194
-        tangentMode: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
         weightedMode: 0
-        inWeight: 0.090275526
+        inWeight: 0.33333334
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.x
-    path: Transition/Circle
+    path: Game/Transition/Circle
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -81,17 +81,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.75
         value: 0
-        inSlope: -3054.955
-        outSlope: -3054.955
-        tangentMode: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
         weightedMode: 0
-        inWeight: 0.09573245
+        inWeight: 0.33333334
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.y
-    path: Transition/Circle
+    path: Game/Transition/Circle
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -104,7 +104,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3639526494
+      path: 2368114525
       attribute: 1967290853
       script: {fileID: 0}
       typeID: 224
@@ -113,7 +113,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3639526494
+      path: 2368114525
       attribute: 38095219
       script: {fileID: 0}
       typeID: 224
@@ -168,17 +168,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.75
         value: 0
-        inSlope: -3239.6194
-        outSlope: -3239.6194
-        tangentMode: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
         weightedMode: 0
-        inWeight: 0.090275526
+        inWeight: 0.33333334
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.x
-    path: Transition/Circle
+    path: Game/Transition/Circle
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -207,17 +207,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.75
         value: 0
-        inSlope: -3054.955
-        outSlope: -3054.955
-        tangentMode: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
         weightedMode: 0
-        inWeight: 0.09573245
+        inWeight: 0.33333334
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_SizeDelta.y
-    path: Transition/Circle
+    path: Game/Transition/Circle
     classID: 224
     script: {fileID: 0}
     flags: 0
