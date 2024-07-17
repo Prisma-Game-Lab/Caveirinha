@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool canMove;
 
     [SerializeField] private GameObject deathScene;
+    [SerializeField] private GameObject floorScene;
 
     void Start()
     {
@@ -152,6 +153,7 @@ public class PlayerController : MonoBehaviour
             sfx = (Random.Range(1, 3));
             name = "DEATH" + sfx.ToString();
             AudioManager.instance.PlaySFX(name);
+            floorScene.SetActive(false);
             deathScene.SetActive(true);
             return true;
         }
