@@ -188,7 +188,7 @@ MonoBehaviour:
   knockbackStrenght: 20
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 2
-  spellObject: {fileID: 4722857247087816948, guid: 8eb8b4026c465554b9865bcf5540050f, type: 3}
+  spellObject: {fileID: 4722857247087816948, guid: 922d352d97cedc94482f91f7e3107477, type: 3}
   spellDamage: 15
   spellSpeed: 5
   spellScatter: 0.5
