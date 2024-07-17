@@ -24,7 +24,8 @@ public class BossController : MonoBehaviour
     [SerializeField]
     float laserDestructionTime;
 
-    GameObject laser;
+    GameObject laserL, laserR;
+    GameObject meeleVisualInScene;
 
     bool attacking;
     [SerializeField] Vector3 meeleColliderOffset;
@@ -68,22 +69,29 @@ public class BossController : MonoBehaviour
 
     void OnDeath()
     {
+        Destroy(meeleVisualInScene);
         Destroy(gameObject);
     }
 
     IEnumerator shootLaser()
     {
         yield return new WaitForSeconds(0);
-        Transform vassoura = GameObject.Find("Vassoura_Laser").transform;
+        Transform vassouraL = GameObject.Find("Vassoura_Laser L").transform;
+        Transform vassouraR = GameObject.Find("Vassoura_Laser R").transform;
 
-        Vector2 targetVector = vassoura.up * -1;
-        laser = Instantiate(laserObject, vassoura.position, vassoura.rotation);
-        laser.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed,laserDestructionTime, 0);
+        Vector2 targetVector = vassouraL.up * -1;
+        laserL = Instantiate(laserObject, vassouraL.position, vassouraL.rotation);
+        laserL.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed,laserDestructionTime, 0);
+
+        targetVector = vassouraR.up * -1;
+        laserR = Instantiate(laserObject, vassouraR.position, vassouraR.rotation);
+        laserR.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed, laserDestructionTime, 0);
     }
 
     void destroyLaser()
     {
-        Destroy(laser);
+        Destroy(laserL);
+        Destroy(laserR);
     }
 
     void playSound(string sfx)
@@ -103,7 +111,7 @@ public class BossController : MonoBehaviour
 
     IEnumerator meeleAttack() 
     {
-        GameObject meeleVisualInScene = Instantiate(meeleVisual);
+        meeleVisualInScene = Instantiate(meeleVisual);
         meeleVisualInScene.transform.position = transform.position + meeleColliderOffset;
         meeleVisualInScene.transform.localScale = meeleColliderSize;
         yield return new WaitForSeconds(meeleAtackDelay);

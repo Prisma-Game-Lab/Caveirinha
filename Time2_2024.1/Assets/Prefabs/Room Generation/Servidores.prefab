@@ -9930,6 +9930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredCameraLocation: {fileID: 0}
   desiredPlayerLocation: {fileID: 0}
   cameraCollider: {fileID: 0}
 --- !u!1 &9132850812786496826
@@ -15728,6 +15729,14 @@ PrefabInstance:
     - target: {fileID: 2687639719472045636, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
@@ -72917,6 +72926,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[96].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 3349833291915974578, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6327805002084819320, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -72955,6 +72968,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327805002084819320, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353052464770324479, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
+      propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7009201791677497078, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
