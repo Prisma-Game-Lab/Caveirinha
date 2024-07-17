@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4586431106596069794}
   - component: {fileID: -3553535790001232290}
   - component: {fileID: 6287944994047955814}
+  - component: {fileID: 7396576895879103889}
   m_Layer: 10
   m_Name: EnemyRobson
   m_TagString: Enemy
@@ -190,7 +191,7 @@ MonoBehaviour:
   spellObject: {fileID: 4722857247087816948, guid: 8eb8b4026c465554b9865bcf5540050f, type: 3}
   spellDamage: 15
   spellSpeed: 5
-  spellScatter: 1
+  spellScatter: 0.5
   castingDistance: 0.5
   maxCooldown: 2
   spellDestructionTime: 60
@@ -217,3 +218,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &7396576895879103889
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8464873342827758928}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b8a0af594d260024f8d3cba72cc53899, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
