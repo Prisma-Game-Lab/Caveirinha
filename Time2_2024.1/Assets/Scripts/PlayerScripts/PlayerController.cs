@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
     float invencibilitySeconds;
     [HideInInspector] public bool canMove;
 
+    [SerializeField] private GameObject deathScene;
+
     void Start()
     {
         selectedSoulDistance = 69;
@@ -150,7 +152,7 @@ public class PlayerController : MonoBehaviour
             sfx = (Random.Range(1, 3));
             name = "DEATH" + sfx.ToString();
             AudioManager.instance.PlaySFX(name);
-            Die();
+            deathScene.SetActive(true);
             return true;
         }
         health -= damage;
@@ -164,7 +166,7 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
-    void Die() 
+    public void Die() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
