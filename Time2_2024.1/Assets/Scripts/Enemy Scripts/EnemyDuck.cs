@@ -12,35 +12,47 @@ public class EnemyDuck : MonoBehaviour
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     [SerializeField] float castingDistance;
+    [SerializeField] float minCooldown;
     [SerializeField] float maxCooldown;
     [SerializeField] float spellDestructionTime;
     [SerializeField] float spellKnockback;
     float cooldown;
+    private bool shooting;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        cooldown = maxCooldown;
+        cooldown = Random.Range(minCooldown*100, maxCooldown*100);
+        cooldown /= 100;
     }
 
     void Update()
     {
-        cooldown -= Time.deltaTime;
-        if (cooldown <= 0)
+        if (!shooting)
         {
-            anim.SetTrigger("Atirar");
-            StartCoroutine(shoot());
-            cooldown = maxCooldown;
-            AudioManager.instance.PlaySFX("ROBSON");
+            if(cooldown <= 0) 
+            {
+                anim.SetTrigger("Atirar");
+                cooldown = Random.Range(minCooldown*100, maxCooldown * 100);
+                cooldown /= 100;
+                shooting = true;
+            }
+            else 
+            {
+                cooldown -= Time.deltaTime;
+            }
         }
     }
 
-    IEnumerator shoot()
+    public void AnimationShoot() 
     {
-        yield return new WaitForSeconds(0.25f);
-        Vector2 directionVector = new Vector2(spellSpeed, Random.Range(-spellScatter, spellScatter));
+        Vector2 directionVector = new Vector2(1, 0) * transform.right;
+        directionVector += new Vector2(0, Random.Range(-spellScatter, spellScatter));
+        directionVector = directionVector.normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * directionVector * transform.right, spellDestructionTime, spellKnockback);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * directionVector, spellDestructionTime, spellKnockback);
+        AudioManager.instance.PlaySFX("ROBSON");
+        shooting = false;
     }
 }

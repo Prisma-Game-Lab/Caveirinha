@@ -183,10 +183,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellObject: {fileID: 4722857247087816948, guid: 922d352d97cedc94482f91f7e3107477, type: 3}
   spellDamage: 15
-  spellSpeed: 5
-  spellScatter: 2
-  castingDistance: 0.5
-  maxCooldown: 2
+  spellSpeed: 2
+  spellScatter: 0.5
+  castingDistance: 1
+  minCooldown: 1
+  maxCooldown: 2.5
   spellDestructionTime: 60
   spellKnockback: 15.4
 --- !u!95 &6287944994047955814
