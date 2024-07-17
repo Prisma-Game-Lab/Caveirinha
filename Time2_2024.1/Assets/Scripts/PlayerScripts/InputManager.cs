@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour
 
     public void OnItemChange(InputAction.CallbackContext itemInput) 
     {
-        if (itemInput.performed) 
+        if (itemInput.started) 
         {
             playerMovementScript.ChangeItemSelected();
         }
@@ -53,9 +53,17 @@ public class InputManager : MonoBehaviour
 
     public void UseItem(InputAction.CallbackContext itemInput)
     {
-        if (itemInput.performed)
+        if (itemInput.started)
         {
             playerMovementScript.UseItem();
+        }
+    }
+
+    public void OnPause(InputAction.CallbackContext pause)
+    {
+        if (pause.started)
+        {
+            playerMovementScript.gameIsPaused = !playerMovementScript.gameIsPaused;
         }
     }
 }

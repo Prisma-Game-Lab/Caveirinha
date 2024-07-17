@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
     float invencibilitySeconds;
     [HideInInspector] public bool canMove;
+    [HideInInspector] public bool gameIsPaused;
 
     [SerializeField] private GameObject deathScene;
 
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             spellCooldown -= Time.deltaTime;
         }
-        else if (shouldShoot && canMove) 
+        else if (shouldShoot && canMove && !gameIsPaused) 
         {
             AudioManager.instance.PlaySFX("ATK");
             CastSpell();
@@ -149,10 +150,7 @@ public class PlayerController : MonoBehaviour
         AudioManager.instance.PlaySFX(name);
         if (health <= 1)
         {
-            sfx = (Random.Range(1, 3));
-            name = "DEATH" + sfx.ToString();
-            AudioManager.instance.PlaySFX(name);
-            deathScene.SetActive(true);
+            Die();
             return true;
         }
         health -= damage;
@@ -168,7 +166,10 @@ public class PlayerController : MonoBehaviour
 
     public void Die() 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        int sfx = (Random.Range(1, 3));
+        string name = "DEATH" + sfx.ToString();
+        AudioManager.instance.PlaySFX(name);
+        GameObject.Find("Canvas").GetComponent<CanvasController>().GameOver();
     }
 
     void CastSpell() 
@@ -197,6 +198,10 @@ public class PlayerController : MonoBehaviour
 
     public void Assimilate() 
     {
+        if (gameIsPaused) 
+        {
+            return;
+        }
         if (selectedSoul != null) 
         {
             selectedSoul.GetComponent<SoulScript>().soulAssimilation();
@@ -207,6 +212,10 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeItemSelected() 
     {
+        if (gameIsPaused)
+        {
+            return;
+        }
         int i = selectedItem+1;
         i = i % (avaiableItems.Length);
         while (true) 
@@ -224,6 +233,10 @@ public class PlayerController : MonoBehaviour
 
     public void UseItem() 
     {
+        if (!canMove && gameIsPaused) 
+        {
+            return;
+        }
         if(itemCooldown > 0) 
         {
             playerUIController.CaveiraoAnim.SetTrigger("Balança");

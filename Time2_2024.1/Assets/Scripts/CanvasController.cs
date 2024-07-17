@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
@@ -9,9 +10,16 @@ public class CanvasController : MonoBehaviour
     GameObject player;
     Animator anim;
     bool isOnTransition;
+    bool gameIsPaused;
+
+    [SerializeField] GameObject gameUI;
+    [SerializeField] GameObject pauseUI;
+    [SerializeField] GameObject gameOverUI;
 
     public delegate void OnSceneTransition();
     public static OnSceneTransition onSceneTransition;
+
+    public AudioSource music, sfx;
 
     private void Awake()
     {
@@ -51,5 +59,50 @@ public class CanvasController : MonoBehaviour
     {
         anim.SetTrigger("LeavingScene");
         StartCoroutine(WaitForAnimation());
+    }
+
+    public void PauseGame() 
+    {
+        if (!gameIsPaused) 
+        {
+            Time.timeScale = 0;
+            pauseUI.SetActive(true);
+        }
+        else 
+        {
+            Time.timeScale = 1;
+            pauseUI.SetActive(false);
+        }
+        gameIsPaused = !gameIsPaused;
+    }
+
+    public void LoadMainMenu() 
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
+    public void LoadCurrentScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
+    }
+
+    public void GameOver() 
+    {
+        Time.timeScale = 0;
+        gameOverUI.SetActive(true);
+    }
+
+    public void MusicVolume(float MusicValue)
+    {
+        AudioManager.instance.MusicVolume(MusicValue);
+        music.volume = MusicValue;
+    }
+
+    public void SFXVolume(float SFXValue)
+    {
+        AudioManager.instance.SFXVolume(SFXValue);
+        sfx.volume = SFXValue;
     }
 }
