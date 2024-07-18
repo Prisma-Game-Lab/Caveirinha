@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     float invencibilitySeconds;
     [HideInInspector] public bool canMove;
-    [HideInInspector] public bool gameIsPaused;
+    public bool gameIsPaused;
 
     void Start()
     {
@@ -320,5 +320,10 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position,broomHitboxSize);
+    }
+
+    public void TogglePause() 
+    {
+        gameIsPaused = !gameIsPaused;
     }
 }

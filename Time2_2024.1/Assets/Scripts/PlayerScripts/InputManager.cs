@@ -3,8 +3,6 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    //Comentario
-
     //Referencia ao script principal
     PlayerController playerMovementScript;
 
@@ -63,7 +61,7 @@ public class InputManager : MonoBehaviour
     {
         if (pause.started)
         {
-            playerMovementScript.gameIsPaused = !playerMovementScript.gameIsPaused;
+            playerMovementScript.TogglePause();
         }
     }
 }
