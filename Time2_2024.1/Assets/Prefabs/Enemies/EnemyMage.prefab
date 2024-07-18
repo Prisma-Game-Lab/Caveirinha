@@ -268,5 +268,6 @@ MonoBehaviour:
   spellScatter: 0.025
   castingDistance: 0.5
   maxCooldown: 2
-  spellDestructionTime: 60
+  spellDestructionTime: 10
   spellKnockback: 15
+  robson: 0

@@ -299,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1144555305410522938, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1144555305410522938, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -323,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1428114485732632356, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1428114485732632356, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2492080483964442912, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3363979231180543041, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: doors.Array.data[0]
       value: 
@@ -452,6 +456,10 @@ PrefabInstance:
     - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514380946719691070, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5680564471463406197, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_Controller
@@ -2038,17 +2046,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
---- !u!114 &588683531804478856 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
-  m_PrefabInstance: {fileID: 588683531804478855}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33f46f8b820de64e822e796e8ef8c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2808305315101955872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2057,10 +2054,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1145095190811726097, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 588683531804478856}
     - target: {fileID: 4740361055041908177, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2172,7 +2165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1785081177563292600, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

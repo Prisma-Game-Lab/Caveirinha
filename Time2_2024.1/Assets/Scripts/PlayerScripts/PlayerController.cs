@@ -237,7 +237,7 @@ public class PlayerController : MonoBehaviour
         }
         if(itemCooldown > 0) 
         {
-            playerUIController.CaveiraoAnim.SetTrigger("Balan�a");
+            playerUIController.CaveiraoAnim.SetTrigger("Balanca");
             return;
         }
         switch (selectedItem)
