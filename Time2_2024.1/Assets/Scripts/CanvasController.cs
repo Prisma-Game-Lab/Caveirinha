@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CanvasController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class CanvasController : MonoBehaviour
     public static OnSceneTransition onSceneTransition;
 
     public AudioSource music, sfx;
+    public Slider musicSl, SFXSl;
 
     private void Awake()
     {
@@ -104,5 +106,11 @@ public class CanvasController : MonoBehaviour
     {
         AudioManager.instance.SFXVolume(SFXValue);
         sfx.volume = SFXValue;
+    }
+
+    private void Start()
+    {
+        musicSl.value = AudioManager.instance.musicSource.volume;
+        SFXSl.value = AudioManager.instance.sfxSource.volume;
     }
 }
