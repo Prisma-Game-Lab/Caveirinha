@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour
     {
         //Pega o input do player e passa pro script principal
         Vector2 moveVector = moveInput.ReadValue<Vector2>();
-        playerMovementScript.moveInputVector = moveVector;
+        playerMovementScript.CalculateDirection(moveVector);
     }
 
     public void OnShoot(InputAction.CallbackContext shootInput) 

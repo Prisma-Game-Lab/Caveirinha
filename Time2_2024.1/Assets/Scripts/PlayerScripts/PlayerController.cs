@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator anim;
 
     PlayerUIController playerUIController;
     [HideInInspector] public GameObject selectedSoul;
@@ -58,12 +59,13 @@ public class PlayerController : MonoBehaviour
 
     float invencibilitySeconds;
     [HideInInspector] public bool canMove;
-    public bool gameIsPaused;
+    [HideInInspector] public bool gameIsPaused;
 
     void Start()
     {
         selectedSoulDistance = 69;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         health = maxHealth;
         invencibilitySeconds = starterInvencibility;
         playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
@@ -135,6 +137,14 @@ public class PlayerController : MonoBehaviour
             //Aplica a for�a
             rb.AddForce(speedDif * accelRate);
         }
+    }
+
+    public void CalculateDirection(Vector2 inputVector) 
+    {
+        moveInputVector = inputVector;
+        anim.SetFloat("InputMagnitude", moveInputVector.sqrMagnitude);
+        anim.SetFloat("Horizontal", moveInputVector.x);
+        anim.SetFloat("Vertical", moveInputVector.y);
     }
 
     public bool TakeDamage(float damage, Vector2 knockbackDirection, float knockback) 
