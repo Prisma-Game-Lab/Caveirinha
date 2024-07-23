@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2266341339302050975, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266341339302050975, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266341339302050975, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6678748
+      objectReference: {fileID: 0}
     - target: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
       propertyPath: m_Name
       value: LaserProjectile - Copy
@@ -163,8 +175,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 1}
+      key0: {r: 0.4871256, g: 0, b: 0.7264151, a: 1}
+      key1: {r: 0.88035524, g: 0.6367924, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
