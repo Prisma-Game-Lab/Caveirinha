@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Unity.UI;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
@@ -27,6 +29,10 @@ public class BossController : MonoBehaviour
     GameObject laserL, laserR;
     GameObject meeleVisualInScene;
 
+    [SerializeField]
+    private GameObject healthUI;
+    private Slider slider;
+
     bool attacking;
     [SerializeField] Vector3 meeleColliderOffset;
     [SerializeField] Vector2 meeleColliderSize;
@@ -48,6 +54,10 @@ public class BossController : MonoBehaviour
             health = baseHealth * Mathf.Log(rooms, 2.3f);
             laserDamage = baseLaser * Mathf.Pow(1.03f, rooms);
         }
+        healthUI.SetActive(true);
+        slider = healthUI.GetComponent<Slider>();
+        slider.maxValue = health;
+        slider.value = health;
     }
 
     private void FixedUpdate()
@@ -61,6 +71,7 @@ public class BossController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        slider.value = health;
         if (health <= 0)
         {
             OnDeath();
@@ -71,6 +82,7 @@ public class BossController : MonoBehaviour
     {
         Destroy(meeleVisualInScene);
         Destroy(gameObject);
+        healthUI.SetActive(false);
     }
 
     IEnumerator shootLaser()
