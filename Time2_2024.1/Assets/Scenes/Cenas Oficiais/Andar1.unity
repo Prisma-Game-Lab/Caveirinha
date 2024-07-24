@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8035162eedb8c05418945af331df399a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: 373ad348d99c9f94f94e1c81f01fdf31, type: 2}
+  flashMaterial: {fileID: 2100000, guid: 6d4d54584f330954a9a3f7cf9248523b, type: 2}
   flashDuration: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
