@@ -257,6 +257,7 @@ public class PlayerController : MonoBehaviour
         }
         if(itemCooldown > 0) 
         {
+            AudioManager.instance.PlaySFX("COOLDOWN");
             playerUIController.CaveiraoAnim.SetTrigger("Balanca");
             return;
         }
@@ -268,6 +269,7 @@ public class PlayerController : MonoBehaviour
                 {
                     return;
                 }
+                AudioManager.instance.PlaySFX("POTION");
                 health += potionHealing;
                 if(health > maxHealth) 
                 {
@@ -282,6 +284,9 @@ public class PlayerController : MonoBehaviour
             case 1:
                 //Broom
                 currentMaxMoveSpeed = broomMaxMoveSpeed;
+                int sfx = (Random.Range(1, 2));
+                string name = "CVASS" + sfx.ToString();
+                AudioManager.instance.PlaySFX(name);
                 anim.Play("Vassourada");
                 itemCooldown = broomCooldown;
                 break;
