@@ -8,7 +8,6 @@ public class EnemyMage : EnemyBase
     //descrever funcoes da classe healer
     GameObject player;
     [SerializeField] GameObject spellObject;
-    [SerializeField] float spellDamage;
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     [SerializeField] float castingDistance;
@@ -42,6 +41,6 @@ public class EnemyMage : EnemyBase
         directionVector = directionVector.normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * directionVector, spellDestructionTime, spellKnockback);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Player", currentEnemyAttack, spellSpeed * directionVector, spellDestructionTime, spellKnockback);
     }
 }

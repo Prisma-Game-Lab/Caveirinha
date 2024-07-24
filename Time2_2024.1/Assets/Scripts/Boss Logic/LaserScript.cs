@@ -13,7 +13,7 @@ public class LaserScript : SpellScript
             case "Enemy":
                 if (targetTag == "Enemy")
                 {
-                    collision.GetComponent<EnemyBase>().TakeDamage(damage,Vector2.zero,0);
+                    collision.GetComponent<EnemyBase>().TakeDamage(damage);
                     Destroy(gameObject);
                 }
                 break;

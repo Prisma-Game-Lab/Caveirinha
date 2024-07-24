@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
-    Rigidbody2D rb;
     BlinkScript blinkScript;
 
     private string enemyName;
@@ -40,48 +39,47 @@ public class EnemyBase : MonoBehaviour
                                      "Vinícius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
                                      "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenóbio", "Zé" };
 
-    [SerializeField]
-    private float health;
-    [SerializeField]
-    private float enemyAttack;
-    [SerializeField]
-    private float contactDamage;
-    [SerializeField]
-    private float knockbackStrenght;
-    [SerializeField]
-    GameObject soulObject;
-    [SerializeField] [Tooltip("0 - Vida, 1 - Dano, 2 - Speed")]
-    int soulType;
+    [SerializeField] private float[] healthVector;
+    [SerializeField] private float[] attackVector;
+    [SerializeField] private float contactDamage;
+    [SerializeField] private float knockbackStrenght;
+    [SerializeField] GameObject soulObject;
+    [SerializeField] [Tooltip("0 - Vida, 1 - Dano, 2 - Speed")] int soulType;
+    [SerializeField] private string onDeathAudio;
+
+    private float currentHealth;
+    protected float currentEnemyAttack;
 
     private void Awake()
     {
+        currentHealth = healthVector[GameManager.instance.Floor];
+        currentEnemyAttack = attackVector[GameManager.instance.Floor];
         enemyName = vectorNames[Random.Range(0, vectorNames.Length)];
-        rb = GetComponent<Rigidbody2D>();
         blinkScript = GetComponent<BlinkScript>();
     }
 
-    public void TakeDamage(float damage, Vector2 knockbackDirection, float knockback)
+    public void TakeDamage(float damage)
     {
         AudioManager.instance.PlaySFX("HIT");
-        health -= damage;
+        currentHealth -= damage;
         StartCoroutine(blinkScript.Blink());
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
-            if (soulType == 0)
-            {
-                AudioManager.instance.PlaySFX("EDEATH");
-            }
-            else if (soulType == 1)
-            {
-                AudioManager.instance.PlaySFX("SDEATH");
-            }
-            else 
-            {
-                AudioManager.instance.PlaySFX("PDEATH");
-            }
+            AudioManager.instance.PlaySFX(onDeathAudio);
+            //if (soulType == 0)
+            //{
+            //    AudioManager.instance.PlaySFX("EDEATH");
+            //}
+            //else if (soulType == 1)
+            //{
+            //    AudioManager.instance.PlaySFX("SDEATH");
+            //}
+            //else 
+            //{
+            //    AudioManager.instance.PlaySFX("PDEATH");
+            //}
             OnDeath();
         }
-        //rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
     }
 
     void OnDeath()

@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
     BlinkScript blinkScript;
-
+    CanvasController canvasController;
     PlayerUIController playerUIController;
+
     [HideInInspector] public GameObject selectedSoul;
     [HideInInspector] public float selectedSoulDistance;
 
@@ -56,7 +55,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask broomLayerMask;
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
-    [SerializeField] private float broomKnockback;
     private int potionCharges = 2;
     bool bocaAberta = true;
     private float itemCooldown;
@@ -74,6 +72,7 @@ public class PlayerController : MonoBehaviour
         blinkScript = GetComponent<BlinkScript>();
         health = maxHealth;
         invencibilitySeconds = starterInvencibility;
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
         playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
         UpdateUI();
         StartCoroutine(WaitForRoomTransition(1));
@@ -311,6 +310,7 @@ public class PlayerController : MonoBehaviour
     {
         gameIsPaused = !gameIsPaused;
         anim.SetBool("GameIsPaused", gameIsPaused);
+        canvasController.PauseGame();
     }
 
     private void BroomAttack() 
@@ -329,8 +329,7 @@ public class PlayerController : MonoBehaviour
                     EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
                     if (enemy != null)
                     {
-                        Vector2 directionVector = hitObject.transform.position - transform.position;
-                        enemy.TakeDamage(broomDamage, directionVector, broomKnockback);
+                        enemy.TakeDamage(broomDamage);
                     }
                     else
                     {

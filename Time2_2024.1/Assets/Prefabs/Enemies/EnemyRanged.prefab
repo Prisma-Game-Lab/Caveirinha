@@ -371,14 +371,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd6e603637c70440b85a090502dfbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  enemyAttack: 50
+  healthVector:
+  - 100
+  - 200
+  - 300
+  attackVector:
+  - 10
+  - 20
+  - 30
   contactDamage: 10
   knockbackStrenght: 20
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 0
+  onDeathAudio: EDEATH
   spellObject: {fileID: 4722857247087816948, guid: d872a7b1f38733542a0ba95be83191b1, type: 3}
-  spellDamage: 20
   spellSpeed: 5
   spellScatter: 0.2
   spellDestructionTimer: 2.5
@@ -503,4 +509,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6d4d54584f330954a9a3f7cf9248523b, type: 2}
-  flashDuration: 0.25
+  flashDuration: 0.125

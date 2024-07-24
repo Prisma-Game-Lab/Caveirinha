@@ -31,7 +31,7 @@ public class SpellScript : MonoBehaviour
                     EnemyBase enemy = collision.GetComponent<EnemyBase>();
                     if (enemy != null)
                     {
-                        enemy.TakeDamage(damage,rb.velocity.normalized,knockbackAmount);
+                        enemy.TakeDamage(damage);
                     }
                     else
                     {

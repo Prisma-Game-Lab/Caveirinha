@@ -100,6 +100,8 @@ GameObject:
   - component: {fileID: 2144826358682729720}
   - component: {fileID: 6225997440456077146}
   - component: {fileID: 6756568901989985601}
+  - component: {fileID: 636050209288150833}
+  - component: {fileID: 9014380608365562192}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -228,19 +230,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedSoul: {fileID: 0}
   selectedSoulDistance: 0
-  avaiableItems: 01000100
+  avaiableItems: 0101
   moveInputVector: {x: 0, y: 0}
   shouldShoot: 0
   shootVector: {x: 0, y: 0}
-  moveSpeed: 5.25
+  maxMoveSpeed: 5.25
   moveAcceleration: 10
-  moveDesacceleration: 8
+  moveDesacceleration: 10
+  broomMaxMoveSpeed: 3
   castingDistance: 0.6
   spellObject: {fileID: 4722857247087816948, guid: bf5fe636b5afb3d4d85fcfe4141e4335, type: 3}
   spellSpeed: 5
   spellScatter: 0.2
   spellDestructionTime: 1.35
-  spellKnockback: 0
+  spellKnockback: 10
   health: 100
   maxHealth: 100
   attackDamage: 35
@@ -250,7 +253,7 @@ MonoBehaviour:
   maxInvencibilityOnRoomEnter: 3
   potionHealing: 50
   potionCooldown: 0
-  potionChangeDelay: 0
+  potionChangeDelay: 0.4
   broomDamage: 25
   broomCooldown: 4
   broomHitboxSize: 2
@@ -259,8 +262,8 @@ MonoBehaviour:
     m_Bits: 1152
   broomVisual: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
   deflectedProjectileSpeed: 7
-  broomKnockback: 0
   canMove: 0
+  gameIsPaused: 0
 --- !u!114 &2144826358682729720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +369,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3c6bda5a-ff9f-4cec-809f-c9695df9b8a1
     m_ActionName: Normal/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 332292834312830547}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 95b5d17e-d509-4765-9479-4c63eece46de
+    m_ActionName: Normal/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Normal
@@ -462,3 +481,38 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath: []
+--- !u!95 &636050209288150833
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359137475710176937}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b7135776cbcf664292be94755ec2169, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9014380608365562192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359137475710176937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8035162eedb8c05418945af331df399a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 6d4d54584f330954a9a3f7cf9248523b, type: 2}
+  flashDuration: 0.125
