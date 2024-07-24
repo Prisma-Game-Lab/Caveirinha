@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
+    BlinkScript blinkScript;
 
     PlayerUIController playerUIController;
     [HideInInspector] public GameObject selectedSoul;
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
     [SerializeField] private float broomKnockback;
+    private int potionCharges = 2;
     bool bocaAberta = true;
     private float itemCooldown;
 
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
         selectedSoulDistance = 69;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        blinkScript = GetComponent<BlinkScript>();
         health = maxHealth;
         invencibilitySeconds = starterInvencibility;
         playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
@@ -79,6 +82,7 @@ public class PlayerController : MonoBehaviour
     public void OnDoorEnter() 
     {
         canMove = false;
+        anim.SetBool("CanMove", canMove);
         invencibilitySeconds = maxInvencibilityOnRoomEnter;
         rb.velocity = Vector3.zero;
         StartCoroutine(WaitForRoomTransition(1.50f));
@@ -88,6 +92,7 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(timeWaited);
         canMove = true;
+        anim.SetBool("CanMove", canMove);
     }
 
     private void Update()
@@ -148,7 +153,6 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("InputMagnitude", moveInputVector.sqrMagnitude);
         anim.SetFloat("Horizontal", moveInputVector.x);
         anim.SetFloat("Vertical", moveInputVector.y);
-        anim.SetBool("CanMove",canMove);
     }
 
     public bool TakeDamage(float damage, Vector2 knockbackDirection, float knockback) 
@@ -171,6 +175,7 @@ public class PlayerController : MonoBehaviour
             health = 1;
         }
         UpdateUI();
+        StartCoroutine(blinkScript.Blink());
         invencibilitySeconds = maxInvencibilityOnDamage;
         rb.AddForce(knockback * knockbackDirection, ForceMode2D.Impulse);
         return true;
@@ -181,7 +186,9 @@ public class PlayerController : MonoBehaviour
         int sfx = (Random.Range(1, 3));
         string name = "DEATH" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);
-        GameObject.Find("Canvas").GetComponent<CanvasController>().GameOver();
+        anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        anim.Play("Morte");
+        StartCoroutine(GameObject.Find("Canvas").GetComponent<CanvasController>().GameOver());
     }
 
     void CastSpell() 
@@ -240,7 +247,7 @@ public class PlayerController : MonoBehaviour
             i++;
             i = i % (avaiableItems.Length);
         }
-        playerUIController.UpdateItem(selectedItem);
+        playerUIController.UpdateItem(selectedItem,potionCharges);
     }
 
     public void UseItem() 
@@ -258,33 +265,27 @@ public class PlayerController : MonoBehaviour
         {
             case 0:
                 //Unused Potion
+                if (potionCharges == 0) 
+                {
+                    return;
+                }
                 health += potionHealing;
                 if(health > maxHealth) 
                 {
                     health = maxHealth;
                 }
-                avaiableItems[0] = false;
-                avaiableItems[1] = true;
-                selectedItem = 1;
                 itemCooldown = potionCooldown;
+                potionCharges -= 1;
                 StartCoroutine(WaitMouthClosing());
                 UpdateUI();
                 break;
 
             case 1:
-                //Used Potion
-                return;
-
-            case 2:
                 //Broom
                 currentMaxMoveSpeed = broomMaxMoveSpeed;
                 anim.Play("Vassourada");
                 itemCooldown = broomCooldown;
                 break;
-
-            case 3:
-                //Bucket
-                return;
         }
         playerUIController.CaveiraoAnim.SetTrigger("Fechar");
         bocaAberta = false;
@@ -293,7 +294,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitMouthClosing() 
     {
         yield return new WaitForSeconds(potionChangeDelay);
-        playerUIController.UpdateItem(selectedItem);
+        playerUIController.UpdateItem(selectedItem,potionCharges);
     }
 
     void UpdateUI() 
@@ -309,13 +310,14 @@ public class PlayerController : MonoBehaviour
     public void TogglePause() 
     {
         gameIsPaused = !gameIsPaused;
+        anim.SetBool("GameIsPaused", gameIsPaused);
     }
 
     private void BroomAttack() 
     {
         GameObject broomVisualObject = Instantiate(broomVisual, transform);
         broomVisualObject.transform.localScale = new Vector3(broomHitboxSize * 2 / transform.localScale.x, broomHitboxSize * 2 / transform.localScale.y, 1);
-        Destroy(broomVisualObject, 0.25f);
+        Destroy(broomVisualObject, 0.5f);
         RaycastHit2D[] objectsHit = Physics2D.CircleCastAll(transform.position, broomHitboxSize, Vector2.zero, 0, broomLayerMask);
         foreach (var item in objectsHit)
         {

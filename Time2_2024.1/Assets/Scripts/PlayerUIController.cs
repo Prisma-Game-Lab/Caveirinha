@@ -23,8 +23,13 @@ public class PlayerUIController : MonoBehaviour
         attackSpeedText.text = attackSpeed.ToString();
     }
 
-    public void UpdateItem(int selectedItem)
+    public void UpdateItem(int selectedItem, int potionCharges)
     {
-        itemImage.sprite = spriteVector[selectedItem];
+        if (selectedItem == 0) 
+        {
+            itemImage.sprite = spriteVector[potionCharges];
+            return;
+        }
+        itemImage.sprite = spriteVector[selectedItem+2];
     }
 }

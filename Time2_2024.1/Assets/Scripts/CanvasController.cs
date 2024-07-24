@@ -90,9 +90,10 @@ public class CanvasController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void GameOver() 
+    public IEnumerator GameOver() 
     {
         Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(1);
         gameOverUI.SetActive(true);
     }
 

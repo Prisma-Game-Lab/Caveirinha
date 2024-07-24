@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour
 {
     Rigidbody2D rb;
+    BlinkScript blinkScript;
 
     private string enemyName;
 
@@ -56,12 +57,14 @@ public class EnemyBase : MonoBehaviour
     {
         enemyName = vectorNames[Random.Range(0, vectorNames.Length)];
         rb = GetComponent<Rigidbody2D>();
+        blinkScript = GetComponent<BlinkScript>();
     }
 
     public void TakeDamage(float damage, Vector2 knockbackDirection, float knockback)
     {
         AudioManager.instance.PlaySFX("HIT");
         health -= damage;
+        StartCoroutine(blinkScript.Blink());
         if (health <= 0)
         {
             if (soulType == 0)

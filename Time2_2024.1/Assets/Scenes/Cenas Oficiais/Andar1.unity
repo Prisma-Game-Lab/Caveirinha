@@ -1698,6 +1698,18 @@ PrefabInstance:
       propertyPath: broomLayerMask.m_Bits
       value: 1152
       objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: avaiableItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: avaiableItems.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: avaiableItems.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1709,6 +1721,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8933374578159023306}
+    - targetCorrespondingSourceObject: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8933374578159023312}
   m_SourcePrefab: {fileID: 100100000, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
 --- !u!1001 &2808305315101955872
 PrefabInstance:
@@ -1718,6 +1733,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 669110891449603783, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: spriteVector.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 97436731876c93843bd8a9ac4b9801a2, type: 3}
+    - target: {fileID: 669110891449603783, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: spriteVector.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 922fb5382389ead41a07813701fecdca, type: 3}
+    - target: {fileID: 669110891449603783, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: spriteVector.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 738050bf1b9211b43878a134aaba38bf, type: 3}
+    - target: {fileID: 669110891449603783, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: spriteVector.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 532caae379036614e8a627d74b297b8f, type: 3}
+    - target: {fileID: 1049533849209416734, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1361697648499695236, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1770,6 +1805,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2029815779938041845, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 738050bf1b9211b43878a134aaba38bf, type: 3}
     - target: {fileID: 2643449647365823864, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2545,6 +2584,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8933374578159023312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650089336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8035162eedb8c05418945af331df399a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 373ad348d99c9f94f94e1c81f01fdf31, type: 2}
+  flashDuration: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

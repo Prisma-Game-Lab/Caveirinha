@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7968076277286018682}
   - component: {fileID: 3618274750609022443}
   - component: {fileID: -3553535790001232290}
+  - component: {fileID: -8827696512198388712}
   m_Layer: 10
   m_Name: EnemyMage
   m_TagString: Enemy
@@ -270,4 +271,17 @@ MonoBehaviour:
   maxCooldown: 2
   spellDestructionTime: 10
   spellKnockback: 15
-  robson: 0
+--- !u!114 &-8827696512198388712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8464873342827758928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8035162eedb8c05418945af331df399a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 6d4d54584f330954a9a3f7cf9248523b, type: 2}
+  flashDuration: 0.25
