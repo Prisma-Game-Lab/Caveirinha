@@ -7,18 +7,20 @@ public class RoomMgr : MonoBehaviour
 {
     public GameObject[] roomPrefabs;
     public GameObject[] doors;
-    [SerializeField] PolygonCollider2D mainCameraCollider;
-    GameObject[] rooms;
+
+    [SerializeField] private GameObject mainRoom;
     public GameObject PathFinding;
 
     // Start is called before the first frame update
     void Start()
     {
-        rooms = new GameObject[doors.Length];
-        for (int i = 0; i < doors.Length; i++) { 
+        GameObject[] rooms = new GameObject[doors.Length];
+        PolygonCollider2D mainRoomCollider = mainRoom.GetComponent<PolygonCollider2D>();
+        for (int i = 0; i < doors.Length; i++)
+        {
             int rand = Random.Range(0, roomPrefabs.Length);
             GameObject room = Instantiate(roomPrefabs[rand]);
-            room.transform.parent = transform.parent;
+            //room.transform.parent = transform.parent;
             room.transform.Translate(100 * i, 20, 0);
 
             DoorController doorMain = doors[i].GetComponentInChildren<DoorController>(); // porta na sala principal
@@ -34,28 +36,24 @@ public class RoomMgr : MonoBehaviour
                         if (tSub.gameObject.name.Equals("PlayerTransform"))
                         {
                             doorMain.desiredPlayerLocation = tSub;
-                            doorMain.desiredCameraLocation = room.transform;
+                            doorMain.CurrentRoom = mainRoom;
+                            doorMain.DesiredRoom = room;
                             doorMain.cameraCollider = cameraCollider;
 
                             doorSub.desiredPlayerLocation = tMain;
-                            doorSub.desiredCameraLocation = transform;
-                            doorSub.cameraCollider = mainCameraCollider;
+                            doorSub.CurrentRoom = room;
+                            doorSub.DesiredRoom = mainRoom;
+                            doorSub.cameraCollider = mainRoomCollider;
                         }
                     }
                 }
             }
-
-
-            
-
-            rooms[i] = room; // Guarda a sala geradas caso precisemos no futuro
+            rooms[i] = room;
         }
         Instantiate(PathFinding);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach(GameObject room in rooms) 
+        {
+            room.SetActive(false);
+        }
     }
 }

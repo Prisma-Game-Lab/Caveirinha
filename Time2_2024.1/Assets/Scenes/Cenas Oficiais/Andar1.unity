@@ -268,6 +268,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+--- !u!1 &675165548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+  m_PrefabInstance: {fileID: 696544475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!60 &692898100 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 2172176348579321642, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -333,6 +338,14 @@ PrefabInstance:
     - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_Name
       value: Boss Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825523685136396073, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -608,6 +621,11 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &1985433036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4424476370697426282, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+  m_PrefabInstance: {fileID: 3229498969108425660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1994295445
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1013,14 @@ PrefabInstance:
       value: OctaRoomTest
       objectReference: {fileID: 0}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: CurrentRoom
+      value: 
+      objectReference: {fileID: 1985433036}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: DesiredRoom
+      value: 
+      objectReference: {fileID: 675165548}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1092049978}
@@ -1010,6 +1036,10 @@ PrefabInstance:
       propertyPath: desiredPlayerLocation
       value: 
       objectReference: {fileID: 717264267}
+    - target: {fileID: 8023658224045066401, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: mainRoom
+      value: 
+      objectReference: {fileID: 1985433036}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

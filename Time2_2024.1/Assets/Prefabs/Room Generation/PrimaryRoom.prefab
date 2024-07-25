@@ -431,11 +431,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1755621eefb18144c8199ce9852d9291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredCameraLocation: {fileID: 0}
+  DesiredRoom: {fileID: 0}
+  CurrentRoom: {fileID: 4424476370697426282}
   desiredPlayerLocation: {fileID: 0}
   cameraCollider: {fileID: 0}
   roomsNeeded: 3
-  enemyManager: {fileID: 0}
 --- !u!1 &1285147827033404375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,7 +4607,7 @@ MonoBehaviour:
   - {fileID: 4864751296032380892}
   - {fileID: 1159084828880189791}
   - {fileID: 1413483264853320908}
-  mainCameraCollider: {fileID: 2792992904535946720}
+  mainRoom: {fileID: 4424476370697426282}
   PathFinding: {fileID: 6485473789887992910, guid: 929ee713eb71df24398632c513b22665, type: 3}
 --- !u!1 &6520609534127286984
 GameObject:

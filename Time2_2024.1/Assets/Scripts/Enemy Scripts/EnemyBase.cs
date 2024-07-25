@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour
 {
     BlinkScript blinkScript;
+    EnemyManager enemyManager;
 
     private string enemyName;
 
@@ -56,6 +57,7 @@ public class EnemyBase : MonoBehaviour
         currentEnemyAttack = attackVector[GameManager.instance.Floor];
         enemyName = vectorNames[Random.Range(0, vectorNames.Length)];
         blinkScript = GetComponent<BlinkScript>();
+        enemyManager = GetComponentInParent<EnemyManager>();
     }
 
     public void TakeDamage(float damage)
@@ -66,18 +68,6 @@ public class EnemyBase : MonoBehaviour
         if (currentHealth <= 0)
         {
             AudioManager.instance.PlaySFX(onDeathAudio);
-            //if (soulType == 0)
-            //{
-            //    AudioManager.instance.PlaySFX("EDEATH");
-            //}
-            //else if (soulType == 1)
-            //{
-            //    AudioManager.instance.PlaySFX("SDEATH");
-            //}
-            //else 
-            //{
-            //    AudioManager.instance.PlaySFX("PDEATH");
-            //}
             OnDeath();
         }
     }
@@ -86,6 +76,7 @@ public class EnemyBase : MonoBehaviour
     {
         GameObject soul = Instantiate(soulObject, transform.position, Quaternion.identity);
         soul.GetComponent<SoulScript>().inicialConfiguration(soulType,enemyName);
+        enemyManager.OnEnemyDeath();
         Destroy(gameObject);
     }
 
