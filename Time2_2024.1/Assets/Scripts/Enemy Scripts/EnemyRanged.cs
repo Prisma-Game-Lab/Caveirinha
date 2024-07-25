@@ -16,6 +16,8 @@ public class EnemyRanged : EnemyBase
     [SerializeField] float spellKnockback;
     Animator ac;
     float cooldown;
+    Vector2 lastFramePosition;
+    bool moving;
 
     void Start()
     {
@@ -35,6 +37,26 @@ public class EnemyRanged : EnemyBase
             StartCoroutine(shoot());
             cooldown = maxCooldown;
             AudioManager.instance.PlaySFX("EATK");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Mathf.Abs(transform.position.x - lastFramePosition.x) + Mathf.Abs(transform.position.y - lastFramePosition.y) > 0.1f)
+        {
+            if (!moving) 
+            {
+                ac.SetBool("Moving", true);
+                moving = true;
+            }
+        }
+        else 
+        {
+            if (moving)
+            {
+                ac.SetBool("Moving", false);
+                moving = false;
+            }
         }
     }
 

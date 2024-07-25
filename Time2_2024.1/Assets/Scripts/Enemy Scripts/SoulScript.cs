@@ -15,7 +15,7 @@ public class SoulScript : MonoBehaviour
     int soulStat;
     float soulAmount;
     string[] statsName = {"Health", "Attack", "Attack Speed" };
-    Color[] statsColor = { Color.green, Color.red, Color.blue };
+    [SerializeField] Color[] statsColor = { Color.green, Color.red, Color.blue };
     int soulRarity;
     Image soulImage;
 
