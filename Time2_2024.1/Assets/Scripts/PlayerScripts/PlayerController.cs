@@ -327,27 +327,24 @@ public class PlayerController : MonoBehaviour
         foreach (var item in objectsHit)
         {
             GameObject hitObject = item.transform.gameObject;
-            string collisionTag = hitObject.tag;
-            switch (collisionTag)
+            if (hitObject.CompareTag("Enemy")) 
             {
-                case "Enemy":
-                    EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
-                    if (enemy != null)
-                    {
-                        enemy.TakeDamage(broomDamage);
-                    }
-                    else
-                    {
-                        hitObject.GetComponent<BossController>().TakeDamage(broomDamage);
-                    }
-                    break;
-
-                case "Spell":
-                    SpellScript spellScript = hitObject.GetComponent<SpellScript>();
-                    Rigidbody2D spellRigidBody = hitObject.GetComponent<Rigidbody2D>();
-                    spellScript.targetTag = "Enemy";
-                    spellRigidBody.velocity = deflectedProjectileSpeed * (spellRigidBody.transform.position - transform.position).normalized;
-                    break;
+                EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(broomDamage);
+                }
+                else
+                {
+                    hitObject.GetComponent<BossController>().TakeDamage(broomDamage);
+                }
+            }
+            else if (hitObject.CompareTag("Spell")) 
+            {
+                SpellScript spellScript = hitObject.GetComponent<SpellScript>();
+                Rigidbody2D spellRigidBody = hitObject.GetComponent<Rigidbody2D>();
+                spellScript.targetTag = "Enemy";
+                spellRigidBody.velocity = deflectedProjectileSpeed * (spellRigidBody.transform.position - transform.position).normalized;
             }
         }
     }

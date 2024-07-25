@@ -395,7 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846d34c1942d2a540a3219c5be9f34a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredCameraLocation: {fileID: 0}
+  DesiredRoom: {fileID: 0}
+  CurrentRoom: {fileID: 0}
   desiredPlayerLocation: {fileID: 0}
   cameraCollider: {fileID: 0}
 --- !u!1 &718878942233309328
@@ -1563,7 +1564,7 @@ GameObject:
   - component: {fileID: 2414696601327375404}
   - component: {fileID: 2172176348579321642}
   m_Layer: 0
-  m_Name: Sala do Projetor A 2
+  m_Name: Projetor A 2
   m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7381,6 +7382,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5eace9bb05c3069449c65adb420270ff, type: 2}
     - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 6
