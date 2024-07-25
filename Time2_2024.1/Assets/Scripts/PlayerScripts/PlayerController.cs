@@ -284,10 +284,10 @@ public class PlayerController : MonoBehaviour
             case 1:
                 //Broom
                 currentMaxMoveSpeed = broomMaxMoveSpeed;
+                anim.Play("Vassourada");
                 int sfx = (Random.Range(1, 2));
                 string name = "CVASS" + sfx.ToString();
                 AudioManager.instance.PlaySFX(name);
-                anim.Play("Vassourada");
                 itemCooldown = broomCooldown;
                 break;
         }
