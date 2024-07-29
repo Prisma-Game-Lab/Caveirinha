@@ -229,6 +229,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb47859ef452314d86880fc348cf813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statsColor:
+  - {r: 0.43867922, g: 1, b: 0.43867922, a: 1}
+  - {r: 1, g: 0.36681604, b: 0.25943398, a: 1}
+  - {r: 0, g: 0.8518257, b: 1, a: 1}
   minHealthUp: 15
   maxHealthUp: 50
   minAttackUp: 10

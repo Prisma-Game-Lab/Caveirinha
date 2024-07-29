@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77863872dd3e85a4ea3b6231ed720c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Floor: 0
   RoomCleared: 0
 --- !u!1 &7195627174754554884
 GameObject:
@@ -412,9 +413,23 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8033a2d72722b0045a9919303c25bfe5, type: 3}
   - name: MOUSE
     clip: {fileID: 8300000, guid: 106b8aefaabf552418d2f98acd92481c, type: 3}
-  - name: LASER
+  - name: LASER1
     clip: {fileID: 8300000, guid: b76684a91ca199141bd0ea90ad3238af, type: 3}
+  - name: LASER2
+    clip: {fileID: 8300000, guid: 96fd7a047959341449ccddc7eb7112c1, type: 3}
   - name: ROBSON
     clip: {fileID: 8300000, guid: 1bbbeec285dc16d4681edd3c0676d074, type: 3}
+  - name: PVASS
+    clip: {fileID: 8300000, guid: 1021ef9e30964254b8c62611d0d773ea, type: 3}
+  - name: BVASS
+    clip: {fileID: 8300000, guid: 206a2f69d23baa542905bbad583b52ff, type: 3}
+  - name: POTION
+    clip: {fileID: 8300000, guid: 524217a1a8e524f44a71f3f4dcccd431, type: 3}
+  - name: COOLDOWN
+    clip: {fileID: 8300000, guid: db2c0fb010efb844f855c362d845d9af, type: 3}
+  - name: CVASS1
+    clip: {fileID: 8300000, guid: 0cdc26a5b16a451498165d038519a3bf, type: 3}
+  - name: CVASS2
+    clip: {fileID: 8300000, guid: 7d5f9454c7129cb48a460236aa29651b, type: 3}
   musicSource: {fileID: 9145844221489020775}
   sfxSource: {fileID: 5931273066366996789}

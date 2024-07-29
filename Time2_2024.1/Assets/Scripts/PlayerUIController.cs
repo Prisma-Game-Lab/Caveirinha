@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ public class PlayerUIController : MonoBehaviour
     {
         healthBar.maxValue = maxHealth;
         healthBar.value = health;
-        healthText.text = $"{health}/{maxHealth}";
+        healthText.text = $"{Mathf.Round(health)}/{maxHealth}";
         attackText.text = attackDamage.ToString();
         attackSpeedText.text = attackSpeed.ToString();
     }

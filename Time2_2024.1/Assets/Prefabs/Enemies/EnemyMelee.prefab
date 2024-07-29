@@ -261,12 +261,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef32ca8fbc11123418cdb6f025ce61f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 175
-  enemyAttack: 50
+  healthVector:
+  - 175
+  - 350
+  - 525
+  attackVector:
+  - 25
+  - 50
+  - 75
   contactDamage: 25
   knockbackStrenght: 30
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
   soulType: 1
+  onDeathAudio: SDEATH
 --- !u!114 &538601960664854071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6d4d54584f330954a9a3f7cf9248523b, type: 2}
-  flashDuration: 0.25
+  flashDuration: 0.125
 --- !u!95 &-5205718877152257700
 Animator:
   serializedVersion: 5

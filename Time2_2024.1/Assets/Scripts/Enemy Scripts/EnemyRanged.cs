@@ -8,7 +8,6 @@ public class EnemyRanged : EnemyBase
     //descrever funcoes da classe ranged
     GameObject player;
     [SerializeField] GameObject spellObject;
-    [SerializeField] float spellDamage;
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     [SerializeField] float spellDestructionTimer;
@@ -17,6 +16,8 @@ public class EnemyRanged : EnemyBase
     [SerializeField] float spellKnockback;
     Animator ac;
     float cooldown;
+    Vector2 lastFramePosition;
+    bool moving;
 
     void Start()
     {
@@ -36,6 +37,26 @@ public class EnemyRanged : EnemyBase
             StartCoroutine(shoot());
             cooldown = maxCooldown;
             AudioManager.instance.PlaySFX("EATK");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Mathf.Abs(transform.position.x - lastFramePosition.x) + Mathf.Abs(transform.position.y - lastFramePosition.y) > 0.1f)
+        {
+            if (!moving) 
+            {
+                ac.SetBool("Moving", true);
+                moving = true;
+            }
+        }
+        else 
+        {
+            if (moving)
+            {
+                ac.SetBool("Moving", false);
+                moving = false;
+            }
         }
     }
 
@@ -74,6 +95,6 @@ public class EnemyRanged : EnemyBase
         desiredShootVector = new Vector2(Random.Range(-spellScatter, spellScatter) + xComponent, Random.Range(-spellScatter, spellScatter) + yComponent).normalized;
         Vector2 castingLocation = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) + castingDistance * directionVector;
         GameObject invokedSpell = Instantiate(spellObject, castingLocation, Quaternion.identity);
-        invokedSpell.GetComponent<SpellScript>().SetUp("Player", spellDamage, spellSpeed * desiredShootVector, spellDestructionTimer, spellKnockback);
+        invokedSpell.GetComponent<SpellScript>().SetUp("Player", currentEnemyAttack, spellSpeed * desiredShootVector, spellDestructionTimer, spellKnockback);
     }
 }

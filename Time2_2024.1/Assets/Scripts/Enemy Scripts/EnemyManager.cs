@@ -8,13 +8,6 @@ public class EnemyManager : MonoBehaviour
     public static OnRoomCleared onRoomCleared;
     [SerializeField] DoorController[] doors;
     public string enemyType;
-    bool roomNotCleared;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameObject.SetActive(false);
-    }
 
     private void OnEnable()
     {
@@ -38,14 +31,11 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    public void OnEnemyDeath() 
     {
-        if (gameObject.transform.childCount == 0 && !roomNotCleared) 
+        if (gameObject.transform.childCount == 1)
         {
             onRoomCleared();
-            roomNotCleared = true;
-
         }
-        
     }
 }

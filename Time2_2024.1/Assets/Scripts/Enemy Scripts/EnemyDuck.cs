@@ -8,7 +8,8 @@ public class EnemyDuck : MonoBehaviour
 
     //descrever funcoes da classe healer
     [SerializeField] GameObject spellObject;
-    [SerializeField] float spellDamage;
+    [SerializeField] private float[] attackVector;
+    float spellDamage;
     [SerializeField] float spellSpeed;
     [SerializeField] float spellScatter;
     [SerializeField] float castingDistance;
@@ -21,6 +22,7 @@ public class EnemyDuck : MonoBehaviour
 
     void Start()
     {
+        spellDamage = attackVector[GameManager.instance.Floor];
         anim = GetComponent<Animator>();
         cooldown = Random.Range(minCooldown*100, maxCooldown*100);
         cooldown /= 100;

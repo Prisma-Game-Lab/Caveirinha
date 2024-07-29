@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Unity.UI;
 using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
@@ -87,6 +85,7 @@ public class BossController : MonoBehaviour
 
     IEnumerator shootLaser()
     {
+        playSound();
         yield return new WaitForSeconds(0);
         Transform vassouraL = GameObject.Find("Vassoura_Laser L").transform;
         Transform vassouraR = GameObject.Find("Vassoura_Laser R").transform;
@@ -106,9 +105,11 @@ public class BossController : MonoBehaviour
         Destroy(laserR);
     }
 
-    void playSound(string sfx)
+    void playSound()
     {
-        AudioManager.instance.PlaySFX(sfx);
+        int sfx = (Random.Range(1, 2));
+        string name = "LASER" + sfx.ToString();
+        AudioManager.instance.PlaySFX(name);
     }
 
     private void melleRangeCheck() 
@@ -117,6 +118,7 @@ public class BossController : MonoBehaviour
         if (objectHit)
         {
             attacking = true;
+            AudioManager.instance.PlaySFX("PVASS");
             StartCoroutine(meeleAttack());
         }
     }
@@ -128,6 +130,7 @@ public class BossController : MonoBehaviour
         meeleVisualInScene.transform.localScale = meeleColliderSize;
         yield return new WaitForSeconds(meeleAtackDelay);
         meeleVisualInScene.GetComponent<SpriteRenderer>().color = Color.red;
+        AudioManager.instance.PlaySFX("BVASS");
         RaycastHit2D objectHit = Physics2D.BoxCast(transform.position + meeleColliderOffset, meeleColliderSize, 0, Vector2.zero, 0, playerLayerMask);
         if(objectHit) 
         {

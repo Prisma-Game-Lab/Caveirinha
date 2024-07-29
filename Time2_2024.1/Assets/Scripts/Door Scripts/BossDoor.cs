@@ -1,4 +1,3 @@
-using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,35 +5,23 @@ using UnityEngine;
 public class BossDoor : DoorController
 {
     public int roomsNeeded;
-    //[SerializeField]
-    //GameObject bossRoom;
-    [SerializeField]
-    EnemyManager enemyManager;
 
     private void OnEnable()
     {
-        locked = true;
-        //bossRoom.SetActive(false);
-        SoulScript.onSoulAssimilation += toggleLock;
-    }
-
-    private void OnDisable()
-    {
-        SoulScript.onSoulAssimilation -= toggleLock;
+        if(GameManager.instance.RoomCleared >= roomsNeeded) 
+        {
+            toggleLock();
+        }
     }
 
     public override void toggleLock()
     {
-        if (locked && GameManager.instance.RoomCleared >= roomsNeeded) 
-        {
-            doorCollider.enabled = true;
-            doorSr.color = Color.red;
-            locked = false;
-        }
+        doorCollider.enabled = true;
+        doorSr.color = Color.red;
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Se o player entrar na area, teleporte ele e a camera para essas posicoes
         if (collision.CompareTag("Player"))
         {
             StartCoroutine(BossTransition(collision.transform));
@@ -43,6 +30,7 @@ public class BossDoor : DoorController
 
     protected IEnumerator BossTransition(Transform playerTransform)
     {
+        DesiredRoom.SetActive(true);
         CanvasController.onSceneTransition();
         PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();
         playerScript.OnDoorEnter();
@@ -53,10 +41,7 @@ public class BossDoor : DoorController
         playerTransform.position = desiredPlayerLocation.position;
         cameraConfiner.m_BoundingShape2D = cameraCollider;
         cameraObject.transform.position = desiredPlayerLocation.position;
-
-        //bossRoom.SetActive(true);
-        enemyManager.gameObject.SetActive(true);
-
+        CurrentRoom.SetActive(false);
         toggleLock();
         yield return new WaitForSeconds(0.1f);
         cinemachineTransposer.m_XDamping = 1;

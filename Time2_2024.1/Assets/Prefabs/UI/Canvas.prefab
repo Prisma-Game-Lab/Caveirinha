@@ -165,8 +165,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3502168072584676085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 922fb5382389ead41a07813701fecdca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 738050bf1b9211b43878a134aaba38bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -720,7 +720,7 @@ RectTransform:
   m_Father: {fileID: 8373614568212534297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.125, y: 0}
   m_SizeDelta: {x: 10.25, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1798,10 +1798,10 @@ MonoBehaviour:
   itemImage: {fileID: 2029815779938041845}
   CaveiraoAnim: {fileID: 871477819416672412}
   spriteVector:
-  - {fileID: 21300000, guid: 922fb5382389ead41a07813701fecdca, type: 3}
   - {fileID: 21300000, guid: 97436731876c93843bd8a9ac4b9801a2, type: 3}
+  - {fileID: 21300000, guid: 922fb5382389ead41a07813701fecdca, type: 3}
+  - {fileID: 21300000, guid: 738050bf1b9211b43878a134aaba38bf, type: 3}
   - {fileID: 21300000, guid: 532caae379036614e8a627d74b297b8f, type: 3}
-  - {fileID: 21300000, guid: a0069b6849e9a8347955c43e8148314a, type: 3}
 --- !u!1 &4105409443460109411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.25, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4503206012320259042
@@ -1969,7 +1969,7 @@ RectTransform:
   m_Father: {fileID: 9036364415608890105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2404,7 +2404,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4043077601285015187}
         m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
-        m_MethodName: PauseGame
+        m_MethodName: ResumeButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2482,8 +2482,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4222386824243026720}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3275,7 +3275,7 @@ RectTransform:
   m_Father: {fileID: 2281686466925908815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4397,8 +4397,8 @@ MonoBehaviour:
   gameOverUI: {fileID: 1049533849209416734}
   music: {fileID: 0}
   sfx: {fileID: 0}
-  musicSl: {fileID: 0}
-  SFXSl: {fileID: 0}
+  musicSl: {fileID: 7330194580218478344}
+  SFXSl: {fileID: 227874873936479258}
 --- !u!1 &9035921286163871252
 GameObject:
   m_ObjectHideFlags: 0

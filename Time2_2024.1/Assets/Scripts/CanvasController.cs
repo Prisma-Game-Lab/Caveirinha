@@ -9,6 +9,7 @@ public class CanvasController : MonoBehaviour
     [SerializeField] GameObject transitionObject;
     public GameObject circleObject;
     GameObject player;
+    PlayerController playerController;
     Animator anim;
     bool isOnTransition;
     bool gameIsPaused;
@@ -28,6 +29,7 @@ public class CanvasController : MonoBehaviour
         anim = GetComponent<Animator>();
         transitionObject.SetActive(true);
         player = GameObject.Find("Player");
+        playerController = player.GetComponent<PlayerController>();
     }
 
     private void OnEnable()
@@ -61,6 +63,11 @@ public class CanvasController : MonoBehaviour
     {
         anim.SetTrigger("LeavingScene");
         StartCoroutine(WaitForAnimation());
+    }
+
+    public void ResumeButton() 
+    {
+        playerController.TogglePause();
     }
 
     public void PauseGame() 

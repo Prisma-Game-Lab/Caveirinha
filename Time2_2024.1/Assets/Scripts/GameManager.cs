@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     //Comentario
     public static GameManager instance { get; private set; }
 
+    public int Floor = 0;
     public int RoomCleared = 0;
 
     private void Awake()

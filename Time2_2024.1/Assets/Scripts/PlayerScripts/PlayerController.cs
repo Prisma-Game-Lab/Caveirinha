@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
     BlinkScript blinkScript;
-
+    CanvasController canvasController;
     PlayerUIController playerUIController;
+
     [HideInInspector] public GameObject selectedSoul;
     [HideInInspector] public float selectedSoulDistance;
 
@@ -56,7 +55,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask broomLayerMask;
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
-    [SerializeField] private float broomKnockback;
     private int potionCharges = 2;
     bool bocaAberta = true;
     private float itemCooldown;
@@ -74,6 +72,7 @@ public class PlayerController : MonoBehaviour
         blinkScript = GetComponent<BlinkScript>();
         health = maxHealth;
         invencibilitySeconds = starterInvencibility;
+        canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
         playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
         UpdateUI();
         StartCoroutine(WaitForRoomTransition(1));
@@ -258,6 +257,7 @@ public class PlayerController : MonoBehaviour
         }
         if(itemCooldown > 0) 
         {
+            AudioManager.instance.PlaySFX("COOLDOWN");
             playerUIController.CaveiraoAnim.SetTrigger("Balanca");
             return;
         }
@@ -269,6 +269,7 @@ public class PlayerController : MonoBehaviour
                 {
                     return;
                 }
+                AudioManager.instance.PlaySFX("POTION");
                 health += potionHealing;
                 if(health > maxHealth) 
                 {
@@ -284,6 +285,9 @@ public class PlayerController : MonoBehaviour
                 //Broom
                 currentMaxMoveSpeed = broomMaxMoveSpeed;
                 anim.Play("Vassourada");
+                int sfx = (Random.Range(1, 2));
+                string name = "CVASS" + sfx.ToString();
+                AudioManager.instance.PlaySFX(name);
                 itemCooldown = broomCooldown;
                 break;
         }
@@ -311,6 +315,7 @@ public class PlayerController : MonoBehaviour
     {
         gameIsPaused = !gameIsPaused;
         anim.SetBool("GameIsPaused", gameIsPaused);
+        canvasController.PauseGame();
     }
 
     private void BroomAttack() 
@@ -322,28 +327,24 @@ public class PlayerController : MonoBehaviour
         foreach (var item in objectsHit)
         {
             GameObject hitObject = item.transform.gameObject;
-            string collisionTag = hitObject.tag;
-            switch (collisionTag)
+            if (hitObject.CompareTag("Enemy")) 
             {
-                case "Enemy":
-                    EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
-                    if (enemy != null)
-                    {
-                        Vector2 directionVector = hitObject.transform.position - transform.position;
-                        enemy.TakeDamage(broomDamage, directionVector, broomKnockback);
-                    }
-                    else
-                    {
-                        hitObject.GetComponent<BossController>().TakeDamage(broomDamage);
-                    }
-                    break;
-
-                case "Spell":
-                    SpellScript spellScript = hitObject.GetComponent<SpellScript>();
-                    Rigidbody2D spellRigidBody = hitObject.GetComponent<Rigidbody2D>();
-                    spellScript.targetTag = "Enemy";
-                    spellRigidBody.velocity = deflectedProjectileSpeed * (spellRigidBody.transform.position - transform.position).normalized;
-                    break;
+                EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(broomDamage);
+                }
+                else
+                {
+                    hitObject.GetComponent<BossController>().TakeDamage(broomDamage);
+                }
+            }
+            else if (hitObject.CompareTag("Spell")) 
+            {
+                SpellScript spellScript = hitObject.GetComponent<SpellScript>();
+                Rigidbody2D spellRigidBody = hitObject.GetComponent<Rigidbody2D>();
+                spellScript.targetTag = "Enemy";
+                spellRigidBody.velocity = deflectedProjectileSpeed * (spellRigidBody.transform.position - transform.position).normalized;
             }
         }
     }

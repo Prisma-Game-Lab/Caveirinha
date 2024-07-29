@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public Transform desiredCameraLocation;
+    public GameObject DesiredRoom;
+    public GameObject CurrentRoom;
+
     public Transform desiredPlayerLocation;
     public PolygonCollider2D cameraCollider;
 
@@ -27,14 +29,14 @@ public class DoorController : MonoBehaviour
         doorSr = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    public virtual void toggleLock() 
+    public virtual void toggleLock()
     {
         if (locked)
         {
             doorCollider.enabled = true;
             doorSr.color = Color.yellow;
         }
-        else 
+        else
         {
             doorCollider.enabled = false;
             doorSr.color = Color.gray;
@@ -45,14 +47,15 @@ public class DoorController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Se o player entrar na area, teleporte ele e a camera para essas posicoes
-        if (collision.CompareTag("Player")) 
+        if (collision.CompareTag("Player"))
         {
             StartCoroutine(RoomTransition(collision.transform));
         }
     }
 
-    protected IEnumerator RoomTransition(Transform playerTransform) 
+    protected IEnumerator RoomTransition(Transform playerTransform)
     {
+        DesiredRoom.SetActive(true);
         CanvasController.onSceneTransition();
         PlayerController playerScript = playerTransform.gameObject.GetComponent<PlayerController>();
         playerScript.OnDoorEnter();
@@ -71,6 +74,7 @@ public class DoorController : MonoBehaviour
         }
         toggleLock();
         yield return new WaitForSeconds(0.1f);
+        CurrentRoom.SetActive(false);
         cinemachineTransposer.m_XDamping = 1;
         cinemachineTransposer.m_YDamping = 1;
         cinemachineTransposer.m_ZDamping = 1;
