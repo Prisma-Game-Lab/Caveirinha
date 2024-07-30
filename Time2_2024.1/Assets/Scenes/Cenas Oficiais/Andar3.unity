@@ -272,6 +272,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+--- !u!1 &650746526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+  m_PrefabInstance: {fileID: 696544475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!60 &692898100 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 2172176348579321642, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
@@ -290,6 +295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 676202972921201188, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: sceneName
+      value: TelaInicial
+      objectReference: {fileID: 0}
     - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: healthUI
       value: 
@@ -954,6 +963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2274395521248551336, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -998,6 +1011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OctaRoomTest
       objectReference: {fileID: 0}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: DesiredRoom
+      value: 
+      objectReference: {fileID: 650746526}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: enemyManager
       value: 
