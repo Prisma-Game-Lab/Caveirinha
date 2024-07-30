@@ -46,7 +46,7 @@ public class BossController : MonoBehaviour
 
     private void Start()
     {
-        int rooms = GameManager.instance.RoomCleared;
+        int rooms = GameManager.instance.RoomClearedThisFloor + GameManager.instance.RoomClearedInTotal;
 
         health = baseHealth;
         laserDamage = baseLaser;

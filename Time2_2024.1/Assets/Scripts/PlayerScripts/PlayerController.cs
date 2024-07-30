@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
         playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
         UpdateUI();
         StartCoroutine(WaitForRoomTransition(1));
+        GameManager.instance.ApplyPlayerStats();
     }
 
     public void OnDoorEnter() 
@@ -187,6 +188,7 @@ public class PlayerController : MonoBehaviour
         AudioManager.instance.PlaySFX(name);
         anim.updateMode = AnimatorUpdateMode.UnscaledTime;
         anim.Play("Morte");
+        GameManager.instance.ErasePlayerData();
         StartCoroutine(GameObject.Find("Canvas").GetComponent<CanvasController>().GameOver());
     }
 
@@ -301,7 +303,7 @@ public class PlayerController : MonoBehaviour
         playerUIController.UpdateItem(selectedItem,potionCharges);
     }
 
-    void UpdateUI() 
+    public void UpdateUI() 
     {
         playerUIController.UpdateUI(maxHealth, health, attackDamage, attackSpeed);
     }

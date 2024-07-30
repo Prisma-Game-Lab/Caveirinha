@@ -53,7 +53,7 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    protected IEnumerator RoomTransition(Transform playerTransform)
+    private IEnumerator RoomTransition(Transform playerTransform)
     {
         DesiredRoom.SetActive(true);
         CanvasController.onSceneTransition();

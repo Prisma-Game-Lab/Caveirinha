@@ -290,6 +290,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 676202972921201188, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: sceneName
+      value: Andar4
+      objectReference: {fileID: 0}
     - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: healthUI
       value: 
@@ -338,7 +342,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Room
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264242728337700565, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825523685136396073, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 30831314452504500, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+    - {fileID: 2062522195842771683, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -436,17 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1092049978 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 30831314452504500, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
-  m_PrefabInstance: {fileID: 696544475}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d08b5534e03ce429adfa4c7d4eaaeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1575226731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1229293035539810288, guid: e2668ddf61b2ee040a413ea9ddcade0a, type: 3}
@@ -534,6 +541,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1954628405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4434839237470094874, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+  m_PrefabInstance: {fileID: 696544475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1955631598
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +844,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: health
+      value: 165
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: maxHealth
+      value: 165
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: attackSpeed
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: attackDamage
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: m_Name
       value: Player
@@ -999,9 +1027,13 @@ PrefabInstance:
       value: OctaRoomTest
       objectReference: {fileID: 0}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: DesiredRoom
+      value: 
+      objectReference: {fileID: 1954628405}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: enemyManager
       value: 
-      objectReference: {fileID: 1092049978}
+      objectReference: {fileID: 0}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: cameraCollider
       value: 

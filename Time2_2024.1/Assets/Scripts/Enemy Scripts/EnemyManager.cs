@@ -7,7 +7,6 @@ public class EnemyManager : MonoBehaviour
     public delegate void OnRoomCleared();
     public static OnRoomCleared onRoomCleared;
     [SerializeField] DoorController[] doors;
-    public string enemyType;
 
     private void OnEnable()
     {
@@ -21,10 +20,6 @@ public class EnemyManager : MonoBehaviour
 
     public void LockDoors() 
     {
-        if (enemyType == "Boss")
-        {
-            return;
-        }
         foreach(DoorController door in doors) 
         {
             door.toggleLock();
