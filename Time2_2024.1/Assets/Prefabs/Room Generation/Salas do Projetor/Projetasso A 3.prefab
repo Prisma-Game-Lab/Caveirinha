@@ -2149,10 +2149,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -4.25, y: 4.25}
-      - {x: -4.25, y: -4.25}
-      - {x: 4.25, y: -4.25}
-      - {x: 4.25, y: 4.25}
+    - - {x: -9, y: 8}
+      - {x: -9, y: -8}
+      - {x: 13, y: -8}
+      - {x: 13, y: 8}
   m_UseDelaunayMesh: 0
 --- !u!1 &4452860224651483380
 GameObject:
@@ -27635,19 +27635,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileColorArray.Array.data[1].m_Data.a
-      value: 1
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileColorArray.Array.data[1].m_Data.b
-      value: 0.7169812
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileColorArray.Array.data[1].m_Data.g
-      value: 0.61166435
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileColorArray.Array.data[1].m_Data.r
-      value: 0.49038807
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_TileIndex
@@ -27691,11 +27691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileColorArray.Array.data[0].m_RefCount
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileColorArray.Array.data[1].m_RefCount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_TileMatrixArray.Array.data[0].m_Data.e00
@@ -28111,7 +28111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileColorIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_Tiles.Array.data[3].second.m_TileColorIndex
@@ -28119,7 +28119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_Tiles.Array.data[4].second.m_TileColorIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3339736070529824336, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_TileMatrixIndex
