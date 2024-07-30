@@ -41,6 +41,9 @@ public class BossController : MonoBehaviour
     [SerializeField] float meeleAttackDamage;
     [SerializeField] float meeleKnockbackStrenght;
 
+    [SerializeField] Animator animator;
+    [SerializeField] GameObject portal;
+
     private void Start()
     {
         int rooms = GameManager.instance.RoomCleared;
@@ -72,15 +75,16 @@ public class BossController : MonoBehaviour
         slider.value = health;
         if (health <= 0)
         {
-            OnDeath();
+            animator.SetTrigger("Death");
         }
     }
 
     void OnDeath()
     {
         Destroy(meeleVisualInScene);
-        Destroy(gameObject);
         healthUI.SetActive(false);
+        portal.SetActive(true);
+        Destroy(gameObject);
     }
 
     IEnumerator shootLaser()

@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask broomLayerMask;
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
-    private int potionCharges = 2;
+    public int potionCharges = 2;
     bool bocaAberta = true;
     private float itemCooldown;
 

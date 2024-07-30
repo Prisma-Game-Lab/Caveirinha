@@ -291,6 +291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 676202972921201188, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: sceneName
+      value: Andar2
+      objectReference: {fileID: 0}
     - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: healthUI
       value: 
@@ -6962,6 +6966,10 @@ PrefabInstance:
     - target: {fileID: 5316081034453955871, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346137096921233664, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
+      propertyPath: attackDamage
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 8359137475710176937, guid: e7520bb965adcab489408f5a3e6c6122, type: 3}
       propertyPath: m_Name

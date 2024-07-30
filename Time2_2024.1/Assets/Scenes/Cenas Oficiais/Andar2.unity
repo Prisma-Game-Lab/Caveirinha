@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 91569f5fe5bba6d48a42753a63c8f636, type: 2}
+    - target: {fileID: 676202972921201188, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
+      propertyPath: sceneName
+      value: Andar3
+      objectReference: {fileID: 0}
     - target: {fileID: 1018240885146631221, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -1943,7 +1947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1134535765400425841, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2307,6 +2311,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: bossRoom
+      value: 
+      objectReference: {fileID: 40803955}
+    - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
+      propertyPath: DesiredRoom
       value: 
       objectReference: {fileID: 40803955}
     - target: {fileID: 5464198927689071861, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
