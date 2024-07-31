@@ -8,6 +8,10 @@ public class BossDoor : DoorController
 
     private void OnEnable()
     {
+        if(GameManager.instance == null) 
+        {
+            return;
+        }
         if(GameManager.instance.RoomClearedThisFloor >= roomsNeeded) 
         {
             toggleLock();
