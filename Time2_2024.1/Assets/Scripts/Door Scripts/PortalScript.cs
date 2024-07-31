@@ -12,6 +12,7 @@ public class PortalScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.instance.PlayMusic("GAME");
             StartCoroutine(SceneTransition(collision.gameObject));
         }
     }
