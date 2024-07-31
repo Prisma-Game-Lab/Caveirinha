@@ -57,4 +57,9 @@ public class EnemyDuck : MonoBehaviour
         AudioManager.instance.PlaySFX("ROBSON");
         shooting = false;
     }
+
+    public void death()
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("Death");
+    }
 }

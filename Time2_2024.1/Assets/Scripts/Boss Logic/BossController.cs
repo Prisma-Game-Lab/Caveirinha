@@ -24,6 +24,7 @@ public class BossController : MonoBehaviour
     [SerializeField]
     float laserDestructionTime;
 
+    GameObject[] lasers;
     GameObject laserL, laserR;
     GameObject meeleVisualInScene;
 
@@ -84,7 +85,12 @@ public class BossController : MonoBehaviour
         Destroy(meeleVisualInScene);
         healthUI.SetActive(false);
         portal.SetActive(true);
-        Destroy(gameObject);
+        GameObject robsons = GameObject.Find("Robsons");
+        foreach (EnemyDuck i in robsons.GetComponentsInChildren<EnemyDuck>())
+        {
+            i.death();
+        }
+        gameObject.SetActive(false);
     }
 
     IEnumerator shootLaser()
