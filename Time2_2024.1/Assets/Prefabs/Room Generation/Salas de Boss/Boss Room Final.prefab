@@ -622,6 +622,8 @@ MonoBehaviour:
   meeleAttackCooldown: 0
   meeleAttackDamage: 50
   meeleKnockbackStrenght: 5
+  animator: {fileID: 0}
+  portal: {fileID: 0}
 --- !u!61 &734759449293553542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -924,7 +926,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3166585134292750770}
-  - component: {fileID: 2062522195842771683}
   m_Layer: 0
   m_Name: Robsons
   m_TagString: Untagged
@@ -959,20 +960,6 @@ Transform:
   - {fileID: 1144555305410522938}
   m_Father: {fileID: 6948237812090436452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2062522195842771683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2911941033896324676}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d08b5534e03ce429adfa4c7d4eaaeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doors: []
-  enemyType: 
 --- !u!1 &3438382953312463042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,6 +3034,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8264242728337700565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6948237812090436452}
+  m_Layer: 0
+  m_Name: BossManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6948237812090436452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264242728337700565}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6945882421622360974}
+  - {fileID: 3166585134292750770}
+  m_Father: {fileID: 2414696601327375404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8427532905271448218
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,86 +6188,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1072505128662687654, guid: 77081d537e55e534f8f7a0a0bb2ee23c, type: 3}
   m_PrefabInstance: {fileID: 72069994035359900}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &684275093765379957
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2414696601327375404}
-    m_Modifications:
-    - target: {fileID: 653726150105630913, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: enemyType
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 653726150105630913, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: doors.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8921477390906171808, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_Name
-      value: BossManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8921477390906171808, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6945882421622360974}
-    - targetCorrespondingSourceObject: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3166585134292750770}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
---- !u!4 &6948237812090436452 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7571133613976988689, guid: 2708a6c02ef9587449fbabf697fe1fad, type: 3}
-  m_PrefabInstance: {fileID: 684275093765379957}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1353093993075134926
 PrefabInstance:

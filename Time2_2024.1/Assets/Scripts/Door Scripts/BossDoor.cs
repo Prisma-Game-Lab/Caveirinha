@@ -8,7 +8,7 @@ public class BossDoor : DoorController
 
     private void OnEnable()
     {
-        if(GameManager.instance.RoomCleared >= roomsNeeded) 
+        if(GameManager.instance.RoomClearedThisFloor >= roomsNeeded) 
         {
             toggleLock();
         }
@@ -28,7 +28,7 @@ public class BossDoor : DoorController
         }
     }
 
-    protected IEnumerator BossTransition(Transform playerTransform)
+    private IEnumerator BossTransition(Transform playerTransform)
     {
         DesiredRoom.SetActive(true);
         CanvasController.onSceneTransition();

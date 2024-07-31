@@ -8,10 +8,17 @@ public class MainMenu : MonoBehaviour
     //Comentario
     public void PlayGame()
     {
-        int sfx = (Random.Range(1, 2));
+        int sfx = Random.Range(1, 2);
         string name = "PLAY" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);
-        SceneManager.LoadScene("Andar1"); //alterar para cena do jogo depois 
+        transform.parent.GetComponent<Animator>().Play("MainMenuTransition");
+        StartCoroutine(WaitForTransition());
+    }
+
+    private IEnumerator WaitForTransition() 
+    {
+        yield return new WaitForSeconds(0.9f);
+        SceneManager.LoadScene("Andar1");
     }
 
     public void QuitGame()

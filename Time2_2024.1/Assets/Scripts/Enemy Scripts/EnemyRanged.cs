@@ -16,14 +16,15 @@ public class EnemyRanged : EnemyBase
     [SerializeField] float spellKnockback;
     Animator ac;
     float cooldown;
-    Vector2 lastFramePosition;
-    bool moving;
-
+    Vector3 lastFramePosition;
+    private int frameCount;
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ac = GetComponent<Animator>();
         cooldown = maxCooldown;
+        lastFramePosition = transform.position;
     }
 
     // Update is called once per frame
@@ -42,21 +43,20 @@ public class EnemyRanged : EnemyBase
 
     private void FixedUpdate()
     {
-        if (Mathf.Abs(transform.position.x - lastFramePosition.x) + Mathf.Abs(transform.position.y - lastFramePosition.y) > 0.1f)
+        frameCount++;
+        if(frameCount == 5)
         {
-            if (!moving) 
+            float distanceBetweenPoints = Mathf.Pow(transform.position.x - lastFramePosition.x,2) + Mathf.Pow(transform.position.y - lastFramePosition.y,2);
+            if (distanceBetweenPoints > 0.01f)
             {
                 ac.SetBool("Moving", true);
-                moving = true;
             }
-        }
-        else 
-        {
-            if (moving)
+            else
             {
                 ac.SetBool("Moving", false);
-                moving = false;
             }
+            lastFramePosition = transform.position;
+            frameCount = 0;
         }
     }
 
