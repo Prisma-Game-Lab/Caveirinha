@@ -293,7 +293,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 676202972921201188, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: sceneName
-      value: Andar4
+      value: TelaInicial
       objectReference: {fileID: 0}
     - target: {fileID: 2127039653600413240, guid: b9fa3d7d5d72ac8418f1d9c948f132bb, type: 3}
       propertyPath: healthUI
@@ -998,7 +998,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1068407261304608302, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2274395521248551336, guid: 39ffa87a64f9e9943aedad8f437c93c2, type: 3}
       propertyPath: m_LocalPosition.x

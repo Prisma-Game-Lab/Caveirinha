@@ -24,8 +24,9 @@ public class BossController : MonoBehaviour
     [SerializeField]
     float laserDestructionTime;
 
+    [SerializeField]
+    Transform[] vassouras;
     GameObject[] lasers;
-    GameObject laserL, laserR;
     GameObject meeleVisualInScene;
 
     [SerializeField]
@@ -97,22 +98,25 @@ public class BossController : MonoBehaviour
     {
         playSound();
         yield return new WaitForSeconds(0);
-        Transform vassouraL = GameObject.Find("Vassoura_Laser L").transform;
-        Transform vassouraR = GameObject.Find("Vassoura_Laser R").transform;
+        Vector2 targetVector;
 
-        Vector2 targetVector = vassouraL.up * -1;
-        laserL = Instantiate(laserObject, vassouraL.position, vassouraL.rotation);
-        laserL.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed,laserDestructionTime, 0);
-
-        targetVector = vassouraR.up * -1;
-        laserR = Instantiate(laserObject, vassouraR.position, vassouraR.rotation);
-        laserR.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed, laserDestructionTime, 0);
+        Transform vassoura;
+        GameObject laser;
+        for (int i = 0; i < vassouras.Length; i++)
+        {
+            vassoura = vassouras[i];
+            targetVector = vassoura.up * -1;
+            laser = Instantiate(laserObject, vassoura.position, vassoura.rotation);
+            laser.GetComponent<SpellScript>().SetUp("Player", laserDamage, targetVector * laserSpeed, laserDestructionTime, 0);
+        }
     }
 
     void destroyLaser()
     {
-        Destroy(laserL);
-        Destroy(laserR);
+        foreach (GameObject laser in lasers)
+        {
+            Destroy(laser);
+        }
     }
 
     void playSound()
