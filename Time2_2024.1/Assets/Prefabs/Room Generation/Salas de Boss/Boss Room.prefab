@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 6678916650072787395}
   - component: {fileID: 265578962814067732}
   - component: {fileID: 2127039653600413240}
+  - component: {fileID: 5675399825490403181}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -656,8 +657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3878790a865c24bbdd1708a4e12918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Zelador
-  enemyClass: Boss
   baseHealth: 4252.5
   baseLaser: 26.5
   health: 0
@@ -680,7 +679,22 @@ MonoBehaviour:
   meeleAttackDamage: 50
   meeleKnockbackStrenght: 5
   animator: {fileID: 265578962814067732}
+  spriteAnimator: {fileID: 8094005444248165394}
   portal: {fileID: 1890190749516402139}
+--- !u!114 &5675399825490403181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017528577569526136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8035162eedb8c05418945af331df399a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 6d4d54584f330954a9a3f7cf9248523b, type: 2}
+  flashDuration: 0.125
 --- !u!1 &2588015940641002774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,7 +1168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2414696601327375404
 Transform:
   m_ObjectHideFlags: 0
@@ -1327,6 +1341,7 @@ GameObject:
   - component: {fileID: 2802249044009491016}
   - component: {fileID: 5864751582192677997}
   - component: {fileID: 2925122668068952951}
+  - component: {fileID: 8094005444248165394}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -1593,7 +1608,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 1, b: 0.116252184, a: 1}
+      maxColor: {r: 0.17509569, g: 0, b: 0.26415092, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6200,6 +6215,27 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!95 &8094005444248165394
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823563939761092551}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2a7ae99e3aa8f84cb9bb9e4e7260b0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4907625887564133977
 GameObject:
   m_ObjectHideFlags: 0
@@ -11669,7 +11705,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2947555361095054378, guid: 52945ff6a6b7eaa4c943e0dab8b47196, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
