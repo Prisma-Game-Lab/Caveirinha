@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Boss_Laser : StateMachineBehaviour
 {
-    Transform vassouraL, vassouraR;
-    Transform mira;
+    Transform[] vassouras;
     Transform player;
     public float rotation_speed = 2.5f;
 
@@ -14,9 +13,7 @@ public class Boss_Laser : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        vassouraL = GameObject.Find("Vassoura_Laser L").transform;
-        vassouraR = GameObject.Find("Vassoura_Laser R").transform;
-        mira = GameObject.Find("Aim").transform;
+        vassouras = GameObject.Find("Boss").GetComponent<BossController>().vassouras;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -35,8 +32,10 @@ public class Boss_Laser : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rotate(vassouraL, animator);
-        rotate(vassouraR, animator);
+        foreach (Transform vassoura in vassouras)
+        {
+            rotate(vassoura, animator);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

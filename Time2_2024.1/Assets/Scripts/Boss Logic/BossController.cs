@@ -24,8 +24,7 @@ public class BossController : MonoBehaviour
     [SerializeField]
     float laserDestructionTime;
 
-    [SerializeField]
-    Transform[] vassouras;
+    public Transform[] vassouras;
     GameObject[] lasers;
     GameObject meeleVisualInScene;
 
