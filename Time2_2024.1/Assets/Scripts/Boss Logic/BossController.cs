@@ -26,9 +26,8 @@ public class BossController : MonoBehaviour
     GameObject[] lasers;
     GameObject meeleVisualInScene;
 
-    [SerializeField]
-    private GameObject healthUI;
-    private Slider slider;
+    [SerializeField] private GameObject healthUI;
+    [SerializeField] private Slider Healthslider;
 
     bool attacking;
     [SerializeField] Vector3 meeleColliderOffset;
@@ -56,9 +55,8 @@ public class BossController : MonoBehaviour
             laserDamage = baseLaser * Mathf.Pow(1.03f, rooms);
         }
         healthUI.SetActive(true);
-        slider = healthUI.GetComponent<Slider>();
-        slider.maxValue = health;
-        slider.value = health;
+        Healthslider.maxValue = health;
+        Healthslider.value = health;
 
         blinkScript = GetComponent<BlinkScript>();
     }
@@ -74,8 +72,8 @@ public class BossController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        slider.value = health;
-        //StartCoroutine(blinkScript.Blink());
+        Healthslider.value = health;
+        StartCoroutine(blinkScript.Blink());
         if (health <= 0)
         {
             spriteAnimator.Play("FaxineiroMorte");
