@@ -245,8 +245,8 @@ MonoBehaviour:
   spellDestructionTime: 1.35
   spellKnockback: 10
   health: 100
-  maxHealth: 200
-  attackDamage: 50
+  maxHealth: 100
+  attackDamage: 35
   attackSpeed: 2
   starterInvencibility: 5
   maxInvencibilityOnDamage: 2

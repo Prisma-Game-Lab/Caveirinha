@@ -183,9 +183,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellObject: {fileID: 4722857247087816948, guid: 922d352d97cedc94482f91f7e3107477, type: 3}
   attackVector:
-  - 10
   - 20
   - 30
+  - 40
   spellSpeed: 2
   spellScatter: 0.3
   castingDistance: 1
