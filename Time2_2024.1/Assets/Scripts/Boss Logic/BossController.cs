@@ -75,7 +75,7 @@ public class BossController : MonoBehaviour
     {
         health -= damage;
         slider.value = health;
-        StartCoroutine(blinkScript.Blink());
+        //StartCoroutine(blinkScript.Blink());
         if (health <= 0)
         {
             spriteAnimator.Play("FaxineiroMorte");
