@@ -21,7 +21,7 @@ public class BossDoor : DoorController
     public override void toggleLock()
     {
         doorCollider.enabled = true;
-        doorSr.color = Color.red;
+        gameObject.GetComponent<Animator>().SetTrigger("Open");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
