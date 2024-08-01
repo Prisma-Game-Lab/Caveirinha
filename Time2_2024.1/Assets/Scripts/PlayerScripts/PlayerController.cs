@@ -183,6 +183,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die() 
     {
+        UpdateUI();
         int sfx = (Random.Range(1, 3));
         string name = "DEATH" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);

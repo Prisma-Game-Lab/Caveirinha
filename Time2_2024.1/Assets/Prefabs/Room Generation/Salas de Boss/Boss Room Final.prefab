@@ -668,8 +668,9 @@ MonoBehaviour:
   - {fileID: 7932806684952663430}
   - {fileID: 8847776047441956401}
   healthUI: {fileID: 0}
-  meeleColliderOffset: {x: 0, y: 0, z: 0}
-  meeleColliderSize: {x: 0, y: 0}
+  Healthslider: {fileID: 0}
+  meeleColliderOffset: {x: 0, y: -3, z: 0}
+  meeleColliderSize: {x: 7, y: 3}
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 0
