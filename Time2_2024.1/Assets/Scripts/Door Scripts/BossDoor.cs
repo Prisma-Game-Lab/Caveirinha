@@ -28,6 +28,7 @@ public class BossDoor : DoorController
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.instance.PlayMusic("BOSS");
             StartCoroutine(BossTransition(collision.transform));
         }
     }

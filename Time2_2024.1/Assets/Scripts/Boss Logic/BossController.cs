@@ -5,10 +5,8 @@ using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
-    [SerializeField]
-    private string enemyName;
-    [SerializeField]
-    private string enemyClass;
+    BlinkScript blinkScript;
+
     [SerializeField]
     private float baseHealth;
     [SerializeField]
@@ -43,6 +41,7 @@ public class BossController : MonoBehaviour
     [SerializeField] float meeleKnockbackStrenght;
 
     [SerializeField] Animator animator;
+    [SerializeField] Animator spriteAnimator;
     [SerializeField] GameObject portal;
 
     private void Start()
@@ -60,6 +59,8 @@ public class BossController : MonoBehaviour
         slider = healthUI.GetComponent<Slider>();
         slider.maxValue = health;
         slider.value = health;
+
+        blinkScript = GetComponent<BlinkScript>();
     }
 
     private void FixedUpdate()
@@ -74,8 +75,10 @@ public class BossController : MonoBehaviour
     {
         health -= damage;
         slider.value = health;
+        StartCoroutine(blinkScript.Blink());
         if (health <= 0)
         {
+            spriteAnimator.Play("FaxineiroMorte");
             animator.SetTrigger("Death");
         }
     }
@@ -139,6 +142,7 @@ public class BossController : MonoBehaviour
     IEnumerator meeleAttack() 
     {
         meeleVisualInScene = Instantiate(meeleVisual);
+        spriteAnimator.Play("Vassourada");
         meeleVisualInScene.transform.position = transform.position + meeleColliderOffset;
         meeleVisualInScene.transform.localScale = meeleColliderSize;
         yield return new WaitForSeconds(meeleAtackDelay);

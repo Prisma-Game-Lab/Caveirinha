@@ -88,12 +88,14 @@ public class CanvasController : MonoBehaviour
     public void LoadMainMenu() 
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        AudioManager.instance.PlayMusic("MENU");
+        SceneManager.LoadScene("TelaInicial");
     }
 
     public void LoadCurrentScene()
     {
         Time.timeScale = 1;
+        AudioManager.instance.PlayMusic("GAME");
         SceneManager.LoadScene(1);
     }
 
@@ -101,6 +103,7 @@ public class CanvasController : MonoBehaviour
     {
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1);
+        AudioManager.instance.PlayMusic("DIE");
         gameOverUI.SetActive(true);
     }
 

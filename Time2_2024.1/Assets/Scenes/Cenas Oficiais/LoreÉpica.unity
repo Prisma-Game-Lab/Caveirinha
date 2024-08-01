@@ -2599,10 +2599,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ef09f4bfafb0ed4aa2e69390d5eda30, type: 3}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[0].name
+      value: MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a9a7538a7201bd4dbd4834918233301, type: 3}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[1].name
+      value: GAME
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1554c42824725f14793fcb7e27990453, type: 3}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[2].name
+      value: BOSS
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0cc54fa9b01b30489ea339c90c15bd1, type: 3}
+    - target: {fileID: 1976100984545076925, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: musicSounds.Array.data[3].name
+      value: DIE
+      objectReference: {fileID: 0}
     - target: {fileID: 6794277786516892169, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9145844221489020775, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145844221489020775, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145844221489020775, guid: feb383d871a7a694caa414df7a8aef4a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ef09f4bfafb0ed4aa2e69390d5eda30, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

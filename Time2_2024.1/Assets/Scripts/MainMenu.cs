@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     private IEnumerator WaitForTransition() 
     {
         yield return new WaitForSeconds(0.9f);
+        AudioManager.instance.PlayMusic("GAME");
         SceneManager.LoadScene("Andar1");
     }
 
@@ -34,6 +35,7 @@ public class MainMenu : MonoBehaviour
 
     public void Menu()
     {
+        AudioManager.instance.PlayMusic("MENU");
         SceneManager.LoadScene("TelaInicial");
     }
 }

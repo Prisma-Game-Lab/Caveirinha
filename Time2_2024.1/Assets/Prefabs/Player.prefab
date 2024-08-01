@@ -245,8 +245,8 @@ MonoBehaviour:
   spellDestructionTime: 1.35
   spellKnockback: 10
   health: 100
-  maxHealth: 100
-  attackDamage: 35
+  maxHealth: 200
+  attackDamage: 50
   attackSpeed: 2
   starterInvencibility: 5
   maxInvencibilityOnDamage: 2
@@ -262,6 +262,7 @@ MonoBehaviour:
     m_Bits: 1152
   broomVisual: {fileID: 2936404169864449889, guid: 427858076e01fda4982443c6c78a5faf, type: 3}
   deflectedProjectileSpeed: 7
+  potionCharges: 2
   canMove: 0
   gameIsPaused: 0
 --- !u!114 &2144826358682729720
