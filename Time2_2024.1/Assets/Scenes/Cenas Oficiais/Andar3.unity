@@ -364,13 +364,61 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678916650072787395, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_Tiles.Array.size
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileAssetArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileAssetArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileAssetArray.Array.data[1].m_RefCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_RefCount
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileMatrixArray.Array.data[0].m_RefCount
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileMatrixArray.Array.data[1].m_RefCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907740632578753606, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[1].m_RefCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454898518882943884, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8264242728337700565, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8825523685136396073, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
