@@ -668,6 +668,7 @@ MonoBehaviour:
   - {fileID: 234668388828877281}
   - {fileID: 7293594559159077189}
   healthUI: {fileID: 0}
+  Healthslider: {fileID: 0}
   meeleColliderOffset: {x: 0, y: -3, z: 0}
   meeleColliderSize: {x: 7, y: 3}
   playerLayerMask:
@@ -1297,7 +1298,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6426,7 +6427,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
