@@ -356,7 +356,7 @@ MonoBehaviour:
   - name: GAME
     clip: {fileID: 8300000, guid: 5a9a7538a7201bd4dbd4834918233301, type: 3}
   - name: BOSS
-    clip: {fileID: 8300000, guid: 1554c42824725f14793fcb7e27990453, type: 3}
+    clip: {fileID: 8300000, guid: 3041630ee6c19a6478498d3caefecc7e, type: 3}
   - name: DIE
     clip: {fileID: 8300000, guid: c0cc54fa9b01b30489ea339c90c15bd1, type: 3}
   sfxSounds:
