@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Cenas Oficiais/Lore\xC9pica.unity"
+    guid: 21bf814124743734dafb51b599af5f0f
+  - enabled: 1
     path: Assets/Scenes/Cenas Oficiais/TelaInicial.unity
     guid: b64288028800203428fb4d869262903e
   - enabled: 1
@@ -17,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cenas Oficiais/Andar3.unity
     guid: ee1d049fa91ebc7439c3531a585e3e78
-  - enabled: 1
-    path: "Assets/Scenes/Cenas Oficiais/Lore\xC9pica.unity"
-    guid: 21bf814124743734dafb51b599af5f0f
   m_configObjects: {}

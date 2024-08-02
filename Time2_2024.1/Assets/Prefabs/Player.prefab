@@ -249,12 +249,12 @@ MonoBehaviour:
   attackDamage: 35
   attackSpeed: 2
   starterInvencibility: 5
-  maxInvencibilityOnDamage: 2
+  maxInvencibilityOnDamage: 1
   maxInvencibilityOnRoomEnter: 3
   potionHealing: 50
-  potionCooldown: 0
+  potionCooldown: 1
   potionChangeDelay: 0.4
-  broomDamage: 25
+  broomDamage: 60
   broomCooldown: 4
   broomHitboxSize: 2
   broomLayerMask:

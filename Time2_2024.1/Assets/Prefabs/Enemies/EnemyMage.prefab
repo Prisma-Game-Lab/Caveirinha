@@ -264,7 +264,7 @@ MonoBehaviour:
   attackVector:
   - 25
   - 40
-  - 55
+  - 65
   contactDamage: 10
   knockbackStrenght: 20
   soulObject: {fileID: 8276919951754529555, guid: abd79dc5b78511444bedf372a173354c, type: 3}
