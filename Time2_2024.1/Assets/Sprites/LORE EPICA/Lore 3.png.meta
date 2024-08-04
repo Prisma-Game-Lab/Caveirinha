@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ba79c77acd19554890b1abeb3ce488c
+guid: 9c400ab033abf4d4889665ce318b54b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Roubo canecal_0
+      name: Lore 3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30bb7613a77c1894684f18264392391b
-      internalID: 1027616391
+      spriteID: 825615aee56ea7745acb7de26243234f
+      internalID: -1518545127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_1
+      name: Lore 3_1
       rect:
         serializedVersion: 2
         x: 192
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58fbed0bc0bf9e349abff51e1b9cd2c2
-      internalID: 859970161
+      spriteID: e5224ad0c1ffc2e4e94dab419ecbf100
+      internalID: -1241731083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_2
+      name: Lore 3_2
       rect:
         serializedVersion: 2
         x: 384
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 223a2d3b9486d98428ca6791dfbd4821
-      internalID: 329003308
+      spriteID: 447fb77671852914398dfb8cb38b5e52
+      internalID: 2091053119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_3
+      name: Lore 3_3
       rect:
         serializedVersion: 2
         x: 576
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec0d5774825f0724eac7d509f184901b
-      internalID: 1527405655
+      spriteID: b0890354b9000b143bb1ea393e58ad9d
+      internalID: 375908264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_4
+      name: Lore 3_4
       rect:
         serializedVersion: 2
         x: 768
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f60cdad673e498f4c9740db2cbbb209e
-      internalID: -223262204
+      spriteID: b6e3fc38f27abd4448e224531bd9bc0b
+      internalID: 989488581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_5
+      name: Lore 3_5
       rect:
         serializedVersion: 2
         x: 960
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f6df72f556cefa438918c6376681d22
-      internalID: 191529783
+      spriteID: a7e9dff922441df49be67112dfa1916a
+      internalID: -744652504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_6
+      name: Lore 3_6
       rect:
         serializedVersion: 2
         x: 1152
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c43c438f7e93d784aaa2b639dea24f94
-      internalID: 725320380
+      spriteID: 2f95eb0e5323ee0458360bd174e354ca
+      internalID: -61340231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_7
+      name: Lore 3_7
       rect:
         serializedVersion: 2
         x: 1344
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0473e105edac0584d89742122df34267
-      internalID: 1423292509
+      spriteID: d45c8573da44d7f48afbe9fba747dd06
+      internalID: 47822550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_8
+      name: Lore 3_8
       rect:
         serializedVersion: 2
         x: 1536
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd26f060058d9434a9bd19d91bd1ea19
-      internalID: -212914264
+      spriteID: 5d3c3aa4521fd9e419eed9493d9e6271
+      internalID: 1528186786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_9
+      name: Lore 3_9
       rect:
         serializedVersion: 2
         x: 1728
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99642950a2096d740a15c4911a3d9392
-      internalID: -192389498
+      spriteID: 317b09ece26f79242b9bc69e60e80476
+      internalID: 359841485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_10
+      name: Lore 3_10
       rect:
         serializedVersion: 2
         x: 1920
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 655aa0ddc3596df4ca527d934b71c9fe
-      internalID: 55231466
+      spriteID: 1c6fe11e32f6dff4bb33c1ba7e0121e6
+      internalID: -698760146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_11
+      name: Lore 3_11
       rect:
         serializedVersion: 2
         x: 2112
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb16964ee942454c9ee24649036c359
-      internalID: 1110874230
+      spriteID: b8539c10a3373004591ae13cf89be529
+      internalID: -1306948517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_12
+      name: Lore 3_12
       rect:
         serializedVersion: 2
         x: 2304
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bcee567e8621f14aa8bda133ef85ab2
-      internalID: 107550412
+      spriteID: 36984ce6f04db0a49a86440ec97bed2e
+      internalID: -1493223599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_13
+      name: Lore 3_13
       rect:
         serializedVersion: 2
         x: 2496
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5a7e693df03920428f1fef620119b29
-      internalID: -1913640175
+      spriteID: 6e5409e8e2ae8d34a91222639c18ac26
+      internalID: 610152859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roubo canecal_14
+      name: Lore 3_14
       rect:
         serializedVersion: 2
         x: 2688
@@ -405,197 +405,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00ff1d725e8bf984596a32495df5dcdd
-      internalID: 2096612593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_15
-      rect:
-        serializedVersion: 2
-        x: 2880
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e1b2d4b14f46274dbb557e4f51ff959
-      internalID: 409162969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_16
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3481f08cb1991b34f9074cc6f2521f10
-      internalID: -1531121256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_17
-      rect:
-        serializedVersion: 2
-        x: 3264
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc343996b435c204892ade56fc22fe2f
-      internalID: -1981822221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_18
-      rect:
-        serializedVersion: 2
-        x: 3456
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be4c78bb521875f49b924e15dcb6f1f7
-      internalID: 1274074994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_19
-      rect:
-        serializedVersion: 2
-        x: 3648
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11598eabaeacdf644ba6e2e0c793aa1a
-      internalID: 1571587983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_20
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae91accb634ffc249b7354a1c2180993
-      internalID: 90427637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_21
-      rect:
-        serializedVersion: 2
-        x: 4032
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3d6840e7a8d63248ad2c4df47ccbe3a
-      internalID: 1975907016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_22
-      rect:
-        serializedVersion: 2
-        x: 4224
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8f2b2aabe60f0a499e0b12f954207a2
-      internalID: -1481105788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Roubo canecal_23
-      rect:
-        serializedVersion: 2
-        x: 4416
-        y: 0
-        width: 192
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39992aecc091e2841bb51d385df31fb3
-      internalID: -1209901341
+      spriteID: 31c9561eb5849f7429e4f7853c22509e
+      internalID: -2014756331
       vertices: []
       indices: 
       edges: []
@@ -603,7 +414,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 85938aa564528d643932c87346f14e3f
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -611,30 +422,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Roubo canecal_0: 1027616391
-      Roubo canecal_1: 859970161
-      Roubo canecal_10: 55231466
-      Roubo canecal_11: 1110874230
-      Roubo canecal_12: 107550412
-      Roubo canecal_13: -1913640175
-      Roubo canecal_14: 2096612593
-      Roubo canecal_15: 409162969
-      Roubo canecal_16: -1531121256
-      Roubo canecal_17: -1981822221
-      Roubo canecal_18: 1274074994
-      Roubo canecal_19: 1571587983
-      Roubo canecal_2: 329003308
-      Roubo canecal_20: 90427637
-      Roubo canecal_21: 1975907016
-      Roubo canecal_22: -1481105788
-      Roubo canecal_23: -1209901341
-      Roubo canecal_3: 1527405655
-      Roubo canecal_4: -223262204
-      Roubo canecal_5: 191529783
-      Roubo canecal_6: 725320380
-      Roubo canecal_7: 1423292509
-      Roubo canecal_8: -212914264
-      Roubo canecal_9: -192389498
+      Lore 3_0: -1518545127
+      Lore 3_1: -1241731083
+      Lore 3_10: -698760146
+      Lore 3_11: -1306948517
+      Lore 3_12: -1493223599
+      Lore 3_13: 610152859
+      Lore 3_14: -2014756331
+      Lore 3_2: 2091053119
+      Lore 3_3: 375908264
+      Lore 3_4: 989488581
+      Lore 3_5: -744652504
+      Lore 3_6: -61340231
+      Lore 3_7: 47822550
+      Lore 3_8: 1528186786
+      Lore 3_9: 359841485
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

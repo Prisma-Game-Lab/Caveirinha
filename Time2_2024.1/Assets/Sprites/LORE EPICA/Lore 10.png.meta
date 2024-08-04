@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e038fdfdf73cf5e4a8ce7a6521a26bc8
+guid: 339b9b9281bb0944a85ec5e824274af5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_0
+      name: Lore 10_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36cd6070378f73640bb25165f6260782
-      internalID: 6636203
+      spriteID: bb08d3271b7adbe45be2bd8ca123767e
+      internalID: 1246371325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_1
+      name: Lore 10_1
       rect:
         serializedVersion: 2
-        x: 120
+        x: 192
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b69d8f0d896b7c4a80822be98413d63
-      internalID: 773448275
+      spriteID: 2df65d09e991fa2408f11f0d79087f68
+      internalID: 353116483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_2
+      name: Lore 10_2
       rect:
         serializedVersion: 2
-        x: 240
+        x: 384
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49c9582971e7a4c4fbf2acfb1247de99
-      internalID: -1233440631
+      spriteID: 5732f4569d353c840a5708abebef9c59
+      internalID: -1170221386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_3
+      name: Lore 10_3
       rect:
         serializedVersion: 2
-        x: 360
+        x: 576
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2263c2cea424fe48acc7de632864cdb
-      internalID: -966411437
+      spriteID: 3fd9b1a136caf08409fddf6d3c9bac31
+      internalID: 1423205351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_4
+      name: Lore 10_4
       rect:
         serializedVersion: 2
-        x: 480
+        x: 768
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,83 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa2cef0331f98ef49a3a5b2cbd6bd45d
-      internalID: -1226878689
+      spriteID: 88ed85bb610c60e448d7f514910266d2
+      internalID: 1904034787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 231fc59116728d944b02052e1204b5bc
-      internalID: -462576450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c42b1f8ea9fdd549b0206a5774df3d8
-      internalID: 87555150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54e4360d8ce21e048a604508e603d96c
-      internalID: -676165481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_8
+      name: Lore 10_5
       rect:
         serializedVersion: 2
         x: 960
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c961014ba61dba4cbff5ae5928220ec
-      internalID: 822395550
+      spriteID: a26a50700c332124c97f345cb215177b
+      internalID: -325636987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_9
+      name: Lore 10_6
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1152
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99359aac6af0770449ff03c6fe502627
-      internalID: 942380568
+      spriteID: db55907e23515ec419989900fd7f1c11
+      internalID: 2126174201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_10
+      name: Lore 10_7
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1344
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb542218d155fc94a8f9d5c4b44dc192
-      internalID: -1822493536
+      spriteID: 4004bcf0d4297a4409db3af1783ed167
+      internalID: 1917833142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_11
+      name: Lore 10_8
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1536
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af70038342184104f96a54139e0116f3
-      internalID: -1878594972
+      spriteID: dbeec0b1153b4e04dbafaa8c5872ddec
+      internalID: -1111339500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_12
+      name: Lore 10_9
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 1728
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,83 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff3da1d72ffebce4e8bdb32a6d9943c3
-      internalID: -1302391567
+      spriteID: d1a09109b6e603d4eaf75627433bac89
+      internalID: -751019072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 1560
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57600f61c2ca07440abf19838bd1dc7e
-      internalID: -545240835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 1680
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c8bb206189be57438c5993e5883d0e0
-      internalID: 798244248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a8c7013ffd1444ca4a176b1d3c50b8
-      internalID: 661139926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_16
+      name: Lore 10_10
       rect:
         serializedVersion: 2
         x: 1920
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80f1170cfd833d448a2bdee51176f2f
-      internalID: 1584747870
+      spriteID: 24a73d1405614b3479a81a30c4744cca
+      internalID: -1365351203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_17
+      name: Lore 10_11
       rect:
         serializedVersion: 2
-        x: 2040
+        x: 2112
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b4e04ae460b7f047b821a9b1cc388ed
-      internalID: 153769583
+      spriteID: 095d642f071017b48b8ef68b30617da1
+      internalID: 1910842683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_18
+      name: Lore 10_12
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 2304
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9e16138afe764b40ba50a0f7d4be6e4
-      internalID: -219476581
+      spriteID: 2bd2ca2a69a79a34c90c4128ef2f4622
+      internalID: 1867914062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_19
+      name: Lore 10_13
       rect:
         serializedVersion: 2
-        x: 2280
+        x: 2496
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9dfa5d1780b594498c9e4aebee72834
-      internalID: -303423544
+      spriteID: 9273969295f55d34987f252b5dd571e3
+      internalID: -1381162620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_20
+      name: Lore 10_14
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 2688
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,83 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be50512b157f9d84e99e8f0a1b2a5e4d
-      internalID: 1205591785
+      spriteID: fd25f2047e77dee44ae8a802c6b04c34
+      internalID: -1852835476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 2520
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08ea11caca105f345b8433521914b9be
-      internalID: 220562660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 2640
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b69df7989f39ab54ab4771b0f5fa02a2
-      internalID: -457311733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 2760
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 311998173b99dd24d84c6790e096b167
-      internalID: 722398379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_24
+      name: Lore 10_15
       rect:
         serializedVersion: 2
         x: 2880
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbe1421a558e6a444ba5a99198d4487d
-      internalID: -1881866345
+      spriteID: 03391f2c43dfbef4ebe0d76444f27630
+      internalID: -1369876730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_25
+      name: Lore 10_16
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 3072
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c343e87965f6c842ab449be691b517e
-      internalID: -841176472
+      spriteID: 10959569a51622d47aa5c8dbe410c8ce
+      internalID: -2111674606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_26
+      name: Lore 10_17
       rect:
         serializedVersion: 2
-        x: 3120
+        x: 3264
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff7bc1e06ab1820468302cad56d1638f
-      internalID: -2055528434
+      spriteID: e0218b0237518194baf3ec775b4fd56d
+      internalID: -452425321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_27
+      name: Lore 10_18
       rect:
         serializedVersion: 2
-        x: 3240
+        x: 3456
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef00be66f5e747a4aa966909d9d67451
-      internalID: 89839390
+      spriteID: a641740defbd2f94e9e505695124ac4d
+      internalID: -696546081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_28
+      name: Lore 10_19
       rect:
         serializedVersion: 2
-        x: 3360
+        x: 3648
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,83 +510,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 367725d6e40a52447ac8943ad24f45b8
-      internalID: -1805835577
+      spriteID: e950a3c33fbb41d48b33a610ebc1d32a
+      internalID: -544571253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_29
-      rect:
-        serializedVersion: 2
-        x: 3480
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4bc2856871c4ba4bb722acac73ba96f
-      internalID: -906743595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_30
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cc09cd58b0c1ef4683d62282ea283c2
-      internalID: -1568956187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_31
-      rect:
-        serializedVersion: 2
-        x: 3720
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d91f2d0af48e604c9172671072d4564
-      internalID: -1614942018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_32
+      name: Lore 10_20
       rect:
         serializedVersion: 2
         x: 3840
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -783,20 +531,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52053274a8e88634ebba7bba0029b87e
-      internalID: 2117964317
+      spriteID: 34abb1437c0788d48ab1c47950ed4a88
+      internalID: 1793956717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_33
+      name: Lore 10_21
       rect:
         serializedVersion: 2
-        x: 3960
+        x: 4032
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,20 +552,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc0f1d9a9a5d91c4c8fad64bc6da814c
-      internalID: 2140735034
+      spriteID: 18be5bc16911d194e801c1f338b82bfb
+      internalID: -594267746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_34
+      name: Lore 10_22
       rect:
         serializedVersion: 2
-        x: 4080
+        x: 4224
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,20 +573,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b41b3875f5eb29349953550188a60b1c
-      internalID: -1586876995
+      spriteID: 84c4428a0d13c4a42b52e0e23f463c0e
+      internalID: 574281809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_35
+      name: Lore 10_23
       rect:
         serializedVersion: 2
-        x: 4200
+        x: 4416
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,20 +594,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 772d51d9c7a71674fb84c33ac29b5d4a
-      internalID: -1630457080
+      spriteID: 7ecac3f55edb8d1489d81dd1957a41c2
+      internalID: -1780932321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_36
+      name: Lore 10_24
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 4608
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,83 +615,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 875e5b02f4849ab47894eeda37e45bcd
-      internalID: 2088568079
+      spriteID: 856b1573a710d064ba97d074164985bb
+      internalID: 1791940892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_37
-      rect:
-        serializedVersion: 2
-        x: 4440
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a392cdc87cc3fba4c9167409786de794
-      internalID: 932467662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_38
-      rect:
-        serializedVersion: 2
-        x: 4560
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 467fd16c1474f9a4aaf80604a90cbd30
-      internalID: -520097499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_39
-      rect:
-        serializedVersion: 2
-        x: 4680
-        y: 0
-        width: 120
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41763c8223bc812439909cce1c6e919f
-      internalID: 65915912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_40
+      name: Lore 10_25
       rect:
         serializedVersion: 2
         x: 4800
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -951,20 +636,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a5d2bbb77b688e418a651ebb3e4860a
-      internalID: 1417534530
+      spriteID: d97cbd8595a11e440866848765e7d3b4
+      internalID: 825235190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_41
+      name: Lore 10_26
       rect:
         serializedVersion: 2
-        x: 4920
+        x: 4992
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -972,20 +657,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d66489f37ebd364f9169303d11d734a
-      internalID: 1330219203
+      spriteID: d365c01a4d9f6ea4c95b0f42f3129503
+      internalID: -974895666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corporativiza de lacaios cut-Sheet_42
+      name: Lore 10_27
       rect:
         serializedVersion: 2
-        x: 5040
+        x: 5184
         y: 0
-        width: 120
-        height: 67
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -993,8 +678,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd5d217ac04108f4abb965abe6cf8140
-      internalID: -1896369092
+      spriteID: b6118b4a3f10bca4db3294c3bffe7766
+      internalID: 612364006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_28
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9f6019b0d39474aa64a96c0fbdaedc
+      internalID: 264476253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_29
+      rect:
+        serializedVersion: 2
+        x: 5568
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10a306eed6238c4fb321ddfe651b93b
+      internalID: -980572112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_30
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a58afd8b7d20a548a71541c19f3ae52
+      internalID: 1824133218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_31
+      rect:
+        serializedVersion: 2
+        x: 5952
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bacc7ebc1ba87640b9191ba919de08d
+      internalID: -276290405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_32
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7382e497687ed574c917e705fc1dce43
+      internalID: 1487678142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_33
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b53a073896cc64c8e64bfd69fd4e72
+      internalID: -1032628648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 10_34
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fcf97b7a52f5345baa2c31e24406de
+      internalID: 749602123
       vertices: []
       indices: 
       edges: []
@@ -1002,7 +834,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 93dd61420b44a7848b4470df5184eb96
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -1010,49 +842,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Corporativiza de lacaios cut-Sheet_0: 6636203
-      Corporativiza de lacaios cut-Sheet_1: 773448275
-      Corporativiza de lacaios cut-Sheet_10: -1822493536
-      Corporativiza de lacaios cut-Sheet_11: -1878594972
-      Corporativiza de lacaios cut-Sheet_12: -1302391567
-      Corporativiza de lacaios cut-Sheet_13: -545240835
-      Corporativiza de lacaios cut-Sheet_14: 798244248
-      Corporativiza de lacaios cut-Sheet_15: 661139926
-      Corporativiza de lacaios cut-Sheet_16: 1584747870
-      Corporativiza de lacaios cut-Sheet_17: 153769583
-      Corporativiza de lacaios cut-Sheet_18: -219476581
-      Corporativiza de lacaios cut-Sheet_19: -303423544
-      Corporativiza de lacaios cut-Sheet_2: -1233440631
-      Corporativiza de lacaios cut-Sheet_20: 1205591785
-      Corporativiza de lacaios cut-Sheet_21: 220562660
-      Corporativiza de lacaios cut-Sheet_22: -457311733
-      Corporativiza de lacaios cut-Sheet_23: 722398379
-      Corporativiza de lacaios cut-Sheet_24: -1881866345
-      Corporativiza de lacaios cut-Sheet_25: -841176472
-      Corporativiza de lacaios cut-Sheet_26: -2055528434
-      Corporativiza de lacaios cut-Sheet_27: 89839390
-      Corporativiza de lacaios cut-Sheet_28: -1805835577
-      Corporativiza de lacaios cut-Sheet_29: -906743595
-      Corporativiza de lacaios cut-Sheet_3: -966411437
-      Corporativiza de lacaios cut-Sheet_30: -1568956187
-      Corporativiza de lacaios cut-Sheet_31: -1614942018
-      Corporativiza de lacaios cut-Sheet_32: 2117964317
-      Corporativiza de lacaios cut-Sheet_33: 2140735034
-      Corporativiza de lacaios cut-Sheet_34: -1586876995
-      Corporativiza de lacaios cut-Sheet_35: -1630457080
-      Corporativiza de lacaios cut-Sheet_36: 2088568079
-      Corporativiza de lacaios cut-Sheet_37: 932467662
-      Corporativiza de lacaios cut-Sheet_38: -520097499
-      Corporativiza de lacaios cut-Sheet_39: 65915912
-      Corporativiza de lacaios cut-Sheet_4: -1226878689
-      Corporativiza de lacaios cut-Sheet_40: 1417534530
-      Corporativiza de lacaios cut-Sheet_41: 1330219203
-      Corporativiza de lacaios cut-Sheet_42: -1896369092
-      Corporativiza de lacaios cut-Sheet_5: -462576450
-      Corporativiza de lacaios cut-Sheet_6: 87555150
-      Corporativiza de lacaios cut-Sheet_7: -676165481
-      Corporativiza de lacaios cut-Sheet_8: 822395550
-      Corporativiza de lacaios cut-Sheet_9: 942380568
+      Lore 10_0: 1246371325
+      Lore 10_1: 353116483
+      Lore 10_10: -1365351203
+      Lore 10_11: 1910842683
+      Lore 10_12: 1867914062
+      Lore 10_13: -1381162620
+      Lore 10_14: -1852835476
+      Lore 10_15: -1369876730
+      Lore 10_16: -2111674606
+      Lore 10_17: -452425321
+      Lore 10_18: -696546081
+      Lore 10_19: -544571253
+      Lore 10_2: -1170221386
+      Lore 10_20: 1793956717
+      Lore 10_21: -594267746
+      Lore 10_22: 574281809
+      Lore 10_23: -1780932321
+      Lore 10_24: 1791940892
+      Lore 10_25: 825235190
+      Lore 10_26: -974895666
+      Lore 10_27: 612364006
+      Lore 10_28: 264476253
+      Lore 10_29: -980572112
+      Lore 10_3: 1423205351
+      Lore 10_30: 1824133218
+      Lore 10_31: -276290405
+      Lore 10_32: 1487678142
+      Lore 10_33: -1032628648
+      Lore 10_34: 749602123
+      Lore 10_4: 1904034787
+      Lore 10_5: -325636987
+      Lore 10_6: 2126174201
+      Lore 10_7: 1917833142
+      Lore 10_8: -1111339500
+      Lore 10_9: -751019072
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

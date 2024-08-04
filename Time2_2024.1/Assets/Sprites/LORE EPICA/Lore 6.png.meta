@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb756ffc54ce59b4d988d2bc803dc59d
+guid: e0bfec2e2cdfa3a4e9a7a08c5469319d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chico Lock in_0
+      name: Lore 6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 503d87078618acc4a94db16a4a7a3a19
-      internalID: 608092519
+      spriteID: b67e091afafb27a49b3ff09fc4a8a770
+      internalID: 1512966505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_1
+      name: Lore 6_1
       rect:
         serializedVersion: 2
         x: 192
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03133dc82516e8146a3ce4d3c5965286
-      internalID: 1901752624
+      spriteID: 1203299001a1a3a4890c5f173ebe676b
+      internalID: -979516562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_2
+      name: Lore 6_2
       rect:
         serializedVersion: 2
         x: 384
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1202861ad5ee3549a0188afb58e8324
-      internalID: 249932307
+      spriteID: 7912800001f21214eb6e934a4fd1cbe0
+      internalID: -1707318855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_3
+      name: Lore 6_3
       rect:
         serializedVersion: 2
         x: 576
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57378381f31e3874383aa4eaf24eb991
-      internalID: 1543375710
+      spriteID: 376d236657f71844e821853d84c8e699
+      internalID: 110910956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_4
+      name: Lore 6_4
       rect:
         serializedVersion: 2
         x: 768
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c241121432f70d4482fb2f6a7b712fb
-      internalID: -1719143315
+      spriteID: 3190098b7f28a904c9d6e393990db4d8
+      internalID: -1997849867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_5
+      name: Lore 6_5
       rect:
         serializedVersion: 2
         x: 960
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c415ce59be81f87438dcced29806ff59
-      internalID: -2032473951
+      spriteID: 2e0395221c8859a41afa55a61e2636dc
+      internalID: 127726375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_6
+      name: Lore 6_6
       rect:
         serializedVersion: 2
         x: 1152
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96f43e936dacae6479af2059a4a86461
-      internalID: -542242502
+      spriteID: 6e18f8aca2aa7b14f8cf7540a774cf46
+      internalID: -765279995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_7
+      name: Lore 6_7
       rect:
         serializedVersion: 2
         x: 1344
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52af5292d47f1624ea4073a9668bf2ba
-      internalID: -1139229172
+      spriteID: 9c718659858e4ae4db6146ed91aa3e15
+      internalID: -302964291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Lock in_8
+      name: Lore 6_8
       rect:
         serializedVersion: 2
         x: 1536
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 384f7edb8959eae41867e85a04974055
-      internalID: -421631670
+      spriteID: 48045929f440a4b41a56014a28217450
+      internalID: -349909116
       vertices: []
       indices: 
       edges: []
@@ -288,7 +288,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d089d15e2e7e01e4eb3d00c1f2f9784f
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -296,15 +296,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chico Lock in_0: 608092519
-      Chico Lock in_1: 1901752624
-      Chico Lock in_2: 249932307
-      Chico Lock in_3: 1543375710
-      Chico Lock in_4: -1719143315
-      Chico Lock in_5: -2032473951
-      Chico Lock in_6: -542242502
-      Chico Lock in_7: -1139229172
-      Chico Lock in_8: -421631670
+      Lore 6_0: 1512966505
+      Lore 6_1: -979516562
+      Lore 6_2: -1707318855
+      Lore 6_3: 110910956
+      Lore 6_4: -1997849867
+      Lore 6_5: 127726375
+      Lore 6_6: -765279995
+      Lore 6_7: -302964291
+      Lore 6_8: -349909116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

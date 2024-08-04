@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18beb569a03a87446bdea7814213891a
+guid: ec1c49450ccb67842be860f511c169fb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chico Brilho_0
+      name: Lore 5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 464e40ad88bad5748beb6f47ccf6886c
-      internalID: -754708856
+      spriteID: 70fd7a4e1c7eea94bac932156b903730
+      internalID: 2059884947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_1
+      name: Lore 5_1
       rect:
         serializedVersion: 2
         x: 192
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 366e3c9c382c32a4f94d566db83bf779
-      internalID: 630633380
+      spriteID: ce41f41f33a09864888d41aed786529e
+      internalID: -337074190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_2
+      name: Lore 5_2
       rect:
         serializedVersion: 2
         x: 384
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f102332143ce24c4384ded8fbffa8c28
-      internalID: -1740061853
+      spriteID: 1fb0d677f836b924b9ff87542dd2707e
+      internalID: -1833334641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_3
+      name: Lore 5_3
       rect:
         serializedVersion: 2
         x: 576
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b653392f25e27774da5442c04b9d51f3
-      internalID: -2118289776
+      spriteID: 4f6046400aa389643aa2d3658758644f
+      internalID: 2064038035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_4
+      name: Lore 5_4
       rect:
         serializedVersion: 2
         x: 768
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4093a744da6390940a43670edfa4f818
-      internalID: 1729890268
+      spriteID: 99896c19fbb33874d966cafc15c7d86b
+      internalID: 674273202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_5
+      name: Lore 5_5
       rect:
         serializedVersion: 2
         x: 960
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75c92ca51e58e9f498bfcef37b91b73a
-      internalID: -1943607368
+      spriteID: 69a4199317f9b73448ac057bf64478b2
+      internalID: 1028281620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_6
+      name: Lore 5_6
       rect:
         serializedVersion: 2
         x: 1152
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b77a97cceb76204bb417673d8ca9bfc
-      internalID: -2050096688
+      spriteID: f7aca46c8719ce543b311d5a22b69489
+      internalID: -1271541458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_7
+      name: Lore 5_7
       rect:
         serializedVersion: 2
         x: 1344
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b18c292bbe62786459c86dc3c31ba4b3
-      internalID: 1222805441
+      spriteID: f14f94a2d88713e4d9808d570c7ab8c8
+      internalID: 1773449887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_8
+      name: Lore 5_8
       rect:
         serializedVersion: 2
         x: 1536
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebc3bac3a45ea9f4dae26cb2f148818d
-      internalID: 69762946
+      spriteID: b8a4f103c1c0ae144980e775922c94c0
+      internalID: 80324526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_9
+      name: Lore 5_9
       rect:
         serializedVersion: 2
         x: 1728
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c28ce00b0a12844d892d6574788355c
-      internalID: -1233844791
+      spriteID: 8abad036724ebcd4d96c5146bb3caac5
+      internalID: 2002179677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_10
+      name: Lore 5_10
       rect:
         serializedVersion: 2
         x: 1920
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65de38951a9e11a4cb8dbe5b6de13275
-      internalID: -833168939
+      spriteID: 1ddc9aaf52e06044da1f8f0607db5e0d
+      internalID: -1803187199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_11
+      name: Lore 5_11
       rect:
         serializedVersion: 2
         x: 2112
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 903fd9cce039bc74e8f940305154b0ab
-      internalID: -378695576
+      spriteID: 99d2acb3cf7628a4f83c24e562e2b496
+      internalID: 1787368004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_12
+      name: Lore 5_12
       rect:
         serializedVersion: 2
         x: 2304
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04070a2c2fd76f14eb61c47e9e066aaf
-      internalID: -1384004659
+      spriteID: 0402bbceb8d18304bae5cc20530cc537
+      internalID: 903962913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_13
+      name: Lore 5_13
       rect:
         serializedVersion: 2
         x: 2496
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17060df874b742a40b71f7d3df7914ab
-      internalID: -2002907033
+      spriteID: 28168c5b91138194ea5aff24d4dcbede
+      internalID: 214021688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chico Brilho_14
+      name: Lore 5_14
       rect:
         serializedVersion: 2
         x: 2688
@@ -405,8 +405,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 342b558d80f43c845bba111acd580a58
-      internalID: 2109062338
+      spriteID: 420585f00d5811a4db5c7a31f73e1f74
+      internalID: 586012170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_15
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61d8a1ba9e0c8242b580b6ba116444f
+      internalID: 1552667517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_16
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacdbb0665fee3845978ab5ae662fb5f
+      internalID: -1223129901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_17
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d2f1850847d604fb27ae79eca7d93a
+      internalID: -1385198871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_18
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e5e8290fcf4764d8f1c328c86f17d4
+      internalID: 169970078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_19
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643d8b596c3cbe34c9697d79e901cfbd
+      internalID: -774191814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_20
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a98269395dc5749896a8635d256fe7
+      internalID: 166471599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_21
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc77bfa636987c04c844e003d841e108
+      internalID: -1399127109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_22
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c777c18fe79de5c4ab0e579dd8cd1f8b
+      internalID: 398125565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lore 5_23
+      rect:
+        serializedVersion: 2
+        x: 4416
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a96707530a4614d9635ef62245a8ee
+      internalID: 385797491
       vertices: []
       indices: 
       edges: []
@@ -414,7 +603,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 861b2679b1bf0784ab240045d7d2937d
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -422,21 +611,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chico Brilho_0: -754708856
-      Chico Brilho_1: 630633380
-      Chico Brilho_10: -833168939
-      Chico Brilho_11: -378695576
-      Chico Brilho_12: -1384004659
-      Chico Brilho_13: -2002907033
-      Chico Brilho_14: 2109062338
-      Chico Brilho_2: -1740061853
-      Chico Brilho_3: -2118289776
-      Chico Brilho_4: 1729890268
-      Chico Brilho_5: -1943607368
-      Chico Brilho_6: -2050096688
-      Chico Brilho_7: 1222805441
-      Chico Brilho_8: 69762946
-      Chico Brilho_9: -1233844791
+      Lore 5_0: 2059884947
+      Lore 5_1: -337074190
+      Lore 5_10: -1803187199
+      Lore 5_11: 1787368004
+      Lore 5_12: 903962913
+      Lore 5_13: 214021688
+      Lore 5_14: 586012170
+      Lore 5_15: 1552667517
+      Lore 5_16: -1223129901
+      Lore 5_17: -1385198871
+      Lore 5_18: 169970078
+      Lore 5_19: -774191814
+      Lore 5_2: -1833334641
+      Lore 5_20: 166471599
+      Lore 5_21: -1399127109
+      Lore 5_22: 398125565
+      Lore 5_23: 385797491
+      Lore 5_3: 2064038035
+      Lore 5_4: 674273202
+      Lore 5_5: 1028281620
+      Lore 5_6: -1271541458
+      Lore 5_7: 1773449887
+      Lore 5_8: 80324526
+      Lore 5_9: 2002179677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
