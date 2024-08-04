@@ -96,6 +96,7 @@ public class CanvasController : MonoBehaviour
     {
         Time.timeScale = 1;
         AudioManager.instance.PlayMusic("GAME");
+        GameManager.instance.ErasePlayerData();
         SceneManager.LoadScene(1);
     }
 

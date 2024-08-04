@@ -294,6 +294,17 @@
                 },
                 {
                     "name": "",
+                    "id": "09567ab5-2648-4916-bf63-43b79a90255a",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Change Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f92e1411-03cb-41c4-8869-ec31c31dd035",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
@@ -310,6 +321,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Use Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1b2fc66f-ec5f-4f57-83e1-e0fc9d6df908",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Use Item",
                     "isComposite": false,
                     "isPartOfComposite": false
