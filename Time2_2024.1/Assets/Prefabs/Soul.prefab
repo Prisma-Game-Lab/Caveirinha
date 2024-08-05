@@ -237,7 +237,7 @@ MonoBehaviour:
   maxHealthUp: 50
   minAttackUp: 10
   maxAttackUp: 25
-  minAttackSpeedUp: 4
+  minAttackSpeedUp: 3
   maxAttackSpeedUp: 10
   attackSpeedDivider: 10
   soulImageVector:
