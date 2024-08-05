@@ -254,7 +254,7 @@ MonoBehaviour:
   potionHealing: 50
   potionCooldown: 1
   potionChangeDelay: 0.4
-  broomDamage: 60
+  broomDamage: 80
   broomCooldown: 4
   broomHitboxSize: 2
   broomLayerMask:
