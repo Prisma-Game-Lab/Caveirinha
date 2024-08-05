@@ -38,5 +38,10 @@ public class MainMenu : MonoBehaviour
         AudioManager.instance.PlayMusic("MENU");
         SceneManager.LoadScene("TelaInicial");
     }
+
+    public void EndSlide()
+    {
+        SceneManager.LoadScene("TelaInicial");
+    }
 }
 

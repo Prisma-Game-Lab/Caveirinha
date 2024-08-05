@@ -97,14 +97,14 @@ public class CanvasController : MonoBehaviour
         Time.timeScale = 1;
         AudioManager.instance.PlayMusic("GAME");
         GameManager.instance.ErasePlayerData();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Andar1");
     }
 
     public IEnumerator GameOver() 
     {
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1);
-        AudioManager.instance.PlayMusic("DIE");
+        AudioManager.instance.PlaySFX("DIE");
         gameOverUI.SetActive(true);
     }
 

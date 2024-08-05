@@ -357,8 +357,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 5a9a7538a7201bd4dbd4834918233301, type: 3}
   - name: BOSS
     clip: {fileID: 8300000, guid: 3041630ee6c19a6478498d3caefecc7e, type: 3}
-  - name: DIE
-    clip: {fileID: 8300000, guid: c0cc54fa9b01b30489ea339c90c15bd1, type: 3}
   sfxSounds:
   - name: DMG1
     clip: {fileID: 8300000, guid: 2fa0e61e55489d5479ef68f182fe6a5b, type: 3}
@@ -440,5 +438,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0cdc26a5b16a451498165d038519a3bf, type: 3}
   - name: CVASS2
     clip: {fileID: 8300000, guid: 7d5f9454c7129cb48a460236aa29651b, type: 3}
+  - name: DIE
+    clip: {fileID: 8300000, guid: c0cc54fa9b01b30489ea339c90c15bd1, type: 3}
   musicSource: {fileID: 9145844221489020775}
   sfxSource: {fileID: 5931273066366996789}

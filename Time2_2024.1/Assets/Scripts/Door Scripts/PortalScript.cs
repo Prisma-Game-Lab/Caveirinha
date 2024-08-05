@@ -12,7 +12,14 @@ public class PortalScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            AudioManager.instance.PlayMusic("GAME");
+            if (sceneName != "LoreFinal (Épica)")
+            {
+                AudioManager.instance.PlayMusic("GAME");
+            }
+            else
+            {
+                AudioManager.instance.PlayMusic("MENU");
+            }
             StartCoroutine(SceneTransition(collision.gameObject));
         }
     }
