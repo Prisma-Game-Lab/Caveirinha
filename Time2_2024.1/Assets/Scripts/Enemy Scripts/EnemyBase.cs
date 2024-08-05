@@ -30,7 +30,7 @@ public class EnemyBase : MonoBehaviour
                                      "Logarino", "Lope", "Lucas", "Luana", "Luciana", "Luisa", "Luiza", "Ludovico", "Magnus",
                                      "Madalena", "Manuel", "Marcela", "Marcelo", "Marcos", "Mariana", "Marina", "Mário", 
                                      "Marta", "Maurício", "Mauro", "Mazinho", "Matheus", "Miguel", "Milena", "Nana", 
-                                     "Natália", "Nelson", "Nelson", "Nilson", "Nicanor", "Nicolau", "Nabia", "Octávio",
+                                     "Natália", "Nelson", "Nelson", "Nilson", "Nicanor", "Nicolau", "Nubia", "Octávio",
                                      "Odete", "Olaso", "Orangofrango", "Orestes", "Ossozé", "Pantaleo", "Pamela", "Patricia",
                                      "Patrícia", "Patrick", "Paulo", "Pedro", "Papyrus", "Pepperonio", "Pingala", "Planilho", 
                                      "Rafaela", "Rafael", "Raimunda", "Raul", "Rebeca", "Renan", "Renata", "Renato", "Riclaudio",
@@ -38,7 +38,13 @@ public class EnemyBase : MonoBehaviour
                                      "Sabrina", "Samuel", "Sandra", "Sans", "Sancho", "Santiago", "Saul", "Sergio", "Severino", "Shaka", "Suzy",
                                      "Syndra", "Tatiana", "Teodora", "Tharcísio", "Tripas", "Túlio", "Ubaldo", "Valdomiro", "Vagner",
                                      "Vinícius", "Virgínia", "Vitória", "Walderez", "Walter", "Wantuwilson", "Wenceslau", "Weslley",
-                                     "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenóbio", "Zé" };
+                                     "Xenofonte", "Yara", "Yuri", "Zagreu", "Zorba", "Zeferino", "Zenóbio", "Zé", "Ofonildo", "Momonga", "Tritri", "Ludwig", "Klaus", "Jorel",
+                                     "Anai", "Simone", "Eide", "Olivia", "Gelda", "Az", "Aster", "Killia", "Valvatorez", "Pierogi", "Chalupa", "Zucchini", "Pistacchio", "Lamar", "Phill", 
+                                     "Frieren", "Himmel", "Cocytus", "Kiryu", "Majima", "Daigo", "Guadalupe", "Guantano", "Morbius", "Ferdinando", "Abner", "Xerxes", "Lorenzo", "Weng",
+                                     "Xiao", "Billy", "Mia", "Jeniffer", "Debora", "Honda", "Jimmy", "Chandler", "Connor", "Chambara", "Chamito", "Taco", "Melina", "Ranni", "Remi", "Dolores", "Zell",
+                                     "Jordan", "Sonic", "Miku", "Markimoo", "Otávio", "Osvaldo", "Ralof", "Alduin", "Keanu Reeves", "Beowulf", "Wolfgang", "Corki", "Anubis", "Mike", "Frederica",
+                                     "Festanzo", "Clara", "Chong", "Lebron", "Larry", "Xu", "Aquiles", "Chapelone", "Garbanzo", "Brad", "Krogmar", "Fuji", "Xube", "Bonzi", "Frango", "Michel", "Tio Fred",
+                                     "Tony", "Sebastian", "Garfield", "Lance"};
 
     [SerializeField] private float[] healthVector;
     [SerializeField] private float[] attackVector;
