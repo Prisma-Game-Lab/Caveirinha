@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4434839237470094874, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6678916650072787395, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_Constraints
@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8825523685136396073, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8868778797269199240, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_Color.a
