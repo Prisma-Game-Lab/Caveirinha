@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3878790a865c24bbdd1708a4e12918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 6378.75
+  baseHealth: 8505
   baseLaser: 40.5
   health: 0
   laserDamage: 0
