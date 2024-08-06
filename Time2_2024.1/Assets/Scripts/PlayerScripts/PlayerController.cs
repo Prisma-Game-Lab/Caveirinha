@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour
         AudioManager.instance.PlaySFX(name);
         if (health <= 1)
         {
+            health = 0;
             Die();
             return true;
         }
@@ -184,6 +185,7 @@ public class PlayerController : MonoBehaviour
     public void Die() 
     {
         UpdateUI();
+        canMove = false;
         int sfx = (Random.Range(1, 3));
         string name = "DEATH" + sfx.ToString();
         AudioManager.instance.PlaySFX(name);
@@ -233,7 +235,7 @@ public class PlayerController : MonoBehaviour
 
     public void ChangeItemSelected() 
     {
-        if (gameIsPaused)
+        if (!canMove || gameIsPaused)
         {
             return;
         }
@@ -254,7 +256,7 @@ public class PlayerController : MonoBehaviour
 
     public void UseItem() 
     {
-        if (!canMove && gameIsPaused) 
+        if (!canMove || gameIsPaused) 
         {
             return;
         }
