@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
 
     public void ApplyPlayerStats() 
     {
+        if(playerMaxHealth == 0) 
+        {
+            return;
+        }
         GameObject player = GameObject.Find("Player");
         PlayerController playerScript = player.GetComponent<PlayerController>();
         playerScript.maxHealth = playerMaxHealth;
