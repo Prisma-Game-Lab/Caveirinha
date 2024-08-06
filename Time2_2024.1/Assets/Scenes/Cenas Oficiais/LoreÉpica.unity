@@ -717,7 +717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &247722610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4163,9 +4163,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: E com "aqueles", quero dizer... todos eles. Liderados pelo zelador sinistro,
-    eles se juntam para roubar e impedir que Chico recupere a caneca favorita de
-    seu chefe.
+  m_text: "Um dia, devido a uma importante \"viagem a trabalho\", seu chefe deixa
+    Chico respons\xE1vel pela cripta, criando uma oportunidade para os que invejam
+    os talentos de Chico."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
