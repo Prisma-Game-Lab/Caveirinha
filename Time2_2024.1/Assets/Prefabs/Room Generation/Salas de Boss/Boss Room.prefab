@@ -747,7 +747,7 @@ MonoBehaviour:
   laserDamage: 0
   laserObject: {fileID: 2174690906993087790, guid: be5f048c076503c46a743f2cea39344c, type: 3}
   laserSpeed: 100
-  laserDestructionTime: 2
+  laserDestructionTime: 0.5
   vassouras:
   - {fileID: 234668388828877281}
   - {fileID: 7293594559159077189}
