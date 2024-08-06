@@ -1061,8 +1061,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.85498, y: -381.67932}
-  m_SizeDelta: {x: 1483.1, y: 215.8114}
+  m_AnchoredPosition: {x: -11.85498, y: -393.97568}
+  m_SizeDelta: {x: 1483.1, y: 191.2187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1329438800
 MonoBehaviour:
@@ -1084,7 +1084,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: servo do seculo yay
+  m_text: "Devido ao seu incans\xE1vel esfor\xE7o e sucesso em manter a cripta em
+    ordem, o Lich concede a Chico o t\xEDtulo de Servo do S\xE9culo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
@@ -1111,15 +1112,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 59
+  m_fontSizeBase: 59
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 32
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1665,7 +1666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1934744794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1758,7 +1759,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chico recupera a caneca bem a tempo de seu chefe voltar
+  m_text: "Finalmente, ap\xF3s sua jornada, Chico recupera a caneca e a devolve justo
+    a tempo da volta de seu chefe."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
