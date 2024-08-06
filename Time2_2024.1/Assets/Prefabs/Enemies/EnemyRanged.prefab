@@ -412,7 +412,7 @@ MonoBehaviour:
   - 200
   - 300
   attackVector:
-  - 10
+  - 15
   - 25
   - 35
   contactDamage: 10

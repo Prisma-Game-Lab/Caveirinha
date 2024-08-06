@@ -248,7 +248,7 @@ MonoBehaviour:
   maxHealth: 100
   attackDamage: 35
   attackSpeed: 2
-  starterInvencibility: 5
+  starterInvencibility: 1
   maxInvencibilityOnDamage: 1
   maxInvencibilityOnRoomEnter: 3
   potionHealing: 50
