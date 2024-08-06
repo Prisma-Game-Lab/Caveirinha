@@ -1191,8 +1191,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dentre eles, Chico, \xE9 consecutivamente o servo da d\xE9cada h\xE1 pelo
-    menos 9 d\xE9cadas! (jdshdkjashdkjashkjdashdhaskdjhask)"
+  m_text: " Entre eles est\xE1 Chico, antes um simples necromante, agora um prod\xEDgio
+    corporativo e servo da d\xE9cada por pelo menos nove d\xE9cadas."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
@@ -1326,8 +1326,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Ent\xE3o, o poderoso Lich decidiu repaginar seu modelo de neg\xF3cios
-    corporativizando a cripta. E atribuindo novos cargos aos seus lacaios"
+  m_text: "Ent\xE3o, o poderoso Lich decidiu repaginar seu modelo de neg\xF3cios,
+    corporativizando a cripta e atribuindo novos cargos aos seus lacaios."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
@@ -2629,9 +2629,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A tenebrosa cripta do Lich, por s\xE9culos ela foi \xFAltimo destino de
-    muitos aventureiros. Mas depois de algumas revolu\xE7\xF5es industriais, derrotar
-    aventureiros deixou de ser lucrativo."
+  m_text: "A tenebrosa cripta do Lich, por s\xE9culos, foi o \xFAltimo destino de
+    muitos aventureiros. Mas, com a moderniza\xE7\xE3o dos tempos, derrotar aventureiros
+    deixou de ser lucrativo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
@@ -3249,7 +3249,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Agora cabe a Chico disciplinar os malfeitores e recuperar a caneca antes
-    que essa bagun\xE7a me custe seu emprego!"
+    que essa bagun\xE7a lhe custe o emprego!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
@@ -3975,8 +3975,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: E com aqueles, eu quero dizer... todos eles... Liderados pelo zelador sinistro,
-    eles se juntam para esconder e impedir que Chico recupere a caneca favorita de
+  m_text: E com "aqueles", quero dizer... todos eles. Liderados pelo Zelador Sinistro,
+    eles se juntam para roubar e impedir que Chico recupere a caneca favorita de
     seu chefe.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
@@ -4163,9 +4163,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Um dia, devido a uma importante \"viajem a trabalho\" seu chefe deixa
-    Chico respons\xE1vel pela cripta. Criando para aqueles que invejam seu talento
-    no mundo corporativo."
+  m_text: E com "aqueles", quero dizer... todos eles. Liderados pelo zelador sinistro,
+    eles se juntam para roubar e impedir que Chico recupere a caneca favorita de
+    seu chefe.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
