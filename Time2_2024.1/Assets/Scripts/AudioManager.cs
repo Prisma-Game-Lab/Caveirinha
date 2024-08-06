@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
     //nao esquecer depois de colocar as musicas e os efeitos sonoros no audio manager
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -21,7 +22,8 @@ public class AudioManager : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
+            PlayMusic("MENU");
         }
     }
 
