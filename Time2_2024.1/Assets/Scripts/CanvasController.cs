@@ -88,7 +88,6 @@ public class CanvasController : MonoBehaviour
     public void LoadMainMenu() 
     {
         Time.timeScale = 1;
-        AudioManager.instance.PlayMusic("MENU");
         SceneManager.LoadScene("TelaInicial");
     }
 

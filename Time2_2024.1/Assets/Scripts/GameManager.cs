@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     float playerAttackDamage;
     float playerAttackSpeed;
 
+    float playerStarterMaxHealth;
+    float playerStarterAttackDamage;
+    float playerStarterAttackSpeed;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -41,10 +45,6 @@ public class GameManager : MonoBehaviour
 
     public void ApplyPlayerStats() 
     {
-        if(playerMaxHealth == 0) 
-        {
-            return;
-        }
         GameObject player = GameObject.Find("Player");
         PlayerController playerScript = player.GetComponent<PlayerController>();
         playerScript.maxHealth = playerMaxHealth;
@@ -59,9 +59,19 @@ public class GameManager : MonoBehaviour
         Floor = 0;
         RoomClearedThisFloor = 0;
         RoomClearedInTotal = 0;
-        playerMaxHealth = 0;
-        playerAttackDamage = 0;
-        playerAttackSpeed = 0;
+        playerMaxHealth = playerStarterMaxHealth;
+        playerAttackDamage = playerStarterAttackDamage;
+        playerAttackSpeed = playerStarterAttackSpeed;
+    }
+
+    public void SetDificulty(float health, float attackDamage, float attackSpeed) 
+    {
+        playerMaxHealth = health;
+        playerStarterMaxHealth = health;
+        playerAttackDamage = attackDamage;
+        playerStarterAttackDamage = attackDamage;
+        playerAttackSpeed = attackSpeed;
+        playerStarterAttackSpeed = attackSpeed;
     }
 }
 

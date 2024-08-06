@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     //Comentario
+    private void Awake()
+    {
+        AudioManager.instance.PlayMusic("MENU");
+    }
+
     public void PlayGame()
     {
         int sfx = Random.Range(1, 2);

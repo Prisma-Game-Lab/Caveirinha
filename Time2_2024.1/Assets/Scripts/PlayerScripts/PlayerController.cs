@@ -275,7 +275,7 @@ public class PlayerController : MonoBehaviour
                     return;
                 }
                 AudioManager.instance.PlaySFX("POTION");
-                health += potionHealing;
+                health += maxHealth/2;
                 if(health > maxHealth) 
                 {
                     health = maxHealth;
