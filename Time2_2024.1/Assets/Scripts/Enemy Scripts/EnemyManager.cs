@@ -35,7 +35,7 @@ public class EnemyManager : MonoBehaviour
 
     public void OnEnemyDeath() 
     {
-        if (enemysAlive == 1)
+        if (enemysAlive == 0)
         {
             onRoomCleared();
             return;
