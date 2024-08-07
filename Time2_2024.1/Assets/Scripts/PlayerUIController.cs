@@ -21,7 +21,7 @@ public class PlayerUIController : MonoBehaviour
         healthBar.value = health;
         healthText.text = $"{Mathf.Round(health)}/{maxHealth}";
         attackText.text = attackDamage.ToString();
-        attackSpeedText.text = attackSpeed.ToString();
+        attackSpeedText.text = (Mathf.Round(attackSpeed*10)/10).ToString();
     }
 
     public void UpdateItem(int selectedItem, int potionCharges)
