@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3878790a865c24bbdd1708a4e12918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 7796.25
+  baseHealth: 11056.5
   baseLaser: 60.5
   health: 0
   laserDamage: 0
