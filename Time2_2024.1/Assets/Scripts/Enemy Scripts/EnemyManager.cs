@@ -8,6 +8,13 @@ public class EnemyManager : MonoBehaviour
     public static OnRoomCleared onRoomCleared;
     [SerializeField] DoorController[] doors;
 
+    int enemysAlive;
+
+    private void Awake()
+    {
+        enemysAlive = gameObject.transform.childCount;
+    }
+
     private void OnEnable()
     {
         SoulScript.onSoulAssimilation += LockDoors;
@@ -28,9 +35,11 @@ public class EnemyManager : MonoBehaviour
 
     public void OnEnemyDeath() 
     {
-        if (gameObject.transform.childCount == 1)
+        if (enemysAlive == 1)
         {
             onRoomCleared();
+            return;
         }
+        enemysAlive -= 1;
     }
 }
