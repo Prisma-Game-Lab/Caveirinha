@@ -46,11 +46,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxInvencibilityOnRoomEnter;
 
     [Header("Item Stats")]
+    [SerializeField] private float broomMultiplyer;
     [SerializeField] private float potionCooldown;
     [SerializeField] private float potionChangeDelay;
-    [SerializeField] private float broomDamage;
     [SerializeField] private float broomCooldown;
     [SerializeField] private float broomHitboxSize;
+    [SerializeField] private float broomISeconds;
     [SerializeField] private LayerMask broomLayerMask;
     [SerializeField] private GameObject broomVisual;
     [SerializeField] private float deflectedProjectileSpeed;
@@ -294,6 +295,7 @@ public class PlayerController : MonoBehaviour
                 string name = "CVASS" + sfx.ToString();
                 AudioManager.instance.PlaySFX(name);
                 itemCooldown = broomCooldown;
+                invencibilitySeconds += broomISeconds;
                 break;
         }
         playerUIController.CaveiraoAnim.SetTrigger("Fechar");
@@ -337,11 +339,11 @@ public class PlayerController : MonoBehaviour
                 EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(attackDamage * 1.4f);
+                    enemy.TakeDamage(attackDamage * broomMultiplyer);
                 }
                 else
                 {
-                    hitObject.GetComponent<BossController>().TakeDamage(attackDamage * 1.4f);
+                    hitObject.GetComponent<BossController>().TakeDamage(attackDamage * broomMultiplyer);
                 }
             }
             else if (hitObject.CompareTag("Spell")) 
@@ -352,6 +354,7 @@ public class PlayerController : MonoBehaviour
                 spellRigidBody.velocity = deflectedProjectileSpeed * (spellRigidBody.transform.position - transform.position).normalized;
             }
         }
+
     }
 
     private void BroomEnd() 

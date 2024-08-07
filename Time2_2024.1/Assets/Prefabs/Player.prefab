@@ -251,12 +251,12 @@ MonoBehaviour:
   starterInvencibility: 1
   maxInvencibilityOnDamage: 1
   maxInvencibilityOnRoomEnter: 3
-  potionHealing: 50
+  broomMultiplyer: 2
   potionCooldown: 1
   potionChangeDelay: 0.4
-  broomDamage: 80
   broomCooldown: 4
   broomHitboxSize: 2
+  broomISeconds: 0.4
   broomLayerMask:
     serializedVersion: 2
     m_Bits: 1152
