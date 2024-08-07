@@ -337,11 +337,11 @@ public class PlayerController : MonoBehaviour
                 EnemyBase enemy = hitObject.GetComponent<EnemyBase>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(broomDamage);
+                    enemy.TakeDamage(attackDamage * 1.4f);
                 }
                 else
                 {
-                    hitObject.GetComponent<BossController>().TakeDamage(broomDamage);
+                    hitObject.GetComponent<BossController>().TakeDamage(attackDamage * 1.4f);
                 }
             }
             else if (hitObject.CompareTag("Spell")) 

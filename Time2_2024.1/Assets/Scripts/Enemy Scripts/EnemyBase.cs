@@ -57,6 +57,8 @@ public class EnemyBase : MonoBehaviour
     private float currentHealth;
     protected float currentEnemyAttack;
 
+    bool dying;
+
     private void Awake()
     {
         currentHealth = healthVector[GameManager.instance.Floor];
@@ -72,8 +74,9 @@ public class EnemyBase : MonoBehaviour
         AudioManager.instance.PlaySFX("HIT");
         currentHealth -= damage;
         StartCoroutine(blinkScript.Blink());
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dying)
         {
+            dying = true;
             AudioManager.instance.PlaySFX(onDeathAudio);
             OnDeath();
         }
