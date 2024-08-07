@@ -64,6 +64,7 @@ public class EnemyBase : MonoBehaviour
         enemyName = vectorNames[Random.Range(0, vectorNames.Length)];
         blinkScript = GetComponent<BlinkScript>();
         enemyManager = GetComponentInParent<EnemyManager>();
+        enemyManager.enemysAlive += 1;
     }
 
     public void TakeDamage(float damage)

@@ -8,13 +8,7 @@ public class EnemyManager : MonoBehaviour
     public static OnRoomCleared onRoomCleared;
     [SerializeField] DoorController[] doors;
 
-    int enemysAlive;
-
-    private void Awake()
-    {
-        enemysAlive = gameObject.transform.childCount;
-        print(enemysAlive);
-    }
+    public int enemysAlive;
 
     private void OnEnable()
     {
@@ -36,11 +30,10 @@ public class EnemyManager : MonoBehaviour
 
     public void OnEnemyDeath() 
     {
-        if (enemysAlive == 1)
+        enemysAlive -= 1;
+        if (enemysAlive <= 0)
         {
             onRoomCleared();
-            return;
         }
-        enemysAlive -= 1;
     }
 }

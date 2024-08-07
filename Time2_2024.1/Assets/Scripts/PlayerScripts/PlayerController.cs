@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxInvencibilityOnRoomEnter;
 
     [Header("Item Stats")]
-    [SerializeField] private float potionHealing;
     [SerializeField] private float potionCooldown;
     [SerializeField] private float potionChangeDelay;
     [SerializeField] private float broomDamage;
