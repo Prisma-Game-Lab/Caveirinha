@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         enemysAlive = gameObject.transform.childCount;
+        print(enemysAlive);
     }
 
     private void OnEnable()
@@ -35,7 +36,7 @@ public class EnemyManager : MonoBehaviour
 
     public void OnEnemyDeath() 
     {
-        if (enemysAlive == 0)
+        if (enemysAlive == 1)
         {
             onRoomCleared();
             return;
