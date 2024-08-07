@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public float selectedSoulDistance;
 
     public bool[] avaiableItems;
-    private int selectedItem = 0;
+    private int selectedItem = 1;
 
     [HideInInspector] public Vector2 moveInputVector;
     [HideInInspector] public bool shouldShoot;
@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
         canvasController = GameObject.Find("Canvas").GetComponent<CanvasController>();
         playerUIController = GameObject.Find("PlayerUI").GetComponent<PlayerUIController>();
         UpdateUI();
+        playerUIController.UpdateItem(selectedItem, potionCharges);
         StartCoroutine(WaitForRoomTransition(1));
         GameManager.instance.ApplyPlayerStats();
     }
