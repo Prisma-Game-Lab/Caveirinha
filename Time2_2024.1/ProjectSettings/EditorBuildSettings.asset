@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Cenas Oficiais/Video.unity
+    guid: d086383114160d841af52018acd8ef2c
+  - enabled: 1
     path: "Assets/Scenes/Cenas Oficiais/Lore\xC9pica.unity"
     guid: 21bf814124743734dafb51b599af5f0f
   - enabled: 1
