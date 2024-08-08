@@ -20,6 +20,6 @@ public class VideoPlayerScript : MonoBehaviour
 
     private void LoadNextScene(VideoPlayer vp) 
     {
-        SceneManager.LoadScene("Lore…pica");
+        SceneManager.LoadScene("LoreEpica");
     }
 }

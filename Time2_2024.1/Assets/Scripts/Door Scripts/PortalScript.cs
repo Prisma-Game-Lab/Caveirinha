@@ -12,7 +12,7 @@ public class PortalScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (sceneName != "LoreFinal (Épica)")
+            if (sceneName != "LoreFinal (Epica)")
             {
                 AudioManager.instance.PlayMusic("GAME");
             }

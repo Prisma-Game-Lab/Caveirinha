@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3053944403285595628, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: sceneName
-      value: "LoreFinal (\xC9pica)"
+      value: LoreFinal (Epica)
       objectReference: {fileID: 0}
     - target: {fileID: 4242025627633632417, guid: 73f5c97abe60e0a4d9c82cef4ef1dcc5, type: 3}
       propertyPath: m_LocalPosition.x
