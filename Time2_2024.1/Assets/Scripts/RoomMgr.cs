@@ -25,6 +25,7 @@ public class RoomMgr : MonoBehaviour
 
             DoorController doorMain = doors[i].GetComponentInChildren<DoorController>(); // porta na sala principal
             DoorController doorSub = room.GetComponentInChildren<DoorController>(); // porta na sala secundaria
+            doorSub = room.transform.Find("Door Prefab").GetComponentInChildren<DoorController>();
             PolygonCollider2D cameraCollider = room.GetComponent<PolygonCollider2D>();
 
             foreach (Transform tMain in doors[i].GetComponentsInChildren<Transform>())

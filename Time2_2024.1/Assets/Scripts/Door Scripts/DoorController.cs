@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    [SerializeField] protected GameObject closedDoor;
+    [SerializeField] protected GameObject openDoor;
+
     public GameObject DesiredRoom;
     public GameObject CurrentRoom;
 
@@ -15,7 +18,6 @@ public class DoorController : MonoBehaviour
     protected CinemachineConfiner2D cameraConfiner;
     protected CinemachineFramingTransposer cinemachineTransposer;
     protected BoxCollider2D doorCollider;
-    protected SpriteRenderer doorSr;
 
     protected bool locked;
 
@@ -26,7 +28,6 @@ public class DoorController : MonoBehaviour
         cameraConfiner = cameraObject.GetComponent<CinemachineConfiner2D>();
         cinemachineTransposer = cameraObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>();
         doorCollider = gameObject.GetComponent<BoxCollider2D>();
-        doorSr = gameObject.GetComponent<SpriteRenderer>();
     }
 
     public virtual void toggleLock()
@@ -34,12 +35,14 @@ public class DoorController : MonoBehaviour
         if (locked)
         {
             doorCollider.enabled = true;
-            doorSr.color = Color.yellow;
+            closedDoor.SetActive(false);
+            openDoor.SetActive(true);
         }
         else
         {
             doorCollider.enabled = false;
-            doorSr.color = Color.gray;
+            closedDoor.SetActive(true);
+            openDoor.SetActive(false);
         }
         locked = !locked;
     }

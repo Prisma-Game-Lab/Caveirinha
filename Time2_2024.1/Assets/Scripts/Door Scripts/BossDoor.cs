@@ -21,7 +21,8 @@ public class BossDoor : DoorController
     public override void toggleLock()
     {
         doorCollider.enabled = true;
-        gameObject.GetComponent<Animator>().SetTrigger("Open");
+        closedDoor.SetActive(false);
+        openDoor.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
