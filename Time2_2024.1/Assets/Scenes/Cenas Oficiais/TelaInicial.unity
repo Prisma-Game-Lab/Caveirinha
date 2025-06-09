@@ -5217,7 +5217,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Davi Feitoza
 
-    Marcelo Garcia'
+    Marcelo Garcia
+
+    Pedro Lopes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
   m_sharedMaterial: {fileID: 2813498491280596711, guid: 20e1956a9dcd9054a90d1485f2d55c9e, type: 2}
